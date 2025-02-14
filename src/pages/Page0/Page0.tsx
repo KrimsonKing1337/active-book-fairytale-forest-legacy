@@ -1,0 +1,124 @@
+import { useEffect, useState } from 'react';
+
+import { goToPage } from 'activeBook-core/utils/control/goToPage';
+import { Flags, modalsWereShowed } from 'activeBook-core/utils/localStorage/modalsWereShowed';
+import { flashlightInst } from 'activeBook-core/utils/effects/flashlight';
+import { useSound } from 'activeBook-core/hooks/effects/audio/sound';
+import { useFlashlight } from 'activeBook-core/hooks/effects/flashlight';
+import { useVibration } from 'activeBook-core/hooks/effects/vibration';
+import { ModalDialog } from 'activeBook-core/components/ModalDialog';
+import { PageWrapper } from 'activeBook-core/components/PageWrapper';
+import { Action } from 'activeBook-core/components/ColoredTextTrigger/Action';
+
+import { useModal } from './hooks';
+
+export const Page0 = () => {
+  const [lastPage, setLastPage] = useState(0);
+
+  const { modalIsActive, modalOnClose, setModalIsActive } = useModal();
+  const { flashlightOn } = useFlashlight();
+  const { vibrationOn } = useVibration();
+
+  const audioInst = useSound({
+    src: '/assets/book_data/audios/sounds/sword.mp3',
+    fadeOutWhenUnload: false,
+    onPlay() {
+      vibrationOn(200);
+      flashlightOn(200);
+    },
+  });
+
+  useEffect(() => {
+    const lastPageAsJSON = localStorage.getItem('lastPage');
+
+    if (lastPageAsJSON) {
+      const page = JSON.parse(lastPageAsJSON);
+
+      setLastPage(page);
+    }
+  }, []);
+
+  const go = async () => {
+    try {
+      await flashlightInst.init();
+    } catch (err) {
+      console.error(err);
+    }
+
+    await audioInst?.play();
+
+    const pageToGo = lastPage > 0 ? lastPage : 1;
+
+    goToPage(pageToGo);
+  };
+
+  const modalCloseHandler = () => {
+    modalOnClose();
+
+    go();
+  };
+
+  const clickHandler = () => {
+    const isModalWasShowed = modalsWereShowed.get(Flags.usingCamera);
+
+    if (isModalWasShowed) {
+      go();
+
+      return;
+    }
+
+    setModalIsActive(true);
+  };
+
+  const label = lastPage > 0 ? 'Продолжить читать' : 'Начать читать';
+
+  return (
+    <PageWrapper>
+      <ModalDialog
+        isOpen={modalIsActive}
+        onClose={modalCloseHandler}
+        onConfirm={modalCloseHandler}
+        onCancel={modalCloseHandler}
+        canFullScreen={true}
+        showCancelButton={false}
+        cantCloseIn={5000}
+      >
+        <div>
+          <header>
+            ОБРАТИТЕ ВНИМАНИЕ
+          </header>
+
+          <article>
+            <p>
+              Для работы эффектов на основе вспышки, приложению необходимо получить разрешение к камере
+              (к сожалению, нет возможности запросить разрешение только ко вспышке).
+            </p>
+
+            <p>
+              Вы всегда можете запросить разрешение ещё раз, в меню приложения
+            </p>
+          </article>
+        </div>
+      </ModalDialog>
+
+      <header>
+        Митя и его друзья
+      </header>
+
+      <article>
+        Небольшой сборник сказок для детей и их родителей
+      </article>
+
+      <Action fullWidth onClick={clickHandler}>
+        {label}
+      </Action>
+
+      <br />
+      <br />
+
+      <p>
+        P. S.: Для наилучшего результата рекомендую читать с приглушенным светом, в наушниках и с тёмной темой
+      </p>
+    </PageWrapper>
+  );
+};
