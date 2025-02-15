@@ -1,37 +1,61 @@
 module.exports = {
-  roots: ['<rootDir>'],
-  modulePaths: ['<rootDir>/src', '<rootDir>/node_modules'],
-  modulePathIgnorePatterns: ['cypress'],
-  moduleDirectories: ['src', 'node_modules'],
-  testEnvironment: 'jest-environment-jsdom-fourteen',
+  coverageDirectory: '<rootDir>/coverage',
+  preset: 'ts-jest/presets/js-with-babel',
+  rootDir: './',
+  verbose: true,
+  testResultsProcessor: 'jest-sonar-reporter',
+  globals: {
+    __IS_SERVER__: false,
+    __NAME__: require('./package.json').name,
+  },
+  moduleDirectories: [
+    'node_modules',
+    'src'
+  ],
+  collectCoverageFrom: [
+    'src/**/*.{ts,tsx,js,jsx}',
+    '!src/**/*.d.ts',
+    '!src/test/**/*',
+    '!src/**/types.ts',
+    '!src/**/*.test.ts',
+    '!src/**/*.test.tsx',
+    '!src/**/__mocks__/**/*',
+    '!src/**/__test__/**/*',
+    '!src/**/mixins/**/*',
+    '!src/**/index.ts',
+    '!src/**/index.ts',
+    '!src/**/styles.ts',
+    '!src/**/*.stories.*',
+    '!**/node_modules/**',
+  ],
+  coveragePathIgnorePatterns: [],
+  setupFiles: [
+    'react-app-polyfill/jsdom'
+  ],
+  setupFilesAfterEnv: [
+    '<rootDir>/src/test/setup-tests.ts'
+  ],
+  testMatch: [
+    '<rootDir>/src/**/__tests__/**/*.{js,jsx,ts,tsx}',
+    '<rootDir>/src/**/*.{spec,test}.{js,jsx,ts,tsx}'
+  ],
+  testEnvironment: 'jsdom',
   transform: {
-    '.(js|jsx)$': require.resolve('babel-jest'),
-    '.(ts|tsx)$': require.resolve('ts-jest'),
+    '^.+\\.(js|jsx|mjs|cjs|ts|tsx)$': '<rootDir>/config/jest/babel-transform.js',
+    '^.+\\.css$': '<rootDir>/config/jest/css-transform.js',
+    '^(?!.*\\.(js|jsx|mjs|cjs|ts|tsx|css|json)$)': '<rootDir>/config/jest/file-transform.js'
   },
-  transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-  collectCoverageFrom: ['src/**/*.{ts,tsx,js,jsx}'],
-  testMatch: ['<rootDir>/**/*.(spec|test).{ts,tsx,js,jsx}'],
-  testURL: 'http://localhost',
-  watchPlugins: [require.resolve('jest-watch-typeahead/filename'), require.resolve('jest-watch-typeahead/testname')],
+  transformIgnorePatterns: [],
+  modulePaths: [],
   moduleNameMapper: {
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|doc|docx|oga)$':
-      '<rootDir>/src/__mocks__/fileMock.ts',
-    '\\.(css|scss)$': 'identity-obj-proxy',
-    '\\.svg$': '<rootDir>/src/__mocks__/svgrMock.ts',
-    '@components/(.*)': '<rootDir>/src/components/$1',
-    '@utils/(.*)': '<rootDir>/src/utils/$1',
-    '@assets/(.*)': '<rootDir>/assets/$1',
-    '@src/(.*)': '<rootDir>/src/$1',
-    '^react$': '<rootDir>/node_modules/react',
+    '.+\\.(css|scss|png|jpg|jpeg|ttf|woff|woff2)$': 'jest-transform-stub',
+    '\\.svg': '<rootDir>/src/test/svg-mock.ts',
+    '^react($|/.+)': '<rootDir>/node_modules/react$1',
   },
-  setupFilesAfterEnv: ['<rootDir>/testSetup.ts'],
-  coverageThreshold: {
-    './src/components/': {
-      branches: 80,
-      functions: 80,
-      lines: 80,
-      statements: 80,
-    },
-  },
+  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
+  watchPlugins: [
+    'jest-watch-typeahead/filename',
+    'jest-watch-typeahead/testname'
+  ],
+  resetMocks: true
 };
