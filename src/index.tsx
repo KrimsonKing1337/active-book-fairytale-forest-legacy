@@ -1,8 +1,6 @@
 import ReactDOM from 'react-dom/client';
-
 import { App } from 'activeBook-core/components';
 import { getIsMobile } from 'activeBook-core/utils/mobile/getIsMobile';
-
 import { Page0 } from 'pages/Page0';
 
 import rangeEffectsJson from './rangeEffects.json';
