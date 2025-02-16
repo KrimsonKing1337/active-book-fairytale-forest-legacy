@@ -2,7 +2,7 @@ import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useSound } from 'activeBook-core/hooks/effects/audio/sound';
 
-import { FlowersBlossom } from './components';
+import { Flowers } from './components';
 
 export const Page1 = () => {
   useSound({
@@ -11,8 +11,13 @@ export const Page1 = () => {
     loop: true,
   });
 
+  const backgroundComponent = {
+    Component: <Flowers />,
+    withShadow: false,
+  };
+
   return (
-    <PageWrapper BackgroundComponent={<FlowersBlossom />}>
+    <PageWrapper backgroundComponent={backgroundComponent}>
       <h1>
         Сказка первая.
       </h1>
