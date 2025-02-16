@@ -9,7 +9,7 @@ export const Page0 = () => {
   const { vibrationOn } = useVibration();
 
   const audioInst = useSound({
-    src: '/assets/book_data/audios/sounds/sword.mp3',
+    src: '/assets/book_data/audios/sounds/start-reading.mp3',
     fadeOutWhenUnload: false,
     onPlay() {
       vibrationOn(200);
@@ -19,12 +19,26 @@ export const Page0 = () => {
 
   const goCallback = async () => {
     await audioInst?.play();
-  }
+  };
+
+  const Footer = () => {
+    return (
+      <>
+        <br />
+        <br />
+
+        <p>
+          Для перехода вперёд/назад по страницам вы можете использовать свайпы влево/вправо
+        </p>
+      </>
+    );
+  };
 
   return (
     <Page0Default
       header="Сказочный лес и его обитатели"
-      article="Небольшой сборник сказок для детей и их родителей"
+      subHeader="Небольшой сборник сказок для детей и их родителей"
+      Footer={Footer}
       goCallback={goCallback}
     />
   );

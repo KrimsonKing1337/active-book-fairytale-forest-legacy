@@ -1,11 +1,22 @@
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
+import { useSound } from 'activeBook-core/hooks/effects/audio/sound';
+
+import { FlowersBlossom } from './components';
+
 export const Page1 = () => {
+  useSound({
+    src: '/assets/book_data/audios/sounds/birds-brook-leafs.mp3',
+    playOnLoad: true,
+    loop: true,
+  });
+
   return (
-    <PageWrapper>
+    <PageWrapper BackgroundComponent={<FlowersBlossom />}>
       <h1>
         Сказка первая.
       </h1>
+
       <h2>
         Сказочный лес и его обитатели.
       </h2>
