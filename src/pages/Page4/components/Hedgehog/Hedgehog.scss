@@ -1,0 +1,36 @@
+.wrapper {
+  position: relative;
+  display: block;
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+.img {
+  position: absolute;
+  z-index: 1;
+  top: 95px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  height: 50px;
+  width: 50px;
+
+  animation: 1s 0s anim forwards;
+
+  @keyframes anim {
+    from {
+      top: 95px;
+    }
+
+    to {
+      top: 27px;
+    }
+  }
+}
+
+.curve {
+  span {
+    transition: all 3s 0s ease;
+  }
+}

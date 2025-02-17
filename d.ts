@@ -7,3 +7,5 @@ declare module '*.svg' {
 }
 
 declare const isDemoMode: boolean;
+
+declare module 'circletype';

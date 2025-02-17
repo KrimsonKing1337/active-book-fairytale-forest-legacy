@@ -2,6 +2,8 @@ import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useSound } from 'activeBook-core/hooks/effects/audio/sound';
 
+import { Hedgehog } from './components';
+
 export const Page4 = () => {
   useSound({
     src: '/assets/book_data/audios/sounds/bed-creaking-and-yawn.mp3',
@@ -11,10 +13,14 @@ export const Page4 = () => {
   return (
     <PageWrapper>
       <p>
-        Барсик наклонился над сонным Левой и весело произнес:
+        Барсик наклонился над сонным Лёвой и весело произнес:
+        <br />
+        <br />
+        — Доброе утро, соня! Пора вставать,
 
-        — Доброе утро, соня! Пора вставать, Ёжик Фыр-Фыр ждёт нас. Он вчера сказал, что приготовил что-то интересное и
-        будет ждать нас утром у ручья!
+        <Hedgehog />
+
+        приготовил что-то интересное и будет ждать нас утром у ручья!
       </p>
     </PageWrapper>
   );
