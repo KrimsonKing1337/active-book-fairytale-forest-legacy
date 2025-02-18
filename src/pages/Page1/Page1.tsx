@@ -7,6 +7,7 @@ import { Flowers } from './components';
 export const Page1 = () => {
   useSound({
     src: '/assets/book_data/audios/sounds/birds-brook-leafs.mp3',
+    bg: true,
     playOnLoad: true,
     loop: true,
   });
