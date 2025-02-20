@@ -1,16 +1,16 @@
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
-import { useSound } from 'activeBook-core/hooks/effects/audio/sound';
+import { useAudio } from 'activeBook-core/hooks/effects/audio';
 
 import { Action } from 'activeBook-core/components/ColoredTextTrigger';
 
 export const Page6 = () => {
-  useSound({
+  useAudio({
     src: '/assets/book_data/audios/sounds/book-dropped.mp3',
     playOnLoad: true,
   });
 
-  const audioInst = useSound({
+  const audioInst = useAudio({
     src: '/assets/book_data/audios/sounds/cuckoo-watch.mp3',
   });
 

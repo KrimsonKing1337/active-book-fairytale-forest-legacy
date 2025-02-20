@@ -1,9 +1,9 @@
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
-import { useSound } from 'activeBook-core/hooks/effects/audio/sound';
+import { useAudio } from 'activeBook-core/hooks/effects/audio';
 
 export const Page3 = () => {
-  useSound({
+  useAudio({
     src: '/assets/book_data/audios/sounds/cat-meow.mp3',
     playOnLoad: true,
   });

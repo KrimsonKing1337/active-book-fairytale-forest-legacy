@@ -1,13 +1,13 @@
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
-import { useSound } from 'activeBook-core/hooks/effects/audio/sound';
+import { useAudio } from 'activeBook-core/hooks/effects/audio';
 
 import { Flowers } from './components';
 
 export const Page1 = () => {
-  useSound({
+  useAudio({
     src: '/assets/book_data/audios/sounds/birds-brook-leafs.mp3',
-    bg: true,
+    type: 'bg',
     playOnLoad: true,
     loop: true,
   });

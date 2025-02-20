@@ -1,6 +1,6 @@
 import { Page0 as Page0Default } from 'activeBook-core/pages/Page0';
 
-import { useSound } from 'activeBook-core/hooks/effects/audio/sound';
+import { useAudio } from 'activeBook-core/hooks/effects/audio';
 import { useFlashlight } from 'activeBook-core/hooks/effects/flashlight';
 import { useVibration } from 'activeBook-core/hooks/effects/vibration';
 
@@ -8,7 +8,7 @@ export const Page0 = () => {
   const { flashlightOn } = useFlashlight();
   const { vibrationOn } = useVibration();
 
-  const audioInst = useSound({
+  const audioInst = useAudio({
     src: '/assets/book_data/audios/sounds/start-reading.mp3',
     fadeOutWhenUnload: false,
     onPlay() {

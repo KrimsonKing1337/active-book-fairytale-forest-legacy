@@ -1,11 +1,11 @@
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
-import { useSound } from 'activeBook-core/hooks/effects/audio/sound';
+import { useAudio } from 'activeBook-core/hooks/effects/audio';
 
 import { Hedgehog } from './components';
 
 export const Page4 = () => {
-  useSound({
+  useAudio({
     src: '/assets/book_data/audios/sounds/bed-creaking-and-yawn.mp3',
     playOnLoad: true,
   });
