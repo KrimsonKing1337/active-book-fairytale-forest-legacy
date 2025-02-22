@@ -2,6 +2,8 @@ import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 
+import { useBackground } from 'activeBook-core/hooks/effects/background';
+
 import { Flowers } from './components';
 
 export const Page1 = () => {
@@ -12,13 +14,12 @@ export const Page1 = () => {
     loop: true,
   });
 
-  const backgroundComponent = {
+  useBackground({
     Component: <Flowers />,
-    withShadow: false,
-  };
+  });
 
   return (
-    <PageWrapper backgroundComponent={backgroundComponent}>
+    <PageWrapper>
       <h1>
         Сказка первая.
       </h1>
