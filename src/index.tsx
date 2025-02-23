@@ -3,7 +3,7 @@ import { App } from 'activeBook-core/components';
 import { getIsMobile } from 'activeBook-core/utils/mobile/getIsMobile';
 import { Page0 } from 'pages/Page0';
 
-import rangeEffectsJson from './rangeEffects.json';
+import { rangeEffects } from './rangeEffects';
 
 import 'activeBook-core/styles/styles.scss';
 
@@ -11,7 +11,7 @@ function initApp(component: React.ReactNode) {
   const root = ReactDOM.createRoot(document.getElementById('root') as HTMLDivElement);
 
   root.render(
-    <App rangeEffectsJson={rangeEffectsJson}>
+    <App rangeEffects={rangeEffects}>
       {component}
     </App>,
   );
