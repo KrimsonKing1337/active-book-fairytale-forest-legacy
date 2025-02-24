@@ -1,0 +1,45 @@
+@keyframes fall {
+  0% {
+    top: -10%;
+    transform: rotate(0);
+  }
+
+  100% {
+    top: calc(100% - 150px);
+    left: calc(100% - 125px);
+    transform: rotate(720deg);
+  }
+}
+
+@keyframes sway1 {
+  0%, 100% {
+    transform: translateX(0) rotate(0) scale(1, 1);
+  }
+
+  50% {
+    transform: translateX(100px) rotate(10deg) scale(0.75, 0.75);
+  }
+}
+
+@keyframes sway2 {
+  0%, 100% {
+    transform: translateX(0) rotate(0) scale(1, 1);
+  }
+
+  50% {
+    transform: translateX(25px) rotate(10deg) scale(0.75, 0.75);
+  }
+}
+
+.leaf {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: calc(50% - 50px);
+  width: 100px;
+  height: 100px;
+  transform-origin: bottom left;
+
+  animation: fall 5s linear forwards, sway1 2s ease-in-out forwards, sway2 2s 4s ease-in-out forwards;
+  animation-iteration-count: 1, 2, 1;
+}
