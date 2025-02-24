@@ -2,7 +2,6 @@ import { getPositionByPreset } from 'activeBook-core/hooks/effects/background/ut
 import type { RangeEffects } from 'activeBook-core/@types';
 
 export const rangeEffects: RangeEffects = [{
-  // todo: передавать id здесь, а не в options
   id: '1',
   type: 'background',
   range: [{
@@ -13,6 +12,8 @@ export const rangeEffects: RangeEffects = [{
     videos: [
       {
         src: '/assets/book_data/1.mp4',
+        muted: false,
+        defaultVolume: 10,
         style: {
           ...getPositionByPreset('bottom'),
           height: '100px',
