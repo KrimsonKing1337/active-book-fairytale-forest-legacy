@@ -1,0 +1,23 @@
+@keyframes moveBeam {
+  0%, 100% {
+    transform: translateX(-50%) rotate(-45deg);
+  }
+
+  50% {
+    transform: translateX(50%) rotate(45deg);
+  }
+}
+
+.sunBeam {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: calc(100vh - 50px) solid rgba(255, 223, 0, 0.5);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 50%;
+  transform-origin: top center;
+  animation: moveBeam 8s linear infinite;
+}
