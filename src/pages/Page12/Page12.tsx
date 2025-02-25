@@ -3,6 +3,8 @@ import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 import { Action } from 'activeBook-core/components/ColoredTextTrigger';
 
+import { Swing } from './components';
+
 export const Page12 = () => {
   const hummingAudioInst1 = useAudio({
     src: '/assets/book_data/audios/sounds/child-humming.mp3',
@@ -23,7 +25,8 @@ export const Page12 = () => {
   return (
     <PageWrapper>
       <p>
-        Барсик, раскачиваясь из стороны в сторону,
+        Барсик,
+        <Swing />
         <Action onClick={action1ClickHandler}>запел</Action>
         свою версию известной всему Сказочному лесу песни о природе,
         добавляя к каждому слову весёлые звуки. Лёва
