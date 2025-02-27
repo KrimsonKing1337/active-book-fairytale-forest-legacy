@@ -9,7 +9,7 @@ import { Hedgehog } from './components';
 
 export const Page2 = () => {
   const [isHedgehogActive, setIsHedgehogActive] = useState(false);
-  
+
   const audioInst1 = useAudio({
     src: '/assets/book_data/audios/sounds/owl-and-branches.mp3',
   });
@@ -20,38 +20,26 @@ export const Page2 = () => {
 
   const segment1EnterHandler = () => {
     audioInst1?.play();
-
-    console.log('___ segment 1 enter');
   };
 
   const segment1ExitHandler = () => {
     audioInst1?.stop();
-
-    console.log('___ segment 1 exit');
   };
 
   const segment2EnterHandler = () => {
     audioInst2?.play();
-
-    console.log('___ segment 2 enter');
   };
 
   const segment2ExitHandler = () => {
     audioInst2?.stop();
-
-    console.log('___ segment 2 exit');
   };
 
   const segment3EnterHandler = () => {
     setIsHedgehogActive(true);
-
-    console.log('___ segment 3 enter');
   };
 
   const segment3ExitHandler = () => {
     setIsHedgehogActive(false);
-
-    console.log('___ segment 3 exit');
   };
 
   return (
