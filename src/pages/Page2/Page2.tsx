@@ -1,9 +1,15 @@
+import { useState } from 'react';
+
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 import { Segment } from 'activeBook-core/components';
 
+import { Hedgehog } from './components';
+
 export const Page2 = () => {
+  const [isHedgehogActive, setIsHedgehogActive] = useState(false);
+  
   const audioInst1 = useAudio({
     src: '/assets/book_data/audios/sounds/owl-and-branches.mp3',
   });
@@ -14,18 +20,38 @@ export const Page2 = () => {
 
   const segment1EnterHandler = () => {
     audioInst1?.play();
+
+    console.log('___ segment 1 enter');
   };
 
   const segment1ExitHandler = () => {
     audioInst1?.stop();
+
+    console.log('___ segment 1 exit');
   };
 
   const segment2EnterHandler = () => {
     audioInst2?.play();
+
+    console.log('___ segment 2 enter');
   };
 
   const segment2ExitHandler = () => {
     audioInst2?.stop();
+
+    console.log('___ segment 2 exit');
+  };
+
+  const segment3EnterHandler = () => {
+    setIsHedgehogActive(true);
+
+    console.log('___ segment 3 enter');
+  };
+
+  const segment3ExitHandler = () => {
+    setIsHedgehogActive(false);
+
+    console.log('___ segment 3 exit');
   };
 
   return (
@@ -43,6 +69,17 @@ export const Page2 = () => {
           Клара видела, как в небольшой уютной избушке – Барсик и Лёва – начинали свой день. Барсик уже бодро
           прохаживался по комнате, вытирая усы после утреннего умывания, а вот его младший брат Лёва только-только
           просыпался.
+        </p>
+      </Segment>
+
+      <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
+        <p>
+          Барсик наклонился над сонным Лёвой и весело произнес:
+          <br />
+          <br />
+          — Доброе утро, соня! Пора вставать,
+          <Hedgehog isActive={isHedgehogActive} />
+          приготовил что-то интересное и будет ждать нас утром у ручья!
         </p>
       </Segment>
     </PageWrapper>

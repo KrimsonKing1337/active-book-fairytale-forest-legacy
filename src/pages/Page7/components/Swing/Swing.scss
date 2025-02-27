@@ -16,7 +16,7 @@
   animation-iteration-count: 0;
   transform-origin: center;
 
-  .isActive {
+  &.isActive {
     animation-iteration-count: infinite;
   }
 }

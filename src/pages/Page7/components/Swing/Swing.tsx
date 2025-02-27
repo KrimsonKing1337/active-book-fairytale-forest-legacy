@@ -13,8 +13,8 @@ export const Swing = ({ isActive }: SwingProps) => {
   });
 
   return (
-    <div className={swingClassNames}>
-      раскачиваясь из стороны в сторону,
-    </div>
+    <span className={swingClassNames}>
+      &nbsp;раскачиваясь из стороны в сторону,&nbsp;
+    </span>
   );
 };
