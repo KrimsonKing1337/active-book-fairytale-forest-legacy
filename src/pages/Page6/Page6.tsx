@@ -1,37 +1,66 @@
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-
-import { Action } from 'activeBook-core/components/ColoredTextTrigger';
+import { Segment } from 'activeBook-core/components';
 
 export const Page6 = () => {
-  useAudio({
-    src: '/assets/book_data/audios/sounds/book-dropped.mp3',
-    playOnLoad: true,
+  const audioInst1 = useAudio({
+    src: '/assets/book_data/audios/sounds/water-stream.mp3',
+    loop: true,
   });
 
-  const audioInst = useAudio({
-    src: '/assets/book_data/audios/sounds/cuckoo-watch.mp3',
+  const audioInst2 = useAudio({
+    src: '/assets/book_data/audios/sounds/paper.mp3',
   });
 
-  const onClick = () => {
-    audioInst?.play();
+  const audioInst3 = useAudio({
+    src: '/assets/book_data/audios/sounds/screw-bolt.mp3',
+  });
+
+  const segment1EnterHandler = () => {
+    audioInst1?.play();
+  };
+
+  const segment1ExitHandler = () => {
+    audioInst1?.stop();
+  };
+
+  const segment2EnterHandler = () => {
+    audioInst2?.play();
+  };
+
+  const segment2ExitHandler = () => {
+    audioInst2?.stop();
+  };
+
+  const segment3EnterHandler = () => {
+    audioInst3?.play();
+  };
+
+  const segment3ExitHandler = () => {
+    audioInst3?.stop();
   };
 
   return (
     <PageWrapper>
-      <p>
-        Барсик неосторожно махнул хвостом и смахнул с тумбочки брата книгу.
-        Подняв ее, он сказал:
-        <br />
-        <br />
-        — Да ладно, часы были хороши! Просто никто не ждал, что они начнут куковать каждые тридцать секунд.
-        <br />
-        <br />
-        — До сих пор это
-        <Action onClick={onClick}>«ку-ку»</Action>
-        мне во снах снится...
-      </p>
+      <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
+        <p>
+          Ещё Клара видела, как Ёжик в полном восторге бегал туда-сюда вдоль тихо журчащего ручья.
+        </p>
+      </Segment>
+
+      <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
+        <p>
+          Он проверял каждую деталь своего нового изобретения. Повсюду валялись чертежи, какие-то деревяшки и даже пара
+          свёрнутых носков (где он их нашёл — загадка).
+        </p>
+      </Segment>
+
+      <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
+        <p>
+          — Ну вот, деталь сюда, болтик сюда... Ух, кажется, готово!
+        </p>
+      </Segment>
     </PageWrapper>
   );
 };

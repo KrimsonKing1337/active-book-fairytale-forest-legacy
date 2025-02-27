@@ -1,19 +1,55 @@
+import { useState } from 'react';
+
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 
+import { Segment } from 'activeBook-core/components';
+
+import { Swing } from './components';
+
 export const Page8 = () => {
-  useAudio({
-    src: '/assets/book_data/audios/sounds/water-stream.mp3',
-    playOnLoad: true,
-    loop: true,
+  const [isSwingActive, setIsSwingActive] = useState(false);
+
+  const audioInst1 = useAudio({
+    src: '/assets/book_data/audios/sounds/child-humming.mp3',
   });
+
+  const audioInst2 = useAudio({
+    src: '/assets/book_data/audios/sounds/child-humming2.mp3',
+  });
+
+  const segment1EnterHandler = () => {
+    audioInst1?.play();
+    setIsSwingActive(true);
+  };
+
+  const segment1ExitHandler = () => {
+    audioInst1?.stop();
+    setIsSwingActive(false);
+  };
+
+  const segment2EnterHandler = () => {
+    audioInst2?.play();
+  };
+
+  const segment2ExitHandler = () => {
+    audioInst2?.stop();
+  };
 
   return (
     <PageWrapper>
-      <p>
-        Ещё Клара видела, как Ёжик в полном восторге бегал туда-сюда вдоль тихо журчащего ручья.
-      </p>
+      <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
+        <p>
+          Барсик,
+          <Swing isActive={isSwingActive} />
+          запел свою версию известной всему Сказочному лесу песни о природе, добавляя к каждому слову весёлые звуки.
+        </p>
+      </Segment>
+
+      <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
+        Лёва пытался подхватить мелодию по-своему, путая брата и делая песню ещё забавнее.
+      </Segment>
     </PageWrapper>
   );
 };

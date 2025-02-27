@@ -12,6 +12,11 @@
   position: relative;
   z-index: -1;
   display: inline-block;
-  animation: swing 3s linear infinite;
+  animation: swing 3s linear;
+  animation-iteration-count: 0;
   transform-origin: center;
+
+  .isActive {
+    animation-iteration-count: infinite;
+  }
 }
