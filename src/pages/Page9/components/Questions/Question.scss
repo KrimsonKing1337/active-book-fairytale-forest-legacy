@@ -1,0 +1,73 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: height 0.5s 0s ease-in-out, margin 0.5s 0s ease-in-out;
+
+  &.isActive {
+    height: 50px;
+    margin: 20px 0;
+  }
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: translateX(-5%) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateX(5%) rotate(5deg);
+  }
+}
+
+.icon {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+
+  height: 0;
+  width: 50px;
+
+  transition: height 0.5s 0s ease-in-out, left 0.5s 0s ease-in-out;
+
+  animation: swing 3s linear;
+  animation-iteration-count: 0;
+  transform-origin: center;
+
+  &:nth-child(1) {
+    left: -5px;
+  }
+
+  &:nth-child(2) {
+    left: 0;
+  }
+
+  &:nth-child(3) {
+    left: 5px;
+  }
+
+  &.isActive {
+    height: 100%;
+    animation-iteration-count: infinite;
+
+    &:nth-child(1) {
+      left: -50px;
+    }
+
+    &:nth-child(2) {
+      left: 0;
+    }
+
+    &:nth-child(3) {
+      left: 50px;
+    }
+  }
+}

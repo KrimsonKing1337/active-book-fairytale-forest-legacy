@@ -5,17 +5,7 @@
   overflow: hidden;
 }
 
-@keyframes imgAnim {
-  from {
-    height: 0;
-  }
-
-  to {
-    height: 50px;
-  }
-}
-
-.img {
+.icon {
   position: absolute;
   z-index: 1;
   top: 0;
