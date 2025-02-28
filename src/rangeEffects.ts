@@ -13,7 +13,7 @@ export const rangeEffects: RangeEffects = [{
       {
         src: '/assets/book_data/1.mp4',
         muted: false,
-        defaultVolume: 10,
+        relativeVolume: 10,
         style: {
           ...getPositionByPreset('bottom'),
           height: '100px',
