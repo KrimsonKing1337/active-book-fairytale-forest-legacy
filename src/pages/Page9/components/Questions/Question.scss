@@ -8,7 +8,7 @@
   overflow: hidden;
   transition: height 0.5s 0s ease-in-out, margin 0.5s 0s ease-in-out;
 
-  &.isActive {
+  &.isBroken {
     height: 50px;
     margin: 20px 0;
   }
@@ -54,7 +54,7 @@
     left: 5px;
   }
 
-  &.isActive {
+  &.isBroken {
     height: 100%;
     animation-iteration-count: infinite;
 

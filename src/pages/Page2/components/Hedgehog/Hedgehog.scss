@@ -19,7 +19,7 @@
 
   transition: height 1s 0s ease-in-out;
 
-  &.isActive {
+  &.isBroken {
     height: 50px;
   }
 }
