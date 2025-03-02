@@ -37,14 +37,13 @@ export const Trigger = () => {
 
     timer = setTimeout(() => {
       setShow(false);
+      timer = null;
     }, 5000);
   };
 
   return (
-    <>
-      <Action onClick={clickHandler}>
-        что-то совсем нелепое
-      </Action>
-    </>
+    <Action onClick={clickHandler}>
+      что-то совсем нелепое
+    </Action>
   );
 };
