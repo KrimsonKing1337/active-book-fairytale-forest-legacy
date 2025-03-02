@@ -35,13 +35,18 @@ export const Hedgehog = ({ isActive }: HedgehogProps) => {
     });
   }, [isActive]);
 
+  const wrapperClassNames = classNames({
+    [styles.wrapper]: true,
+    [styles.isActive]: isActive,
+  });
+
   const imgClassNames = classNames({
     [styles.img]: true,
     [styles.isActive]: isActive,
   });
 
   return (
-    <span className={styles.wrapper}>
+    <span className={wrapperClassNames}>
       <span ref={elementRef1} className={styles.curve}>
         Ёжик Фыр-Фыр ждёт нас.&nbsp;
       </span>

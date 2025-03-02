@@ -1,10 +1,10 @@
-import Icon from '/assets/book_data/images/question.svg';
+import { useMemo } from 'react';
 
 import classNames from 'classnames';
 
-import styles from './Question.scss';
+import Icon from '/assets/book_data/images/question.svg';
 
-import { useMemo } from 'react';
+import styles from './Question.scss';
 
 export type QuestionsProps = {
   isActive: boolean;

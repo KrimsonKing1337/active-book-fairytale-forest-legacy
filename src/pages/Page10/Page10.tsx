@@ -9,14 +9,17 @@ import { Trigger } from './components';
 
 export const Page10 = () => {
   const audioInst1 = useAudio({
+    id: 'page10-kids-laughing-2',
     src: '/assets/book_data/audios/sounds/kids-laughing-2.mp3',
   });
 
   const audioInst2 = useAudio({
+    id: 'page10-creaking-wood',
     src: '/assets/book_data/audios/sounds/creaking-wood.mp3',
   });
 
   const audioInst3 = useAudio({
+    id: 'page10-rustling-grass',
     src: '/assets/book_data/audios/sounds/rustling-grass.mp3',
   });
 
@@ -31,6 +34,8 @@ export const Page10 = () => {
   };
 
   const segment2EnterHandler = async () => {
+    console.log('___ audioInst2', audioInst2);
+
     audioInst2?.play();
   };
 

@@ -24,6 +24,7 @@ export const Trigger = () => {
   const { vibrationOn } = useVibration();
 
   const audioInst = useAudio({
+    id: 'audioInstTrigger',
     src: '/assets/book_data/audios/sounds/wood-broke.mp3',
   });
 
@@ -31,6 +32,8 @@ export const Trigger = () => {
     if (isTrembling || timer) {
       return;
     }
+
+    console.log('___ audioInstTrigger', audioInst);
 
     setIsTrembling(true);
     audioInst?.play();
