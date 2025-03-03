@@ -4,7 +4,7 @@ import { useAudio } from 'activeBook-core/hooks/effects/audio';
 
 import { useBackground } from 'activeBook-core/hooks/effects/background';
 
-import { Flowers } from './components';
+import { FlowersAnimation } from './components';
 
 export const Page1 = () => {
   useAudio({
@@ -15,7 +15,8 @@ export const Page1 = () => {
   });
 
   useBackground({
-    Component: <Flowers />,
+    id: 'flowersAnimation',
+    Component: <FlowersAnimation />,
   });
 
   return (
