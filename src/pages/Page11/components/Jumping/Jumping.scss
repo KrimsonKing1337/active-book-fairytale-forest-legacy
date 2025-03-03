@@ -1,0 +1,28 @@
+@keyframes jumping {
+  0%, 100% {
+    transform: rotate(0) translateX(0) translateY(0);
+  }
+
+  25% {
+    transform: rotate(5deg) translateX(2px) translateY(7px);
+  }
+
+  50% {
+    transform: rotate(-5deg) translateX(-2px) translateY(15px);
+  }
+
+  75% {
+    transform: rotate(5deg) translateX(2px) translateY(7px);
+  }
+}
+
+.wrapper {
+  display: inline-block;
+  transform-origin: bottom center;
+  animation: jumping 0.5s 0s;
+  animation-iteration-count: 0;
+
+  &.isActive {
+    animation-iteration-count: infinite;
+  }
+}
