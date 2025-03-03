@@ -8,11 +8,13 @@ import { Leaf } from './components';
 
 export const Page4 = () => {
   useAudio({
+    id: 'page-4-kids-laughing',
     src: '/assets/book_data/audios/sounds/kids-laughing.mp3',
     playOnLoad: true,
   });
 
   useBackground({
+    id: 'page-4-leaf',
     Component: <Leaf />,
   });
 

@@ -8,6 +8,7 @@ import { FlowersAnimation } from './components';
 
 export const Page1 = () => {
   useAudio({
+    id: 'page1-birds-brook-leafs',
     src: '/assets/book_data/audios/sounds/birds-brook-leafs.mp3',
     type: 'bg',
     playOnLoad: true,
@@ -15,7 +16,7 @@ export const Page1 = () => {
   });
 
   useBackground({
-    id: 'flowersAnimation',
+    id: 'page-1-flowers-animation',
     Component: <FlowersAnimation />,
   });
 

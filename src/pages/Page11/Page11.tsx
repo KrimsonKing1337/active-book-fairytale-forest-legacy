@@ -11,15 +11,18 @@ export const Page11 = () => {
   const [isJumpingActive, setIsJumpingActive] = useState(false);
 
   const audioInst1 = useAudio({
+    id: 'page-11-kids-laughing-2',
     src: '/assets/book_data/audios/sounds/kids-laughing-2.mp3',
   });
 
   const audioInst2 = useAudio({
+    id: 'page-11-running-on-grass-with-wind',
     src: '/assets/book_data/audios/sounds/running-on-grass-with-wind.mp3',
     loop: true,
   });
 
   const audioInst3 = useAudio({
+    id: 'page-11-rustling-grass-birds-singing',
     src: '/assets/book_data/audios/sounds/rustling-grass-birds-singing.mp3',
     loop: true,
   });

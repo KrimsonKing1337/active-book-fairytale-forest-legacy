@@ -8,6 +8,7 @@ import { Trigger } from './components';
 
 export const Page8 = () => {
   const audioInst = useAudio({
+    id: 'page-8-kids-laughing-short',
     src: '/assets/book_data/audios/sounds/kids-laughing-short.mp3',
   });
 

@@ -1,6 +1,6 @@
-import { useMemo } from 'react';
-
 import classNames from 'classnames';
+
+import { getRandomNumber } from 'activeBook-core/utils/getRandomNumber';
 
 import Icon from '/assets/book_data/images/question.svg';
 
@@ -10,15 +10,13 @@ export type QuestionsProps = {
   isActive: boolean;
 };
 
-export const Questions = ({ isActive }: QuestionsProps) => {
-  const fills = useMemo(() => {
-    return [
-      'green',
-      'blue',
-      'yellow',
-    ];
-  }, []);
+const fills = [
+  'green',
+  'blue',
+  'yellow',
+];
 
+export const Questions = ({ isActive }: QuestionsProps) => {
   const wrapperClassNames = classNames({
     [styles.wrapper]: true,
     [styles.isActive]: isActive,
@@ -31,9 +29,14 @@ export const Questions = ({ isActive }: QuestionsProps) => {
 
   return (
     <span className={wrapperClassNames}>
-      {fills.map((fillCur) => (
-        <Icon key={fillCur} style={{ fill: fillCur }} className={iconClassNames} />
-      ))}
+      {fills.map((fillCur) => {
+        const randomIndex = getRandomNumber(0, fills.length - 1);
+        const randomFill = fills[randomIndex];
+
+        return (
+          <Icon key={fillCur} style={{ fill: randomFill }} className={iconClassNames} />
+        );
+      })}
     </span>
   );
 };

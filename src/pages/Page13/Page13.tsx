@@ -11,10 +11,12 @@ export const Page13 = () => {
   const [isBookAnimationActive, setIsBookAnimationActive] = useState(false);
 
   const audioInst1 = useAudio({
+    id: 'page-13-applause',
     src: '/assets/book_data/audios/sounds/applause.mp3',
   });
 
   const audioInst2 = useAudio({
+    id: 'page-13-cow-moo',
     src: '/assets/book_data/audios/sounds/cow-moo.mp3',
   });
 

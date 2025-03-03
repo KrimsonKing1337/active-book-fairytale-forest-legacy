@@ -9,6 +9,7 @@ export const Page0 = () => {
   const { vibrationOn } = useVibration();
 
   const audioInst = useAudio({
+    id: 'page-0-start-reading',
     src: '/assets/book_data/audios/sounds/start-reading.mp3',
     fadeOutWhenUnload: false,
     onPlay() {
