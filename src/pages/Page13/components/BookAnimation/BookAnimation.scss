@@ -1,0 +1,21 @@
+.extraWrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  width: 100%;
+  overflow: hidden;
+  transition: height 0.3s 0s ease-in-out;
+
+  &.isActive {
+    height: 140px;
+  }
+}
+
+.wrapper {
+  position: absolute;
+  z-index: 1;
+  top: -120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
