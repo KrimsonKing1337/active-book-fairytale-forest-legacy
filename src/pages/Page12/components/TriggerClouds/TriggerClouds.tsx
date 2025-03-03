@@ -16,7 +16,7 @@ export const TriggerClouds = () => {
   const Component = isActive ? <Clouds /> : null;
 
   useBackground({
-    id: 'clouds',
+    id: 'page-12-trigger-clouds-clouds',
     Component,
   });
 

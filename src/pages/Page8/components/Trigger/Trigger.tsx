@@ -16,7 +16,7 @@ export const Trigger = () => {
   const Component = show ? <Emojis /> : null;
 
   useBackground({
-    id: 'emojis',
+    id: 'page-8-trigger-emojis',
     Component,
   });
 
