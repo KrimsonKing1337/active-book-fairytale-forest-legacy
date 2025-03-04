@@ -11,9 +11,9 @@ import { Emojis } from '../Emojis';
 let timer: Timer = null;
 
 export const Trigger = () => {
-  const [show, setShow] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
-  const Component = show ? <Emojis /> : null;
+  const Component = isActive ? <Emojis /> : null;
 
   useBackground({
     id: 'page-8-trigger-emojis',
@@ -29,14 +29,14 @@ export const Trigger = () => {
   }, []);
 
   const clickHandler = () => {
-    setShow(true);
+    setIsActive(true);
 
     if (timer) {
       clearTimeout(timer);
     }
 
     timer = setTimeout(() => {
-      setShow(false);
+      setIsActive(false);
       timer = null;
     }, 5000);
   };

@@ -1,0 +1,45 @@
+.wrapper {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  overflow: hidden;
+  transition: padding 1s 0s ease-in-out;
+
+  &.isActive {
+    padding: 0 100px;
+  }
+}
+
+.bunny {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: -110px;
+  height: 100px;
+  width: 100px;
+  transform: rotate(360deg);
+  transition: all 1s 0s ease-in-out;
+
+  &.isActive {
+    transform: rotate(0);
+    left: -10px;
+  }
+}
+
+.fox {
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  right: -110px;
+  height: 100px;
+  width: 100px;
+  transform: rotate(360deg);
+  transition: all 1s 0s ease-in-out;
+
+  &.isActive {
+    transform: rotate(0);
+    right: -10px;
+  }
+}
