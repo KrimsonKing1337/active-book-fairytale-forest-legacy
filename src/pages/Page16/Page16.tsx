@@ -10,12 +10,14 @@ import { Action } from 'activeBook-core/components/ColoredTextTrigger';
 
 import { Timer } from 'activeBook-core/@types';
 
-import { Fox } from './components';
+import { Fox, Cat, FirBranchesWrapper } from './components';
 
 let timer: Timer = null;
 
 export const Page16 = () => {
   const [isFoxActive, setIsFoxActive] = useState(false);
+  const [isCatActive, setIsCatActive] = useState(false);
+  const [isFirBranchesWrapperActive, setIsFirBranchesWrapperActive] = useState(false);
 
   const audioInst1 = useAudio({
     id: 'page-16-fireplace',
@@ -51,6 +53,22 @@ export const Page16 = () => {
     }, 2500);
   };
 
+  const segment2EnterHandler = () => {
+    setIsFirBranchesWrapperActive(true);
+  };
+
+  const segment2ExitHandler = () => {
+    setIsFirBranchesWrapperActive(false);
+  };
+
+  const segment3EnterHandler = () => {
+    setIsCatActive(true);
+  };
+
+  const segment3ExitHandler = () => {
+    setIsCatActive(false);
+  };
+
   return (
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
@@ -62,6 +80,30 @@ export const Page16 = () => {
           </Action>
           поставив пирог на огонь.
           <Fox isActive={isFoxActive} />
+        </p>
+      </Segment>
+
+      <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
+        <FirBranchesWrapper isActive={isFirBranchesWrapperActive}>
+          <p>
+            Клара бывала у Ярки в гостях не раз и знала, как хорошо у той дома. Лиса обустроила свою нору с заботой и
+            вкусом. Вход украшали маленькие еловые веточки, а внутри было тепло и уютно благодаря мягким коврам из мха
+            и листвы, разложенных по полу.
+          </p>
+
+          <p>
+            Когда пирог был готов, Лиса вышла из норы с причесанной шерстью и в красивом шарфе, и сняла пирог с печи.
+          </p>
+        </FirBranchesWrapper>
+      </Segment>
+
+      <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
+        <p>
+          — Что ж, наш Прыг-Прыг опять что-то великое придумал, — проворковала Ярка, лениво потирая лапку. — Пусть его.
+          А я пойду к нашим котам на чай напрошусь.
+          <Cat isActive={isCatActive} />
+          Самый хитрый зверь — это тот, кто вовремя напомнит о чае. А если они меня не пригласят, не получат
+          свой любимый пирог, ха-ха!
         </p>
       </Segment>
     </PageWrapper>

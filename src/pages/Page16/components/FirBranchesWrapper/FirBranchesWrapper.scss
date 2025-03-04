@@ -1,0 +1,63 @@
+.wrapper {
+  position: relative;
+  padding: 0;
+  overflow: hidden;
+  transition: padding 0.5s 0s ease-in-out;
+
+  &.isActive {
+    padding: 50px;
+  }
+}
+
+.img {
+  position: absolute;
+  z-index: -1;
+  transition: transform 0.5s 0s ease-in-out;
+}
+
+.img1 {
+  top: -10px;
+  left: -50px;
+  width: 180px;
+  transform: translateY(-130%) rotate(270deg);
+
+  &.isActive {
+    transform: translateY(0) rotate(270deg);
+  }
+}
+
+.img2 {
+  top: -20px;
+  right: -40px;
+
+  width: 140px;
+  transform: translateY(-100%) rotate(90deg);
+
+  &.isActive {
+    transform: translateY(0) rotate(90deg);
+  }
+}
+
+.img3 {
+  bottom: -30px;
+  left: -10px;
+
+  width: 100px;
+  transform: translateY(100%);
+
+  &.isActive {
+    transform: translateY(0);
+  }
+}
+
+.img4 {
+  bottom: -50px;
+  right: -40px;
+
+  width: 150px;
+  transform: translateY(100%) rotate(270deg);
+
+  &.isActive {
+    transform: translateY(0) rotate(270deg);
+  }
+}

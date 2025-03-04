@@ -1,0 +1,48 @@
+.wrapper {
+  position: relative;
+  display: block;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  width: 100%;
+  transition: margin 0.5s 0s ease-in-out, height 0.5s 0s ease-in-out;
+
+  &.isActive {
+    margin: 20px 0;
+    height: 120px;
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    left: -150px;
+  }
+
+  100% {
+    left: calc(100% + 50px);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.img {
+  position: absolute;
+  left: -150px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 100px;
+  width: 100px;
+  animation: rotate 1s linear infinite, leftToRight 5s linear infinite;
+
+  &.isReversed {
+    animation-direction: reverse;
+  }
+}

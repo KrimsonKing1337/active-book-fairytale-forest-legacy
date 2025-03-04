@@ -70,6 +70,7 @@ module.exports = (env = {}, argv) => {
         {
           loader: 'css-loader',
           options: {
+            url: false,
             modules: {
               localIdentName: '[name]__[local]__[hash:base64:5]',
               auto: (resourcePath) => !resourcePath.includes('react-toastify'),
