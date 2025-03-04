@@ -1,0 +1,78 @@
+.wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: height 0.5s 0s ease-in-out, margin 0.5s 0s ease-in-out;
+
+  &.isActive {
+    height: 100px;
+    margin: 20px 0;
+  }
+}
+
+@keyframes leftToRight {
+  0% {
+    left: -300px;
+  }
+
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes jumping {
+  0% {
+    transform: scale(1) translateY(0) rotate(0deg);
+  }
+
+  12.5% {
+    transform: scale(1.1) translateY(2px) rotate(-2deg);
+  }
+
+  25% {
+    transform: scale(1) translateY(-2px) rotate(2deg);
+  }
+
+  37.5% {
+    transform: scale(0.9) translateY(3px) rotate(-3deg);
+  }
+
+  50% {
+    transform: scale(1) translateY(-3px) rotate(3deg);
+  }
+
+  62.5% {
+    transform: scale(0.9) translateY(5px) rotate(-5deg);
+  }
+
+  75% {
+    transform: scale(1) translateY(-5px) rotate(5deg);
+  }
+
+  87.5% {
+    transform: scale(1.1) translateY(3px) rotate(-3deg);
+  }
+
+  100% {
+    transform: scale(1) translateY(-2px) rotate(2deg);
+  }
+}
+
+.icon {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: -300px;
+  margin: auto;
+  fill: orange;
+  width: 300px;
+  height: 100%;
+  transform: scale(1) translateY(0) rotate(0deg);
+  transform-origin: 0 0;
+  animation: leftToRight 2s 0.5s linear 1, jumping 2s 0.5s linear 1;
+}
