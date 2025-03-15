@@ -13,7 +13,6 @@ import { BunnyAndFoxFacesWrapper, Feather } from './components';
 export const Page18 = () => {
   const [isFacesActive, setIsFacesActive] = useState(false);
 
-  // todo: запускается заново при смене isFacesActive - поправить
   useBackground({
     id: 'page-18-feather',
     Component: <Feather />,

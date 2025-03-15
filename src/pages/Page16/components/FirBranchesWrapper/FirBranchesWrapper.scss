@@ -2,7 +2,7 @@
   position: relative;
   padding: 0;
   overflow: hidden;
-  transition: padding 0.5s 0s ease-in-out;
+  transition: padding 0.3s 0s ease-in-out;
 
   &.isActive {
     padding: 50px;

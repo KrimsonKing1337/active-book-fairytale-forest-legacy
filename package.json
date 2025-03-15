@@ -117,7 +117,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@lottiefiles/dotlottie-react": "^0.13.0",
-    "activeBook-core": "file:../../../activeBook-react-core/tgz/activebook-react-core-0.0.200.tgz",
+    "activeBook-core": "file:../../../activeBook-react-core/tgz/activebook-react-core-0.0.210.tgz",
     "circletype": "^2.3.0",
     "encrypt-storage": "^2.12.16",
     "hammerjs": "^2.0.8",
