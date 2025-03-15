@@ -19,7 +19,8 @@ export const BookAnimation = ({ isActive }: BookAnimationProps) => {
       <span className={styles.wrapper}>
         <DotLottieReact
           src="/assets/book_data/animations/book.lottie"
-          style={{ height: '400px', width: '100%' }}
+          width={448}
+          height={400}
           loop
           autoplay
         />

@@ -4,7 +4,9 @@ export const TreasureMap = () => {
   return (
     <DotLottieReact
       src="/assets/book_data/animations/treasure-map.lottie"
-      style={{ height: '300px', width: '300px', margin: '0 auto' }}
+      height={300}
+      width={300}
+      style={{ margin: '0 auto' }}
       loop
       autoplay
     />
