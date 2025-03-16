@@ -10,6 +10,39 @@ export const rangeEffects: RangeEffects = [
       to: 4,
     }],
     options: {
+      videos: [
+        {
+          src: '/assets/book_data/2.mp4',
+          muted: true,
+          style: {
+            ...getPositionByPreset('center'),
+            height: '100px',
+            width: '100%',
+          },
+        },
+        {
+          src: '/assets/book_data/1.mp4',
+          muted: false,
+          relativeVolume: 10,
+          style: {
+            ...getPositionByPreset('bottom'),
+            height: '100px',
+            width: '100%',
+            opacity: 0.5,
+          },
+        },
+        {
+          src: '/assets/book_data/1.mp4',
+          muted: false,
+          relativeVolume: 10,
+          style: {
+            ...getPositionByPreset('top'),
+            height: '100px',
+            width: '100%',
+            opacity: 0.5,
+          },
+        },
+      ],
       images: [
         {
           src: '/assets/book_data/2.jpg',

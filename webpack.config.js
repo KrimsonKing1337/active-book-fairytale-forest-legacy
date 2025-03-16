@@ -38,6 +38,7 @@ module.exports = (env = {}, argv) => {
       patterns: [
         { from: 'assets', to: 'assets' },
         { from: path.resolve(activeBookCorePath, './assets'), to: 'assets' },
+        { from: path.resolve(activeBookCorePath, './vendors'), to: 'vendors' },
       ],
     }),
   ];

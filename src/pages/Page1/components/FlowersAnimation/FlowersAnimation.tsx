@@ -1,4 +1,4 @@
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { DotLottieReact } from 'activeBook-core/components';
 
 import styles from './FlowersAnimation.scss';
 
