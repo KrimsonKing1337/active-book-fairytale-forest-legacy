@@ -39,9 +39,7 @@ export const Trigger = () => {
         клад.
       </Action>
 
-      {isTreasureMapActive && (
-        <TreasureMap />
-      )}
+      <TreasureMap isActive={isTreasureMapActive} />
     </>
   );
 };
