@@ -1,4 +1,4 @@
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { DotLottieReactWrapper, DotLottieReact } from 'activeBook-core/components';
 
 import classNames from 'classnames';
 
@@ -16,7 +16,7 @@ export const BookAnimation = ({ isActive }: BookAnimationProps) => {
 
   return (
     <span className={extraWrapperClassnames}>
-      <span className={styles.wrapper}>
+      <DotLottieReactWrapper className={styles.wrapper}>
         <DotLottieReact
           src="/assets/book_data/animations/book.lottie"
           width={448}
@@ -24,7 +24,7 @@ export const BookAnimation = ({ isActive }: BookAnimationProps) => {
           loop
           autoplay
         />
-      </span>
+      </DotLottieReactWrapper>
     </span>
   );
 };

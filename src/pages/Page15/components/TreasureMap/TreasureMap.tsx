@@ -1,14 +1,17 @@
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { DotLottieReactWrapper, DotLottieReact } from 'activeBook-core/components';
+
+import styles from './TreasureMap.scss';
 
 export const TreasureMap = () => {
   return (
-    <DotLottieReact
-      src="/assets/book_data/animations/treasure-map.lottie"
-      height={300}
-      width={300}
-      style={{ margin: '0 auto' }}
-      loop
-      autoplay
-    />
+    <DotLottieReactWrapper className={styles.wrapper}>
+      <DotLottieReact
+        src="/assets/book_data/animations/treasure-map.lottie"
+        height={300}
+        width={300}
+        loop
+        autoplay
+      />
+    </DotLottieReactWrapper>
   );
 };

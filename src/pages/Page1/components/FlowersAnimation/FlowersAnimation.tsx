@@ -1,10 +1,10 @@
-import { DotLottieReact } from 'activeBook-core/components';
+import { DotLottieReactWrapper, DotLottieReact } from 'activeBook-core/components';
 
 import styles from './FlowersAnimation.scss';
 
 export const FlowersAnimation = () => {
   return (
-    <div>
+    <DotLottieReactWrapper amount={6}>
       <div className={styles.flower1}>
         <DotLottieReact
           src="/assets/book_data/animations/flower-1.lottie"
@@ -64,6 +64,6 @@ export const FlowersAnimation = () => {
           autoplay
         />
       </div>
-    </div>
+    </DotLottieReactWrapper>
   );
 };
