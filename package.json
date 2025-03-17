@@ -13,7 +13,8 @@
     "test": "jest",
     "lint-staged": "lint-staged",
     "pre-commit": "lint-staged",
-    "addOrRemovePages": "node ./scripts/addOrRemovePages.js"
+    "addOrRemovePages": "node ./scripts/addOrRemovePages.js",
+    "freePort": "node ./scripts/freePort.js"
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --fix",
