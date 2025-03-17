@@ -12,6 +12,7 @@ export const rangeEffects: RangeEffects = [
     options: {
       videos: [
         {
+          id: '1',
           src: '/assets/book_data/2.mp4',
           muted: true,
           style: {
@@ -21,6 +22,7 @@ export const rangeEffects: RangeEffects = [
           },
         },
         {
+          id: '2',
           src: '/assets/book_data/1.mp4',
           muted: false,
           relativeVolume: 10,
@@ -32,6 +34,7 @@ export const rangeEffects: RangeEffects = [
           },
         },
         {
+          id: '3',
           src: '/assets/book_data/1.mp4',
           muted: false,
           relativeVolume: 10,
