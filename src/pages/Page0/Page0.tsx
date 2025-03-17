@@ -22,24 +22,10 @@ export const Page0 = () => {
     await audioInst?.play();
   };
 
-  const Footer = () => {
-    return (
-      <>
-        <br />
-        <br />
-
-        <p>
-          Для перехода вперёд/назад по страницам вы можете использовать свайпы влево/вправо
-        </p>
-      </>
-    );
-  };
-
   return (
     <Page0Default
       header="Сказочный лес и его обитатели"
       subHeader="Небольшой сборник сказок для детей и их родителей"
-      Footer={Footer}
       goCallback={goCallback}
     />
   );
