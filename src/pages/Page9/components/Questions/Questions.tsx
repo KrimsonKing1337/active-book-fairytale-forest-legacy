@@ -1,8 +1,12 @@
+import { useEffect, useState } from 'react';
+
 import classNames from 'classnames';
 
 import { getRandomNumber } from 'activeBook-core/utils/getRandomNumber';
 
 import Icon from '/assets/book_data/images/question.svg';
+
+import { nanoid } from 'nanoid';
 
 import styles from './Question.scss';
 
@@ -17,24 +21,34 @@ const fills = [
 ];
 
 export const Questions = ({ isActive }: QuestionsProps) => {
+  const [fillItems, setFillItems] = useState<string[]>([]);
+
+  useEffect(() => {
+    if (!isActive) {
+      return;
+    }
+
+    const newFillItemsValue = fills.map(() => {
+      const randomIndex = getRandomNumber(0, fills.length - 1);
+
+      return fills[randomIndex];
+    });
+
+    setFillItems(newFillItemsValue);
+  }, [isActive]);
+
   const wrapperClassNames = classNames({
     [styles.wrapper]: true,
     [styles.isActive]: isActive,
   });
 
-  const iconClassNames = classNames({
-    [styles.icon]: true,
-    [styles.isActive]: isActive,
-  });
-
   return (
     <span className={wrapperClassNames}>
-      {fills.map((fillCur) => {
-        const randomIndex = getRandomNumber(0, fills.length - 1);
-        const randomFill = fills[randomIndex];
+      {fillItems.map((fillItemCur) => {
+        const uuid = nanoid();
 
         return (
-          <Icon key={fillCur} style={{ fill: randomFill }} className={iconClassNames} />
+          <Icon key={uuid} style={{ fill: fillItemCur }} className={styles.icon} />
         );
       })}
     </span>
