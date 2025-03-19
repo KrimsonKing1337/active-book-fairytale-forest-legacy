@@ -49,22 +49,18 @@ export const rangeEffects: RangeEffects = [
       images: [
         {
           src: '/assets/book_data/2.jpg',
-          wrapperStyle: {
-            zIndex: '-3',
-          },
           style: {
             ...getPositionByPreset('bottom'),
+            zIndex: '-3',
             height: '100px',
             width: '100%',
           },
         },
         {
           src: '/assets/book_data/2.jpg',
-          wrapperStyle: {
-            zIndex: '-3',
-          },
           style: {
             ...getPositionByPreset('top'),
+            zIndex: '-3',
             height: '100px',
             width: '100%',
           },
