@@ -1,8 +1,8 @@
 import { useEffect, useRef } from 'react';
 
-import { Img } from 'activeBook-core/components';
-
 import classNames from 'classnames';
+
+import { Img } from 'activeBook-core/components';
 
 import { initCircleType } from './utils';
 
