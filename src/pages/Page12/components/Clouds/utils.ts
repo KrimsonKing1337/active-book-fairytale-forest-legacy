@@ -1,8 +1,8 @@
 export const images = [
-  '/assets/book_data/images/cloud1.svg',
-  '/assets/book_data/images/cloud2.svg',
-  '/assets/book_data/images/cloud3.svg',
-  '/assets/book_data/images/cloud4.svg',
+  '/assets/book_data/images/clouds/cloud-1.svg',
+  '/assets/book_data/images/clouds/cloud-2.svg',
+  '/assets/book_data/images/clouds/cloud-3.svg',
+  '/assets/book_data/images/clouds/cloud-4.svg',
 ];
 
 export const getRandomImage = () => {
