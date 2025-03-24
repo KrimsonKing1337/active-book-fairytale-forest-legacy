@@ -5,10 +5,17 @@ import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 import { Segment } from 'activeBook-core/components';
 
-import { BookAnimation } from './components';
+import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { BookAnimation, Books } from './components';
 
 export const Page13 = () => {
-  const [isBookAnimationActive, setIsBookAnimationActive] = useState(false);
+  const [isBooksActive, setIsBooksActive] = useState(false);
+
+  useBackground({
+    id: 'page13-books',
+    Component: isBooksActive ? <Books /> : null,
+  });
 
   const audioInst1 = useAudio({
     id: 'page-13-applause',
@@ -37,11 +44,11 @@ export const Page13 = () => {
   };
 
   const segment3EnterHandler = () => {
-    setIsBookAnimationActive(true);
+    setIsBooksActive(true);
   };
 
   const segment3ExitHandler = () => {
-    setIsBookAnimationActive(false);
+    setIsBooksActive(false);
   };
 
   return (
@@ -68,7 +75,7 @@ export const Page13 = () => {
           — Конечно, хватит! А если не хватит, я просто напишу вторую книгу.
           И третью. И четвёртую! — решительно сказал Зайчонок.
 
-          <BookAnimation isActive={isBookAnimationActive} />
+          <BookAnimation isActive={isBooksActive} />
         </p>
       </Segment>
     </PageWrapper>

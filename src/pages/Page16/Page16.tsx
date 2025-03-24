@@ -8,16 +8,19 @@ import { Segment } from 'activeBook-core/components';
 
 import { Action } from 'activeBook-core/components/ColoredTextTrigger';
 
-import { Timer } from 'activeBook-core/@types';
+import type { Timer } from 'activeBook-core/@types';
 
-import { Fox, Cat, FirBranchesWrapper } from './components';
+import { Fox, FirBranchesWrapper, Tea } from './components';
+import { useFoxVibration } from './hooks';
 
 let timer: Timer = null;
 
 export const Page16 = () => {
   const [isFoxActive, setIsFoxActive] = useState(false);
-  const [isCatActive, setIsCatActive] = useState(false);
-  const [isFirBranchesWrapperActive, setIsFirBranchesWrapperActive] = useState(false);
+  const [isFirBranchesActive, setIsFirBranchesActive] = useState(false);
+  const [isTeaActive, setIsTeaActive] = useState(false);
+
+  const { vibrate } = useFoxVibration();
 
   const audioInst1 = useAudio({
     id: 'page-16-fireplace',
@@ -29,6 +32,7 @@ export const Page16 = () => {
     id: 'page-16-running',
     src: '/assets/book_data/audios/sounds/running.mp3',
     delay: 500,
+    relativeVolume: 5,
   });
 
   const segment1EnterHandler = () => {
@@ -39,13 +43,14 @@ export const Page16 = () => {
     audioInst1?.stop();
   };
 
-  const actionClickHandler = () => {
+  const actionClickHandler = async () => {
     if (timer) {
       return;
     }
 
     setIsFoxActive(true);
     audioInst2?.play();
+    vibrate();
 
     timer = setTimeout(() => {
       setIsFoxActive(false);
@@ -54,19 +59,19 @@ export const Page16 = () => {
   };
 
   const segment2EnterHandler = () => {
-    setIsFirBranchesWrapperActive(true);
+    setIsFirBranchesActive(true);
   };
 
   const segment2ExitHandler = () => {
-    setIsFirBranchesWrapperActive(false);
+    setIsFirBranchesActive(false);
   };
 
   const segment3EnterHandler = () => {
-    setIsCatActive(true);
+    setIsTeaActive(true);
   };
 
   const segment3ExitHandler = () => {
-    setIsCatActive(false);
+    setIsTeaActive(false);
   };
 
   return (
@@ -84,7 +89,7 @@ export const Page16 = () => {
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <FirBranchesWrapper isActive={isFirBranchesWrapperActive}>
+        <FirBranchesWrapper isActive={isFirBranchesActive}>
           <p>
             Клара бывала у Ярки в гостях не раз и знала, как хорошо у той дома. Лиса обустроила свою нору с заботой и
             вкусом. Вход украшали маленькие еловые веточки, а внутри было тепло и уютно благодаря мягким коврам из мха
@@ -101,7 +106,7 @@ export const Page16 = () => {
         <p>
           — Что ж, наш Прыг-Прыг опять что-то великое придумал, — проворковала Ярка, лениво потирая лапку. — Пусть его.
           А я пойду к нашим котам на чай напрошусь.
-          <Cat isActive={isCatActive} />
+          <Tea isActive={isTeaActive} />
           Самый хитрый зверь — это тот, кто вовремя напомнит о чае. А если они меня не пригласят, не получат
           свой любимый пирог, ха-ха!
         </p>

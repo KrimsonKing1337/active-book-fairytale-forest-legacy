@@ -1,0 +1,71 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  transition: height 0.5s 0s ease-in-out;
+
+  &.isActive {
+    height: 140px;
+  }
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: translateX(-5%) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateX(5%) rotate(5deg);
+  }
+}
+
+.teaIcon {
+  width: 60px;
+  height: 60px;
+  animation: swing 3s linear infinite;
+  transform-origin: center;
+}
+
+.teapotIcon {
+  width: 60px;
+  height: 65px;
+  fill: pink;
+  animation: swing 3s linear infinite;
+  transform-origin: center;
+}
+
+.teaIconWrapper {
+  position: relative;
+}
+
+
+@keyframes smoke {
+  0% {
+    top: 0;
+    opacity: 1;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+    top: -100%;
+  }
+}
+
+.smoke {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 20px;
+  height: 20px;
+  animation: smoke 3s linear infinite, swing 1s linear infinite;
+}

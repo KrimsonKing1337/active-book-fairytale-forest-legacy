@@ -1,9 +1,9 @@
-import { SunBeam, Blinks } from '../';
+import { Sun, Blinks } from '../';
 
 export const BackgroundComponent = () => {
   return (
     <div>
-      <SunBeam />
+      <Sun />
       <Blinks />
     </div>
   );

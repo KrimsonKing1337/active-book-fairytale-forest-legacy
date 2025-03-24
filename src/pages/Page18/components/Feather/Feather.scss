@@ -14,7 +14,7 @@
   }
 
   100% {
-    top: calc(100% - 300px);
+    top: calc(100% - 250px);
     left: calc(100% - 200px);
   }
 }
@@ -31,11 +31,11 @@
 
 @keyframes sway {
   0%, 100% {
-    transform: translateX(0) scale(1, 1);
+    transform: scale(1, 1);
   }
 
   50% {
-    transform: translateX(25px) scale(0.75, 0.75);
+    transform: scale(0.75, 0.75);
   }
 }
 
@@ -53,5 +53,5 @@
 .img {
   height: 100%;
   width: 100%;
-  animation: sway1 2.5s 2 ease-in-out forwards;
+  animation: sway 2.5s 2 ease-in-out forwards;
 }

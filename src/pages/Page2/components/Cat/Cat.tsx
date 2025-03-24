@@ -6,13 +6,13 @@ import classNames from 'classnames';
 
 import { initCircleType } from './utils';
 
-import styles from './Hedgehog.scss';
+import styles from './Cat.scss';
 
 export type HedgehogProps = {
   isActive: boolean;
 };
 
-export const Hedgehog = ({ isActive }: HedgehogProps) => {
+export const Cat = ({ isActive }: HedgehogProps) => {
   const elementRef1 = useRef<HTMLSpanElement>(null);
   const elementRef2 = useRef<HTMLSpanElement>(null);
 
@@ -51,7 +51,7 @@ export const Hedgehog = ({ isActive }: HedgehogProps) => {
         Ёжик Фыр-Фыр ждёт нас.&nbsp;
       </span>
 
-      <Img src="/assets/book_data/images/hedgehog.svg" className={imgClassNames} />
+      <Img src="/assets/book_data/images/cat2.svg" className={imgClassNames} />
 
       <span ref={elementRef2} className={styles.curve}>
         Он вчера сказал, что

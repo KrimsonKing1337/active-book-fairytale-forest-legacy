@@ -1,0 +1,62 @@
+.wrapper {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes up {
+  0% {
+    bottom: -120px;
+  }
+
+  100% {
+    bottom: calc(100% + 120px);
+  }
+}
+
+@keyframes swing {
+  0%, 100% {
+    transform: translateX(-5%) rotate(-5deg);
+  }
+
+  50% {
+    transform: translateX(5%) rotate(5deg);
+  }
+}
+
+.balloon {
+  position: absolute;
+  z-index: 1;
+  bottom: -120px;
+  width: 80px;
+  height: 120px;
+  transform-origin: center;
+}
+
+.balloon:nth-child(1) {
+  left: 0;
+  animation: up 10s 0s linear 1 forwards, swing 1s linear infinite;
+}
+
+.balloon:nth-child(2) {
+  left: 20%;
+  animation: up 10s 0.5s linear 1 forwards, swing 1s linear infinite;
+}
+
+.balloon:nth-child(3) {
+  left: 40%;
+  animation: up 10s 1s linear 1 forwards, swing 1s linear infinite;
+}
+
+.balloon:nth-child(4) {
+  left: 60%;
+  animation: up 10s 1.5s linear 1 forwards, swing 1s linear infinite;
+}
+
+.balloon:nth-child(5) {
+  left: calc(100% - 80px);
+  animation: up 10s 2s linear 1 forwards, swing 1s linear infinite;
+}

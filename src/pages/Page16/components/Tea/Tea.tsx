@@ -1,0 +1,62 @@
+import { useEffect, useState } from 'react';
+
+import classNames from 'classnames';
+
+import TeaCupIcon from '/assets/book_data/images/tea-cup.svg';
+import TeapotIcon from '/assets/book_data/images/tea-teapot.svg';
+import SmokeIcon from '/assets/book_data/images/smoke.svg';
+
+import { getShuffledFills } from './utils';
+
+import styles from './Tea.scss';
+
+export type TeaProps = {
+  isActive: boolean;
+};
+
+export const Tea = ({ isActive }: TeaProps) => {
+  const fillsDefault = getShuffledFills();
+
+  const [fills, setFills] = useState<string[]>(fillsDefault);
+
+  useEffect(() => {
+    if (!isActive) {
+      return;
+    }
+
+    const newFills = getShuffledFills();
+
+    setFills(newFills);
+  }, [isActive]);
+
+  const wrapperClassNames = classNames({
+    [styles.wrapper]: true,
+    [styles.isActive]: isActive,
+  });
+
+  return (
+    <div className={wrapperClassNames}>
+      <div className={styles.teaIconWrapper}>
+        <SmokeIcon className={styles.smoke} />
+        <TeaCupIcon className={styles.teaIcon} style={{ fill: fills[0] }} />
+      </div>
+
+      <div className={styles.teaIconWrapper}>
+        <SmokeIcon className={styles.smoke} />
+        <TeaCupIcon className={styles.teaIcon} style={{ fill: fills[1] }} />
+      </div>
+
+      <TeapotIcon className={styles.teapotIcon} style={{ fill: fills[2] }} />
+
+      <div className={styles.teaIconWrapper}>
+        <SmokeIcon className={styles.smoke} />
+        <TeaCupIcon className={styles.teaIcon} style={{ fill: fills[3] }} />
+      </div>
+
+      <div className={styles.teaIconWrapper}>
+        <SmokeIcon className={styles.smoke} />
+        <TeaCupIcon className={styles.teaIcon} style={{ fill: fills[4] }} />
+      </div>
+    </div>
+  );
+};

@@ -1,6 +1,6 @@
 import type { Config } from 'activeBook-core/@types';
 
 export const config: Config = {
-  pages: 18,
+  pages: 19,
   defaultTheme: 'orange',
 };

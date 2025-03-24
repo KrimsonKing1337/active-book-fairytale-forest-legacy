@@ -1,0 +1,45 @@
+@keyframes rainbow {
+  0% {
+    box-shadow: inset 1px 1px 100px red;
+  }
+
+  14% {
+    box-shadow: inset 1px 1px 100px orange;
+  }
+
+  28% {
+    box-shadow: inset 1px 1px 100px yellow;
+  }
+
+  42% {
+    box-shadow: inset 1px 1px 100px green;
+  }
+
+  57% {
+    box-shadow: inset 1px 1px 100px blue;
+  }
+
+  71% {
+    box-shadow: inset 1px 1px 100px indigo;
+  }
+
+  85% {
+    box-shadow: inset 1px 1px 100px violet;
+  }
+
+  100% {
+    box-shadow: inset 1px 1px 100px red;
+  }
+}
+
+.wrapper {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset 1px 1px 100px red;
+  animation: rainbow 10s linear infinite;
+}

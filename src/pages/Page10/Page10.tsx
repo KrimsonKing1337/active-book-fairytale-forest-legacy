@@ -10,7 +10,7 @@ import { Trigger } from './components';
 export const Page10 = () => {
   const audioInst1 = useAudio({
     id: 'page-10-kids-laughing-2',
-    src: '/assets/book_data/audios/sounds/kids-laughing-2.mp3',
+    src: '/assets/book_data/audios/sounds/kid-laughing.mp3',
   });
 
   const audioInst2 = useAudio({

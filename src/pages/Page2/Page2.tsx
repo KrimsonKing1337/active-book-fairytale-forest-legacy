@@ -5,7 +5,7 @@ import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 import { Segment } from 'activeBook-core/components';
 
-import { Hedgehog } from './components';
+import { Cat } from './components';
 
 export const Page2 = () => {
   const [isHedgehogActive, setIsHedgehogActive] = useState(false);
@@ -68,7 +68,7 @@ export const Page2 = () => {
           <br />
           <br />
           — Доброе утро, соня! Пора вставать,
-          <Hedgehog isActive={isHedgehogActive} />
+          <Cat isActive={isHedgehogActive} />
           приготовил что-то интересное и будет ждать нас утром у ручья!
         </p>
       </Segment>

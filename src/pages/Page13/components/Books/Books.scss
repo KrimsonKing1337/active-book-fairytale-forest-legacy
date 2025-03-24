@@ -1,0 +1,264 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+@keyframes fromLeftToCenter {
+  0% {
+    left: -120px;
+  }
+
+  100% {
+    left: calc(50% - 60px);
+  }
+}
+
+@keyframes fromRightToCenter {
+  0% {
+    right: -120px;
+  }
+
+  100% {
+    right: calc(50% - 60px);
+  }
+}
+
+@keyframes fall1 {
+  0% {
+    top: -360px;
+  }
+
+  100% {
+    top: calc(100% - 66px);
+  }
+}
+
+@keyframes fall2 {
+  0% {
+    top: calc(10% - 360px);
+  }
+
+  100% {
+    top: calc(100% - 66px);
+  }
+}
+
+@keyframes fall3 {
+  0% {
+    top: calc(20% - 360px);
+  }
+
+  100% {
+    top: calc(100% - 66px);
+  }
+}
+
+@keyframes fall4 {
+  0% {
+    top: calc(30% - 360px);
+  }
+
+  100% {
+    top: calc(100% - 66px);
+  }
+}
+
+@keyframes fall5 {
+  0% {
+    top: calc(40% - 360px);
+  }
+
+  100% {
+    top: calc(100% - 66px);
+  }
+}
+
+@keyframes fall6 {
+  0% {
+    top: calc(5% - 360px);
+  }
+
+  100% {
+    top: calc(100% - 66px);
+  }
+}
+
+@keyframes fall7 {
+  0% {
+    top: calc(15% - 360px);
+  }
+
+  100% {
+    top: calc(100% - 66px);
+  }
+}
+
+@keyframes fall8 {
+  0% {
+    top: calc(25% - 360px);
+  }
+
+  100% {
+    top: calc(100% - 66px);
+  }
+}
+
+@keyframes fall9 {
+  0% {
+    top: calc(35% - 360px);
+  }
+
+  100% {
+    top: calc(100% - 66px);
+  }
+}
+
+@keyframes bouncing {
+  0% {
+    transform: translateY(0) translateX(0);
+  }
+
+  10% {
+    transform: translateY(-300%) translateX(100%);
+  }
+
+  20% {
+    transform: translateY(0) translateX(200%);
+  }
+
+  30% {
+    transform: translateY(-250%) translateX(150%);
+  }
+
+  40% {
+    transform: translateY(0) translateX(100%);
+  }
+
+  50% {
+    transform: translateY(-200%) translateX(0%);
+  }
+
+  60% {
+    transform: translateY(0) translateX(-100%);
+  }
+
+  70% {
+    transform: translateY(-150%) translateX(-150%);
+  }
+
+  80% {
+    transform: translateY(0) translateX(-200%);
+  }
+
+  90% {
+    transform: translateY(-100%) translateX(-100%);
+  }
+
+  100% {
+    transform: translateY(120px) translateX(0);
+  }
+}
+
+.bookWrapper {
+  position: absolute;
+  z-index: 1;
+  width: 60px;
+  height: 60px;
+}
+
+.book {
+  width: 100%;
+  height: 100%;
+}
+
+.bookWrapper:nth-child(1) {
+  top: -360px;
+  left: -120px;
+  animation: fromLeftToCenter 4s 0s linear 1 forwards, fall1 4s 0s linear 1 forwards;
+
+  .book {
+    animation: bouncing 4s 4s linear 1 forwards;
+  }
+}
+
+.bookWrapper:nth-child(2) {
+  top: calc(10% - 360px);
+  left: -120px;
+  animation: fromLeftToCenter 4s 1s linear 1 forwards, fall2 4s 1s linear 1 forwards;
+
+  .book {
+    animation: bouncing 4s 5s linear 1 forwards;
+  }
+}
+
+.bookWrapper:nth-child(3) {
+  top: calc(20% - 360px);
+  left: -120px;
+  animation: fromLeftToCenter 4s 1.5s linear 1 forwards, fall3 4s 1.5s linear 1 forwards;
+
+  .book {
+    animation: bouncing 4s 5.5s linear 1 forwards;
+  }
+}
+
+.bookWrapper:nth-child(4) {
+  top: calc(30% - 360px);
+  left: -120px;
+  animation: fromLeftToCenter 4s 2s linear 1 forwards, fall4 4s 2s linear 1 forwards;
+
+  .book {
+    animation: bouncing 4s 6s linear 1 forwards;
+  }
+}
+
+.bookWrapper:nth-child(5) {
+  top: calc(40% - 360px);
+  left: -120px;
+  animation: fromLeftToCenter 4s 0.5s linear 1 forwards, fall5 4s 0.5s linear 1 forwards;
+
+  .book {
+    animation: bouncing 4s 4.5s linear 1 forwards;
+  }
+}
+
+.bookWrapper:nth-child(6) {
+  top: calc(5% - 360px);
+  right: -120px;
+  animation: fromRightToCenter 4s 1.25s linear 1 forwards, fall6 4s 1.25s linear 1 forwards;
+
+  .book {
+    animation: bouncing 4s 5.25s linear 1 forwards;
+  }
+}
+
+.bookWrapper:nth-child(7) {
+  top: calc(15% - 360px);
+  right: -120px;
+  animation: fromRightToCenter 4s 2.25s linear 1 forwards, fall7 4s 2.25s linear 1 forwards;
+
+  .book {
+    animation: bouncing 4s 6.25s linear 1 forwards;
+  }
+}
+
+.bookWrapper:nth-child(8) {
+  top: calc(25% - 360px);
+  right: -120px;
+  animation: fromRightToCenter 4s 1.75s linear 1 forwards, fall8 4s 1.75s linear 1 forwards;
+
+  .book {
+    animation: bouncing 4s 5.75s linear 1 forwards;
+  }
+}
+
+.bookWrapper:nth-child(9) {
+  top: calc(35% - 360px);
+  right: -120px;
+  animation: fromRightToCenter 4s 2.5s linear 1 forwards, fall9 4s 2.5s linear 1 forwards;
+
+  .book {
+    animation: bouncing 4s 6.5s linear 1 forwards;
+  }
+}

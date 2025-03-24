@@ -5,6 +5,33 @@
   width: 100%;
 }
 
+@keyframes fall {
+  0% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+
+  25% {
+    top: 25vh;
+    transform: rotate(-45deg);
+  }
+
+  50% {
+    top: 50vh;
+    transform: rotate(0deg);
+  }
+
+  75% {
+    top: 75vh;
+    transform: rotate(45deg);
+  }
+
+  100% {
+    top: calc(100vh + 120px);
+    transform: rotate(360deg);
+  }
+}
+
 .carrot {
   position: absolute;
   z-index: 1;
@@ -73,31 +100,4 @@
   left: calc(95% - 60px);
   animation-duration: 6s;
   animation-delay: 3s;
-}
-
-@keyframes fall {
-  0% {
-    top: 0;
-    transform: rotate(0deg);
-  }
-
-  25% {
-    top: 25vh;
-    transform: rotate(-45deg);
-  }
-
-  50% {
-    top: 50vh;
-    transform: rotate(0deg);
-  }
-
-  75% {
-    top: 75vh;
-    transform: rotate(45deg);
-  }
-
-  100% {
-    top: calc(100vh + 120px);
-    transform: rotate(360deg);
-  }
 }

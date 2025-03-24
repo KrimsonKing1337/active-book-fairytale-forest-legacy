@@ -2,29 +2,27 @@ import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 
-import { Action } from 'activeBook-core/components/ColoredTextTrigger';
+import { useBackground } from 'activeBook-core/hooks/effects/background';
 
-import { Trigger } from './components';
+import { Emojis } from './components';
 
 export const Page8 = () => {
-  const audioInst = useAudio({
-    id: 'page-8-kids-laughing-short',
-    src: '/assets/book_data/audios/sounds/kids-laughing-short.mp3',
+  useBackground({
+    id: 'page-8-emojis',
+    Component: <Emojis />,
   });
 
-  const clickHandler = () => {
-    audioInst?.play();
-  };
+  useAudio({
+    id: 'page-8-kids-laughing-short',
+    src: '/assets/book_data/audios/sounds/kids-laughing-2.mp3',
+    playOnLoad: true,
+  });
 
   return (
     <PageWrapper>
       <p>
-        В конце концов Барсик запутался в словах и спел вместо последней фразы
-        <Trigger />,
-        отчего братья так и
-        <Action onClick={clickHandler}>
-          покатились со смеху.
-        </Action>
+        В конце концов Барсик запутался в словах и спел вместо последней фразы что-то совсем нелепое,
+        отчего братья так и покатились со смеху.
       </p>
     </PageWrapper>
   );

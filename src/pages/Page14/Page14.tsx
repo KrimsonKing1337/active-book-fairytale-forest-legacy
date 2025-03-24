@@ -5,10 +5,17 @@ import { Segment } from 'activeBook-core/components';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 
-import { Rainbow } from './components';
+import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { AppleSlices } from './components';
 
 export const Page14 = () => {
-  const [isRainbowActive, setIsRainbowActive] = useState(false);
+  const [isAppleSlicesActive, setIsAppleSlicesActive] = useState(false);
+
+  useBackground({
+    id: 'page14-apple-slices',
+    Component: isAppleSlicesActive ? <AppleSlices /> : null,
+  });
 
   const audioInst1 = useAudio({
     id: 'page-14-humming-woman-with-echo',
@@ -46,13 +53,13 @@ export const Page14 = () => {
   const segment3EnterHandler = () => {
     audioInst3?.play();
 
-    setIsRainbowActive(true);
+    setIsAppleSlicesActive(true);
   };
 
   const segment3ExitHandler = () => {
     audioInst3?.stop();
 
-    setIsRainbowActive(false);
+    setIsAppleSlicesActive(false);
   };
 
   return (
@@ -84,8 +91,6 @@ export const Page14 = () => {
 
       <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
         <p>
-          <Rainbow isActive={isRainbowActive} />
-
           Она ловко нарезала сочные яблоки, аккуратно складывая их в большую глиняную миску.
           Запах корицы и ванили плыл по воздуху. Сова Клара с самого высокого дерева восхищенно смотрела, как Лиса Ярка
           с любовью и мастерством создает своё кулинарное чудо.

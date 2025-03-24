@@ -3,6 +3,8 @@ import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 import { Segment } from 'activeBook-core/components';
 
+import { screwBoltVibration, screwBoltVibrationStop } from './effects';
+
 export const Page5 = () => {
   const audioInst1 = useAudio({
     id: 'page-5-water-stream',
@@ -38,10 +40,12 @@ export const Page5 = () => {
 
   const segment3EnterHandler = () => {
     audioInst3?.play();
+    screwBoltVibration();
   };
 
   const segment3ExitHandler = () => {
     audioInst3?.stop();
+    screwBoltVibrationStop();
   };
 
   return (
