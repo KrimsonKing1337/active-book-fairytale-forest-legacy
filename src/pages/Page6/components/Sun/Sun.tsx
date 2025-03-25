@@ -1,8 +1,48 @@
+import { useEffect, useRef } from 'react';
+
+import type { Timer } from 'activeBook-core/@types';
+
+import { useFlashlight } from 'activeBook-core/hooks/effects/flashlight';
+
 import styles from './Sun.scss';
 
+let timer: Timer = null;
+
 export const Sun = () => {
+  const { flashlightOn, flashlightOff } = useFlashlight(false, 777);
+
+  const ref = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!ref.current) {
+      return;
+    }
+
+    const listener = () => {
+      timer = setTimeout(() => {
+        flashlightOn(777);
+      }, 1650);
+    };
+
+    ref.current.addEventListener('animationstart', listener);
+    ref.current.addEventListener('animationiteration', listener);
+
+    return () => {
+      if (timer) {
+        clearTimeout(timer);
+      }
+
+      if (ref.current) {
+        ref.current.removeEventListener('animationstart', listener);
+        ref.current.removeEventListener('animationiteration', listener);
+      }
+
+      flashlightOff();
+    };
+  }, []);
+
   return (
-    <div className={styles.wrapper}>
+    <div ref={ref} className={styles.wrapper}>
       <svg
         width="305"
         height="321"
