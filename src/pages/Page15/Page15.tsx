@@ -1,6 +1,7 @@
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
+
 import { Action } from 'activeBook-core/components/ColoredTextTrigger';
 
 import { Trigger } from './components';
