@@ -13,7 +13,7 @@ export const rangeEffects: RangeEffects = [
       type: 'music',
       playOnLoad: true,
       loop: true,
-      relativeVolume: 25,
+      relativeVolume: 30,
     },
   },
 ];
