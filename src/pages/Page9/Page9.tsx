@@ -57,10 +57,7 @@ export const Page9 = () => {
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
         <p>
-          Лёва, рассмотрев изобретение, снова рассмеялся:
-          <br />
-          <br />
-          — Это же велосипед!
+          Дойдя до ручья, они увидели Ёжика, гордо стоящего рядом с чем-то необычным. Барсик помахал ему:
         </p>
       </Segment>
 
