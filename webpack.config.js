@@ -1,3 +1,5 @@
+const path = require('path');
+
 const { DefinePlugin } = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
@@ -5,7 +7,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 const TerserPlugin = require('terser-webpack-plugin');
-const path = require('path');
 
 const dotenv = require('dotenv').config({ path: __dirname + '/.env' });
 const activeBookCorePath = path.resolve(__dirname, 'node_modules/activeBook-core');
@@ -89,7 +90,18 @@ module.exports = (env = {}, argv) => {
             },
           },
         },
-        { loader: 'sass-loader' },
+        {
+          loader: 'sass-loader',
+          options: {
+            api: 'modern',
+            sassOptions: {
+              loadPaths: [
+                path.resolve(__dirname, 'src'),
+                path.resolve(__dirname, 'node_modules'),
+              ],
+            },
+          },
+        },
       ],
     },
     {
@@ -97,14 +109,7 @@ module.exports = (env = {}, argv) => {
       oneOf: [
         {
           resourceQuery: /sprite/,
-          use: [
-            {
-              loader: 'url-loader',
-              options: {
-                esModule: false,
-              },
-            },
-          ],
+          type: 'asset/resource',
         },
         {
           use: ['@svgr/webpack'],
@@ -113,19 +118,11 @@ module.exports = (env = {}, argv) => {
     },
     {
       test: /\.(jpeg|jpg|png|docx)$/i,
-      use: [
-        {
-          loader: 'url-loader',
-          options: {
-            esModule: false,
-          },
-        },
-      ],
+      type: 'asset/resource',
     },
     {
       test: /\.(woff|woff2|eot|ttf)$/,
-      use: ['url-loader?limit=100000'],
-      exclude: [path.join(activeBookCorePath, './assets/fonts')],
+      type: 'asset/resource',
     },
   ];
 
@@ -159,7 +156,7 @@ module.exports = (env = {}, argv) => {
     },
     output: {
       // пустой publicPath нужен для кордовы. она не может найти bundle.min.js, если его путь начинается с '/'
-      publicPath: mobile ? '' : '/',
+      publicPath: mobile ? '' : './',
       path: buildDir,
       filename: '[name].[contenthash].js',
     },
