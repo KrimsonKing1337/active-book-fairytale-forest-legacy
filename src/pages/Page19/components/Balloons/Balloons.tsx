@@ -4,7 +4,7 @@ import { nanoid } from 'nanoid';
 
 import type { Interval } from 'activeBook-core/@types';
 
-import BalloonIcon from '/assets/book_data/images/balloon.svg';
+import BalloonIcon from 'assets/book_data/images/balloon.svg';
 
 import { getShuffledFills } from './utils';
 

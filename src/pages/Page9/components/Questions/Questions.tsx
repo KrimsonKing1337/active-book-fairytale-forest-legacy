@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { getRandomNumber } from 'activeBook-core/utils/getRandomNumber';
 
-import Icon from '/assets/book_data/images/question.svg';
+import Icon from 'assets/book_data/images/question.svg';
 
 import { nanoid } from 'nanoid';
 

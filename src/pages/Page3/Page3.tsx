@@ -7,17 +7,17 @@ import { Action } from 'activeBook-core/components/ColoredTextTrigger';
 export const Page3 = () => {
   const audioInst1 = useAudio({
     id: 'page-3-pigeon-flying-and-bed-creaking',
-    src: '/assets/book_data/audios/sounds/pigeon-flying-and-bed-creaking.mp3',
+    src: './assets/book_data/audios/sounds/pigeon-flying-and-bed-creaking.mp3',
   });
 
   const audioInst2 = useAudio({
     id: 'page-3-book-dropped',
-    src: '/assets/book_data/audios/sounds/book-dropped.mp3',
+    src: './assets/book_data/audios/sounds/book-dropped.mp3',
   });
 
   const audioInst3 = useAudio({
     id: 'page-3-cuckoo-watch',
-    src: '/assets/book_data/audios/sounds/cuckoo-watch.mp3',
+    src: './assets/book_data/audios/sounds/cuckoo-watch.mp3',
   });
 
   const segment1EnterHandler = () => {

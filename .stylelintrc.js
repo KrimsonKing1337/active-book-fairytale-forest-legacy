@@ -1,6 +1,8 @@
-const configOrder = require('./config/styles/config-order/configCreator.js')();
+import createConfigOrder from './config/styles/config-order/configCreator.js';
 
-module.exports = {
+const configOrder = createConfigOrder();
+
+export default {
   extends: ['stylelint-config-standard-scss'],
   plugins: [
     'stylelint-scss',
@@ -26,6 +28,7 @@ module.exports = {
     'scss/double-slash-comment-empty-line-before': null,
     'scss/at-import-no-partial-leading-underscore': null,
     'scss/at-rule-no-unknown': true,
+    'scss/load-no-partial-leading-underscore': null,
 
     'at-rule-empty-line-before': null,
     'at-rule-no-unknown': null,

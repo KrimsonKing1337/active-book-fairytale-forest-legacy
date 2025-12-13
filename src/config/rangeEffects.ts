@@ -9,7 +9,7 @@ export const rangeEffects: RangeEffects = [
       to: 19,
     }],
     options: {
-      src: '/assets/book_data/audios/music/just-relax.mp3',
+      src: './assets/book_data/audios/music/just-relax.mp3',
       type: 'music',
       playOnLoad: true,
       loop: true,

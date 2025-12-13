@@ -29,8 +29,8 @@ export const BunnyAndFoxFacesWrapper = ({ children, isActive }: BunnyAndFoxFaces
     <div className={wrapperClassNames}>
       {children}
 
-      <Img src="/assets/book_data/images/bunny-face.svg" className={bunnyClassNames} />
-      <Img src="/assets/book_data/images/fox-face.svg" className={foxClassNames} />
+      <Img src="./assets/book_data/images/bunny-face.svg" className={bunnyClassNames} />
+      <Img src="./assets/book_data/images/fox-face.svg" className={foxClassNames} />
     </div>
   );
 };

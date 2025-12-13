@@ -42,10 +42,10 @@ export const FirBranchesWrapper = ({ children, isActive }: FirstBranchesProps) =
 
   return (
     <div className={wrapperClassNames}>
-      <Img src="/assets/book_data/images/spruce-branches/spruce-branch-1.png" className={img1ClassNames} />
-      <Img src="/assets/book_data/images/spruce-branches/spruce-branch-4.png" className={img2ClassNames} />
-      <Img src="/assets/book_data/images/spruce-branches/spruce-branch-3.png" className={img3ClassNames} />
-      <Img src="/assets/book_data/images/spruce-branches/spruce-branch-2.png" className={img4ClassNames} />
+      <Img src="./assets/book_data/images/spruce-branches/spruce-branch-1.png" className={img1ClassNames} />
+      <Img src="./assets/book_data/images/spruce-branches/spruce-branch-4.png" className={img2ClassNames} />
+      <Img src="./assets/book_data/images/spruce-branches/spruce-branch-3.png" className={img3ClassNames} />
+      <Img src="./assets/book_data/images/spruce-branches/spruce-branch-2.png" className={img4ClassNames} />
 
       {children}
     </div>

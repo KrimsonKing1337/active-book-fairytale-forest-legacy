@@ -10,17 +10,17 @@ import { Trigger } from './components';
 export const Page10 = () => {
   const audioInst1 = useAudio({
     id: 'page-10-kids-laughing-2',
-    src: '/assets/book_data/audios/sounds/kid-laughing.mp3',
+    src: './assets/book_data/audios/sounds/kid-laughing.mp3',
   });
 
   const audioInst2 = useAudio({
     id: 'page-10-creaking-wood',
-    src: '/assets/book_data/audios/sounds/creaking-wood.mp3',
+    src: './assets/book_data/audios/sounds/creaking-wood.mp3',
   });
 
   const audioInst3 = useAudio({
     id: 'page-10-rustling-grass',
-    src: '/assets/book_data/audios/sounds/rustling-grass.mp3',
+    src: './assets/book_data/audios/sounds/rustling-grass.mp3',
   });
 
   const { vibrationOff } = useVibration();

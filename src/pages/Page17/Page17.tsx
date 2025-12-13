@@ -7,18 +7,18 @@ import { Segment } from 'activeBook-core/components';
 export const Page17 = () => {
   const audioInst1 = useAudio({
     id: 'page-17-footsteps-dirt',
-    src: '/assets/book_data/audios/sounds/footsteps-dirt.mp3',
+    src: './assets/book_data/audios/sounds/footsteps-dirt.mp3',
     loop: true,
   });
 
   const audioInst2 = useAudio({
     id: 'page-17-owl-landing-down',
-    src: '/assets/book_data/audios/sounds/owl-landing-down.mp3',
+    src: './assets/book_data/audios/sounds/owl-landing-down.mp3',
   });
 
   const audioInst3 = useAudio({
     id: 'page-17-yay-children',
-    src: '/assets/book_data/audios/sounds/yay-children.mp3',
+    src: './assets/book_data/audios/sounds/yay-children.mp3',
   });
 
   const segment1EnterHandler = () => {

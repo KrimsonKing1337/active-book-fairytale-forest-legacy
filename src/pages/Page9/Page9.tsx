@@ -12,17 +12,17 @@ export const Page9 = () => {
 
   const audioInst1 = useAudio({
     id: 'page-9-wow',
-    src: '/assets/book_data/audios/sounds/wow.mp3',
+    src: './assets/book_data/audios/sounds/wow.mp3',
   });
 
   const audioInst2 = useAudio({
     id: 'page-9-hmm',
-    src: '/assets/book_data/audios/sounds/hmm.mp3',
+    src: './assets/book_data/audios/sounds/hmm.mp3',
   });
 
   const audioInst3 = useAudio({
     id: 'page-9-applause-cheer',
-    src: '/assets/book_data/audios/sounds/applause-cheer.mp3',
+    src: './assets/book_data/audios/sounds/applause-cheer.mp3',
   });
 
   const segment1EnterHandler = () => {

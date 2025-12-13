@@ -1,17 +1,23 @@
-const path = require('path');
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const { DefinePlugin } = require('webpack');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin');
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
-const TerserPlugin = require('terser-webpack-plugin');
+import webpack from 'webpack';
+import HtmlWebpackPlugin from 'html-webpack-plugin';
+import { CleanWebpackPlugin } from 'clean-webpack-plugin';
+import CopyWebpackPlugin from 'copy-webpack-plugin';
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin';
+import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
+import TerserPlugin from 'terser-webpack-plugin';
+import dotenv from 'dotenv';
+import autoprefixer from 'autoprefixer';
 
-const dotenv = require('dotenv').config({ path: __dirname + '/.env' });
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+const dotenvResult = dotenv.config({ path: path.resolve(__dirname, '.env') });
 const activeBookCorePath = path.resolve(__dirname, 'node_modules/activeBook-core');
 
-module.exports = (env = {}, argv) => {
+export default (env = {}, argv) => {
   const webpackMode = argv.mode;
   const { analyze, mobile, demo } = env;
   const isProd = webpackMode === 'production';
@@ -26,8 +32,8 @@ module.exports = (env = {}, argv) => {
         },
       },
     }),
-    new DefinePlugin({
-      'process.env': JSON.stringify(dotenv.parsed),
+    new webpack.DefinePlugin({
+      'process.env': JSON.stringify(dotenvResult.parsed),
       'isDemoMode': JSON.stringify(demo),
     }),
     new HtmlWebpackPlugin({
@@ -85,7 +91,7 @@ module.exports = (env = {}, argv) => {
             postcssOptions: {
               ident: 'postcss',
               plugins: [
-                require('autoprefixer'),
+                autoprefixer,
               ],
             },
           },
@@ -98,6 +104,8 @@ module.exports = (env = {}, argv) => {
               loadPaths: [
                 path.resolve(__dirname, 'src'),
                 path.resolve(__dirname, 'node_modules'),
+                path.resolve(__dirname, 'node_modules/activeBook-core'),
+                path.resolve(__dirname, './'),
               ],
             },
           },
@@ -156,14 +164,16 @@ module.exports = (env = {}, argv) => {
     },
     output: {
       // пустой publicPath нужен для кордовы. она не может найти bundle.min.js, если его путь начинается с '/'
-      publicPath: mobile ? '' : './',
+      publicPath: mobile ? '' : 'auto',
       path: buildDir,
       filename: '[name].[contenthash].js',
     },
-    target: !isProd ? 'web' : ['web', 'es5'],
+    // target: !isProd ? 'web' : ['web', 'es5'],
+    target: 'web',
     resolve: {
       extensions: ['.ts', '.tsx', '.js', '.scss'],
       modules: [
+        path.resolve(__dirname, './'),
         path.resolve(__dirname, './src'),
         path.resolve(__dirname, './node_modules'),
         path.resolve(__dirname, './assets'),

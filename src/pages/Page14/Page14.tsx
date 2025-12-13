@@ -19,18 +19,18 @@ export const Page14 = () => {
 
   const audioInst1 = useAudio({
     id: 'page-14-humming-woman-with-echo',
-    src: '/assets/book_data/audios/sounds/humming-woman-with-echo.mp3',
+    src: './assets/book_data/audios/sounds/humming-woman-with-echo.mp3',
   });
 
   const audioInst2 = useAudio({
     id: 'page-14-fireplace',
-    src: '/assets/book_data/audios/sounds/fireplace.mp3',
+    src: './assets/book_data/audios/sounds/fireplace.mp3',
     loop: true,
   });
 
   const audioInst3 = useAudio({
     id: 'page-14-cutting-vegetables',
-    src: '/assets/book_data/audios/sounds/cutting-vegetables.mp3',
+    src: './assets/book_data/audios/sounds/cutting-vegetables.mp3',
     loop: true,
   });
 

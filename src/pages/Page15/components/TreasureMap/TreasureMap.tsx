@@ -37,7 +37,7 @@ export const TreasureMap = ({ isActive }: TreasureMapProps) => {
   return (
     <DotLottieReactWrapper className={wrapperClassnames}>
       <DotLottieReact
-        src="/assets/book_data/animations/treasure-map.lottie"
+        src="./assets/book_data/animations/treasure-map.lottie"
         height={300}
         width={300}
         loop

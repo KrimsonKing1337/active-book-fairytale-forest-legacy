@@ -51,7 +51,7 @@ export const Cat = ({ isActive }: HedgehogProps) => {
         Ёжик Фыр-Фыр ждёт нас.&nbsp;
       </span>
 
-      <Img src="/assets/book_data/images/cat.svg" className={imgClassNames} />
+      <Img src="./assets/book_data/images/cat.svg" className={imgClassNames} />
 
       <span ref={elementRef2} className={styles.curve}>
         Он вчера сказал, что

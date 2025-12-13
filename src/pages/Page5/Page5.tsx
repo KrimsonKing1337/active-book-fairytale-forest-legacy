@@ -8,18 +8,18 @@ import { screwBoltVibration, screwBoltVibrationStop } from './effects';
 export const Page5 = () => {
   const audioInst1 = useAudio({
     id: 'page-5-water-stream',
-    src: '/assets/book_data/audios/sounds/water-stream.mp3',
+    src: './assets/book_data/audios/sounds/water-stream.mp3',
     loop: true,
   });
 
   const audioInst2 = useAudio({
     id: 'page-5-paper',
-    src: '/assets/book_data/audios/sounds/paper.mp3',
+    src: './assets/book_data/audios/sounds/paper.mp3',
   });
 
   const audioInst3 = useAudio({
     id: 'page-5-screw-bolt',
-    src: '/assets/book_data/audios/sounds/screw-bolt.mp3',
+    src: './assets/book_data/audios/sounds/screw-bolt.mp3',
   });
 
   const segment1EnterHandler = () => {

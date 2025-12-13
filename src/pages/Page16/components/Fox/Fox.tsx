@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import Icon from '/assets/book_data/images/fox.svg';
+import Icon from 'assets/book_data/images/fox.svg';
 
 import styles from './Fox.scss';
 

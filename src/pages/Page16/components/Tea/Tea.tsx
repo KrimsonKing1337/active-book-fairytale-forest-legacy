@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 
 import classNames from 'classnames';
 
-import TeaCupIcon from '/assets/book_data/images/tea/tea-cup.svg';
-import TeapotIcon from '/assets/book_data/images/tea/teapot.svg';
-import SmokeIcon from '/assets/book_data/images/tea/smoke.svg';
+import TeaCupIcon from 'assets/book_data/images/tea/tea-cup.svg';
+import TeapotIcon from 'assets/book_data/images/tea/teapot.svg';
+import SmokeIcon from 'assets/book_data/images/tea/smoke.svg';
 
 import { getShuffledFills } from './utils';
 

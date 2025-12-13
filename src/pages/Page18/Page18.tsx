@@ -20,12 +20,12 @@ export const Page18 = () => {
 
   const audioInst1 = useAudio({
     id: 'page-18-bird-flapping-wings-short',
-    src: '/assets/book_data/audios/sounds/bird-flapping-wings-short.mp3',
+    src: './assets/book_data/audios/sounds/bird-flapping-wings-short.mp3',
   });
 
   const audioInst2 = useAudio({
     id: 'page-18-tea-party',
-    src: '/assets/book_data/audios/sounds/tea-party.mp3',
+    src: './assets/book_data/audios/sounds/tea-party.mp3',
   });
 
   const segment1EnterHandler = () => {

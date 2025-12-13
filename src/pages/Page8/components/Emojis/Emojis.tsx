@@ -6,15 +6,15 @@ import styles from './Emojis.scss';
 
 export const Emojis = () => {
   const imagesSrc = [
-    '/assets/book_data/images/emojis/happy/happy-with-teeth.svg',
-    '/assets/book_data/images/emojis/happy/happy-with-teeth2.svg',
-    '/assets/book_data/images/emojis/happy/laughing-rolling.svg',
-    '/assets/book_data/images/emojis/happy/happy-with-teeth.svg',
-    '/assets/book_data/images/emojis/happy/happy-with-teeth2.svg',
-    '/assets/book_data/images/emojis/happy/laughing-rolling.svg',
-    '/assets/book_data/images/emojis/happy/happy-with-teeth.svg',
-    '/assets/book_data/images/emojis/happy/happy-with-teeth2.svg',
-    '/assets/book_data/images/emojis/happy/laughing-rolling.svg',
+    './assets/book_data/images/emojis/happy/happy-with-teeth.svg',
+    './assets/book_data/images/emojis/happy/happy-with-teeth2.svg',
+    './assets/book_data/images/emojis/happy/laughing-rolling.svg',
+    './assets/book_data/images/emojis/happy/happy-with-teeth.svg',
+    './assets/book_data/images/emojis/happy/happy-with-teeth2.svg',
+    './assets/book_data/images/emojis/happy/laughing-rolling.svg',
+    './assets/book_data/images/emojis/happy/happy-with-teeth.svg',
+    './assets/book_data/images/emojis/happy/happy-with-teeth2.svg',
+    './assets/book_data/images/emojis/happy/laughing-rolling.svg',
   ];
 
   return (
