@@ -13,11 +13,13 @@ export const Page7 = () => {
 
   const audioInst1 = useAudio({
     id: 'page-7-child-humming',
+    page: 7,
     src: './assets/book_data/audios/sounds/child-humming.mp3',
   });
 
   const audioInst2 = useAudio({
     id: 'page-7-child-humming2',
+    page: 7,
     src: './assets/book_data/audios/sounds/child-humming2.mp3',
   });
 

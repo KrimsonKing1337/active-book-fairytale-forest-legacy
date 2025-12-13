@@ -24,12 +24,14 @@ export const Page16 = () => {
 
   const audioInst1 = useAudio({
     id: 'page-16-fireplace',
+    page: 16,
     src: './assets/book_data/audios/sounds/fireplace.mp3',
     loop: true,
   });
 
   const audioInst2 = useAudio({
     id: 'page-16-running',
+    page: 16,
     src: './assets/book_data/audios/sounds/running.mp3',
     delay: 500,
     relativeVolume: 5,

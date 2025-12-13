@@ -14,6 +14,7 @@ export const Page8 = () => {
 
   useAudio({
     id: 'page-8-kids-laughing-short',
+    page: 8,
     src: './assets/book_data/audios/sounds/kids-laughing-2.mp3',
     playOnLoad: true,
   });

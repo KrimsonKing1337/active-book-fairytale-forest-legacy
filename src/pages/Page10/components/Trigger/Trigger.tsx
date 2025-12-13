@@ -25,6 +25,7 @@ export const Trigger = () => {
 
   const audioInst = useAudio({
     id: 'page-10-trigger-wood-broke',
+    page: 10,
     src: './assets/book_data/audios/sounds/wood-broke.mp3',
   });
 

@@ -12,11 +12,13 @@ export const Page2 = () => {
 
   const audioInst1 = useAudio({
     id: 'page2-owl-and-branches',
+    page: 2,
     src: './assets/book_data/audios/sounds/owl-and-branches.mp3',
   });
 
   const audioInst2 = useAudio({
     id: 'page2-cat-meow',
+    page: 2,
     src: './assets/book_data/audios/sounds/cat-meow.mp3',
   });
 

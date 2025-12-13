@@ -12,16 +12,19 @@ export const Page9 = () => {
 
   const audioInst1 = useAudio({
     id: 'page-9-wow',
+    page: 9,
     src: './assets/book_data/audios/sounds/wow.mp3',
   });
 
   const audioInst2 = useAudio({
     id: 'page-9-hmm',
+    page: 9,
     src: './assets/book_data/audios/sounds/hmm.mp3',
   });
 
   const audioInst3 = useAudio({
     id: 'page-9-applause-cheer',
+    page: 9,
     src: './assets/book_data/audios/sounds/applause-cheer.mp3',
   });
 

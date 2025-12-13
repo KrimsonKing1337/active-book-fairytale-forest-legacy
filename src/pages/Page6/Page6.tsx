@@ -8,6 +8,7 @@ import { BackgroundComponent } from './components';
 export const Page6 = () => {
   useAudio({
     id: 'page-6-children-playing',
+    page: 6,
     src: './assets/book_data/audios/sounds/children-playing.mp3',
     playOnLoad: true,
   });

@@ -19,17 +19,20 @@ export const Page14 = () => {
 
   const audioInst1 = useAudio({
     id: 'page-14-humming-woman-with-echo',
+    page: 14,
     src: './assets/book_data/audios/sounds/humming-woman-with-echo.mp3',
   });
 
   const audioInst2 = useAudio({
     id: 'page-14-fireplace',
+    page: 14,
     src: './assets/book_data/audios/sounds/fireplace.mp3',
     loop: true,
   });
 
   const audioInst3 = useAudio({
     id: 'page-14-cutting-vegetables',
+    page: 14,
     src: './assets/book_data/audios/sounds/cutting-vegetables.mp3',
     loop: true,
   });

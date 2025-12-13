@@ -19,11 +19,13 @@ export const Page13 = () => {
 
   const audioInst1 = useAudio({
     id: 'page-13-applause',
+    page: 13,
     src: './assets/book_data/audios/sounds/applause.mp3',
   });
 
   const audioInst2 = useAudio({
     id: 'page-13-cow-moo',
+    page: 13,
     src: './assets/book_data/audios/sounds/cow-moo.mp3',
   });
 

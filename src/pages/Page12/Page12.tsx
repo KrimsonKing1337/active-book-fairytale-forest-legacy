@@ -8,6 +8,7 @@ import { TriggerCarrots, TriggerClouds } from './components';
 export const Page12 = () => {
   const audioInst1 = useAudio({
     id: 'page-12-intrigue',
+    page: 12,
     src: './assets/book_data/audios/sounds/intrigue.mp3',
   });
 

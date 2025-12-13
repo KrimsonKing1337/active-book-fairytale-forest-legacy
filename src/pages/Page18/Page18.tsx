@@ -20,11 +20,13 @@ export const Page18 = () => {
 
   const audioInst1 = useAudio({
     id: 'page-18-bird-flapping-wings-short',
+    page: 18,
     src: './assets/book_data/audios/sounds/bird-flapping-wings-short.mp3',
   });
 
   const audioInst2 = useAudio({
     id: 'page-18-tea-party',
+    page: 18,
     src: './assets/book_data/audios/sounds/tea-party.mp3',
   });
 
