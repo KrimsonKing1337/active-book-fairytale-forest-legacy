@@ -2,6 +2,7 @@
   "name": "activebook-fairytale-forest",
   "version": "0.0.1",
   "private": true,
+  "type": "module",
   "scripts": {
     "start": "webpack serve --mode=development --host 0.0.0.0",
     "build:web": "webpack --mode=production",
@@ -117,7 +118,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
-    "activeBook-core": "file:../../../activeBook-react-core/tgz/activebook-react-core-0.0.365.tgz",
+    "activeBook-core": "file:../../../activeBook-react-core/tgz/activebook-react-core-0.0.440.tgz",
     "circletype": "^2.3.0",
     "encrypt-storage": "^2.12.16",
     "hammerjs": "^2.0.8",
