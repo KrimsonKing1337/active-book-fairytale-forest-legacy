@@ -12,7 +12,6 @@ import tsParser from '@typescript-eslint/parser';
 import typescriptEslint from '@typescript-eslint/eslint-plugin';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import jest from 'eslint-plugin-jest';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -39,7 +38,6 @@ export default defineConfig([globIgnores, {
     '@typescript-eslint': typescriptEslint,
     react,
     'react-hooks': fixupPluginRules(reactHooks),
-    jest,
   },
 
   languageOptions: {
