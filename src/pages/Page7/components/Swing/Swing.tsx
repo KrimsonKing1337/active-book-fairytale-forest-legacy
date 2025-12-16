@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import styles from './Swing.scss';
+import * as styles from './Swing.scss';
 
 export type SwingProps = {
   isActive: boolean;

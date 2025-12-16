@@ -6,18 +6,18 @@ import { Img } from 'activeBook-core/components';
 
 import { initCircleType } from './utils';
 
-import styles from './Cat.scss';
+import * as styles from './Cat.scss';
 
 export type HedgehogProps = {
   isActive: boolean;
 };
 
 export const Cat = ({ isActive }: HedgehogProps) => {
-  const elementRef1 = useRef<HTMLSpanElement>(null);
-  const elementRef2 = useRef<HTMLSpanElement>(null);
+  const elementRef1 = useRef<HTMLSpanElement | null>(null);
+  const elementRef2 = useRef<HTMLSpanElement | null>(null);
 
-  const circleTypeRef1 = useRef<any>();
-  const circleTypeRef2 = useRef<any>();
+  const circleTypeRef1 = useRef<any>(null);
+  const circleTypeRef2 = useRef<any>(null);
 
   useEffect(() => {
     initCircleType({

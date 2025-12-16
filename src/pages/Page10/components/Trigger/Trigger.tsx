@@ -11,7 +11,7 @@ import { sleep } from 'activeBook-core/utils/sleep';
 
 import classNames from 'classnames';
 
-import styles from './Trigger.scss';
+import * as styles from './Trigger.scss';
 
 const text = '\xa0дров наломал\xa0';
 

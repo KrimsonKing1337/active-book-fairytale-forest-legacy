@@ -1,6 +1,6 @@
 import { DotLottieReactWrapper, DotLottieReact } from 'activeBook-core/components';
 
-import styles from './FlowersAnimation.scss';
+import * as styles from './FlowersAnimation.scss';
 
 export const FlowersAnimation = () => {
   return (

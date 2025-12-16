@@ -1,4 +1,4 @@
-import styles from './Rainbow.scss';
+import * as styles from './Rainbow.scss';
 
 export const Rainbow = () => {
   return (

@@ -2,7 +2,7 @@ import { Img } from 'activeBook-core/components';
 
 import { nanoid } from 'nanoid';
 
-import styles from './Carrots.scss';
+import * as styles from './Carrots.scss';
 
 export const Carrots = () => {
   return (

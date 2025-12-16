@@ -2,7 +2,7 @@ import { Img } from 'activeBook-core/components';
 
 import { nanoid } from 'nanoid';
 
-import styles from './Clouds.scss';
+import * as styles from './Clouds.scss';
 
 import { getRandomImage } from './utils';
 

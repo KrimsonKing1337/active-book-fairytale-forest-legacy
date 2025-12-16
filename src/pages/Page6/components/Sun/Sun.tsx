@@ -4,7 +4,7 @@ import type { Timer } from 'activeBook-core/@types';
 
 import { useFlashlight } from 'activeBook-core/hooks/effects/flashlight';
 
-import styles from './Sun.scss';
+import * as styles from './Sun.scss';
 
 let timer: Timer = null;
 

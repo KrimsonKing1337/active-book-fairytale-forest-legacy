@@ -2,7 +2,7 @@ import { nanoid } from 'nanoid';
 
 import { Img } from 'activeBook-core/components/Img';
 
-import styles from './Emojis.scss';
+import * as styles from './Emojis.scss';
 
 export const Emojis = () => {
   const imagesSrc = [

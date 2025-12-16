@@ -8,7 +8,7 @@ import Icon from 'assets/book_data/images/question.svg';
 
 import { nanoid } from 'nanoid';
 
-import styles from './Question.scss';
+import * as styles from './Question.scss';
 
 export type QuestionsProps = {
   isActive: boolean;

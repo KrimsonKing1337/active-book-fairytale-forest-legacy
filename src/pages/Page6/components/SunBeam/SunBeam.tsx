@@ -1,4 +1,4 @@
-import styles from './SunBeam.scss';
+import * as styles from './SunBeam.scss';
 
 export const SunBeam = () => {
   return (

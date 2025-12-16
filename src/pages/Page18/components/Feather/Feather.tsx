@@ -1,6 +1,6 @@
 import { Img } from 'activeBook-core/components';
 
-import styles from './Feather.scss';
+import * as styles from './Feather.scss';
 
 export const Feather = () => {
   return (

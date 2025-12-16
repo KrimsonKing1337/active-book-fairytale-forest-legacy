@@ -1,6 +1,6 @@
 import { Rainbow, Balloons } from '../';
 
-import styles from './BackgroundComponents.scss';
+import * as styles from './BackgroundComponents.scss';
 
 export const BackgroundComponent = () => {
   return (

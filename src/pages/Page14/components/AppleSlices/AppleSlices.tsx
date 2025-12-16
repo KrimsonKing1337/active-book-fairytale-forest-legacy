@@ -4,7 +4,7 @@ import { Img } from 'activeBook-core/components';
 
 import { getShuffledImages } from './utils';
 
-import styles from './AppleSlices.scss';
+import * as styles from './AppleSlices.scss';
 
 export const AppleSlices = () => {
   const images = getShuffledImages();

@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { Img } from 'activeBook-core/components';
 
-import styles from './FirBranchesWrapper.scss';
+import * as styles from './FirBranchesWrapper.scss';
 
 export type FirstBranchesProps = PropsWithChildren & {
   isActive: boolean;

@@ -4,7 +4,7 @@ import { type DotLottie, DotLottieReactWrapper, DotLottieReact } from 'activeBoo
 
 import classNames from 'classnames';
 
-import styles from './TreasureMap.scss';
+import * as styles from './TreasureMap.scss';
 
 export type TreasureMapProps = {
   isActive: boolean;

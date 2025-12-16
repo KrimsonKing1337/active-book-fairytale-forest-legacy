@@ -8,7 +8,7 @@ import BalloonIcon from 'assets/book_data/images/balloon.svg';
 
 import { getShuffledFills } from './utils';
 
-import styles from './Balloons.scss';
+import * as styles from './Balloons.scss';
 
 let interval: Interval = null;
 

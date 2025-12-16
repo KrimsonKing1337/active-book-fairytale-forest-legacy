@@ -8,7 +8,7 @@ import SmokeIcon from 'assets/book_data/images/tea/smoke.svg';
 
 import { getShuffledFills } from './utils';
 
-import styles from './Tea.scss';
+import * as styles from './Tea.scss';
 
 export type TeaProps = {
   isActive: boolean;

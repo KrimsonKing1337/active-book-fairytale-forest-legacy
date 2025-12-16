@@ -3,7 +3,7 @@ import type { PropsWithChildren } from 'react';
 import classNames from 'classnames';
 import { Img } from 'activeBook-core/components';
 
-import styles from './BunnyAndFoxFacesWrapper.scss';
+import * as styles from './BunnyAndFoxFacesWrapper.scss';
 
 export type BunnyAndFoxFacesWrapperProps = PropsWithChildren & {
   isActive: boolean;

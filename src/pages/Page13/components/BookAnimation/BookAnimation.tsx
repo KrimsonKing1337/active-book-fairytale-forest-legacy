@@ -2,7 +2,7 @@ import { DotLottieReactWrapper, DotLottieReact } from 'activeBook-core/component
 
 import classNames from 'classnames';
 
-import styles from './BookAnimation.scss';
+import * as styles from './BookAnimation.scss';
 
 export type BookAnimationProps = {
   isActive: boolean;

@@ -1,6 +1,6 @@
 import { nanoid } from 'nanoid';
 
-import styles from './Blinks.scss';
+import * as styles from './Blinks.scss';
 
 export const Blinks = () => {
   return (

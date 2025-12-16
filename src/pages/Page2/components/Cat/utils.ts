@@ -1,8 +1,8 @@
 import CircleType from 'circletype';
 
 export type InitCircleTypeParams = {
-  elementRef: React.RefObject<HTMLSpanElement>;
-  circleTypeRef: React. MutableRefObject<any>;
+  elementRef: React.RefObject<HTMLSpanElement | null>;
+  circleTypeRef: React.RefObject<any>;
   reverse: boolean;
   isActive: boolean;
 };

@@ -1,6 +1,6 @@
 import { Img } from 'activeBook-core/components';
 
-import styles from './Leaf.scss';
+import * as styles from './Leaf.scss';
 
 export const Leaf = () => {
   return (

@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 
-import styles from './Jumping.scss';
+import * as styles from './Jumping.scss';
 
 export type JumpingProps = {
   isActive: boolean;
