@@ -1,6 +1,7 @@
 import { Page0 as Page0Default } from 'activeBook-core/pages/Page0';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
+import { useBackground } from 'activeBook-core/hooks/effects/background';
 import { useFlashlight } from 'activeBook-core/hooks/effects/flashlight';
 import { useVibration } from 'activeBook-core/hooks/effects/vibration';
 
@@ -16,6 +17,18 @@ export const Page0 = () => {
     onPlay() {
       vibrationOn(200);
       flashlightOn(200);
+    },
+  });
+
+  useBackground({
+    id: 'page-0-bg',
+    images: [{ src: './assets/book_data/images/backgrounds/fox_and_rabbit.png' }],
+    shadow: {
+      show: true,
+      style: {
+        backdropFilter: 'blur(3px)',
+        zIndex: 2,
+      },
     },
   });
 

@@ -21,6 +21,23 @@ export const Page1 = () => {
     Component: <FlowersAnimation />,
   });
 
+  useBackground({
+    id: 'page-1-bg',
+    style: {
+      zIndex: -1,
+    },
+    images: [{
+      src: './assets/book_data/images/backgrounds/forest.png',
+    }],
+    shadow: {
+      show: true,
+      style: {
+        backdropFilter: 'blur(3px)',
+        zIndex: 2,
+      },
+    },
+  });
+
   return (
     <PageWrapper>
       <h1>
