@@ -1,4 +1,4 @@
-const { fork } = require('child_process');
+import { fork } from 'child_process';
 
 try {
   const args = process.argv.slice(2);
