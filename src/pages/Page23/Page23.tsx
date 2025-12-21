@@ -1,33 +1,46 @@
-import { useState } from 'react';
-
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 
 import { Segment } from 'activeBook-core/components';
-
 import { useBackground } from 'activeBook-core/hooks/effects/background';
 
-import { BunnyAndFoxFacesWrapper, Feather } from './components';
-
 export const Page23 = () => {
-  const [isFacesActive, setIsFacesActive] = useState(false);
-
-  useBackground({
-    id: 'page-19_feather',
-    Component: <Feather />,
-  });
-
   const audioInst1 = useAudio({
-    id: 'page-19_bird-flapping-wings-short',
-    page: 19,
-    src: './assets/book_data/audios/sounds/bird-flapping-wings-short.mp3',
+    id: 'page-23_footsteps-dirt',
+    page: 23,
+    src: './assets/book_data/audios/sounds/footsteps-dirt.mp3',
+    loop: true,
   });
 
   const audioInst2 = useAudio({
-    id: 'page-19_tea-party',
-    page: 19,
-    src: './assets/book_data/audios/sounds/tea-party.mp3',
+    id: 'page-23-owl-landing-down',
+    page: 23,
+    src: './assets/book_data/audios/sounds/owl-landing-down.mp3',
+  });
+
+  const audioInst3 = useAudio({
+    id: 'page-23-yay-children',
+    page: 23,
+    src: './assets/book_data/audios/sounds/yay-children.mp3',
+  });
+
+  useBackground({
+    id: 'page-23_bg',
+    style: {
+      zIndex: -1,
+    },
+    images: [{
+      src: './assets/book_data/images/backgrounds/hut.png',
+    }],
+    shadow: {
+      show: true,
+      style: {
+        zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
+      },
+    },
   });
 
   const segment1EnterHandler = () => {
@@ -39,51 +52,58 @@ export const Page23 = () => {
   };
 
   const segment2EnterHandler = () => {
-    setIsFacesActive(true);
-  };
-
-  const segment2ExitHandler = () => {
-    setIsFacesActive(false);
-  };
-
-  const segment3EnterHandler = () => {
     audioInst2?.play();
   };
 
-  const segment3ExitHandler = () => {
+  const segment2ExitHandler = () => {
     audioInst2?.stop();
+  };
+
+  const segment3EnterHandler = () => {
+    audioInst3?.play();
+  };
+
+  const segment3ExitHandler = () => {
+    audioInst3?.stop();
   };
 
   return (
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
         <p>
-          — Каждый день – новый урок, — сказала она, хлопая крыльями. — Сегодня, кажется мне, урок будет такой:
-          «Планируйте и договаривайтесь заранее!» Вот Ёжик предупредил Барсика с Лёвой о своей затее, и они чудесно
-          провели день. А Зайчонок и Корова пошли за кладом наобум, и Ярка свой пирог приготовила, не пригласив гостей –
-          а в итоге и клада не нашли, и пирог ещё чуть-чуть и пропал бы.
+          И она направилась к дому Барсика и Лёвы.
+        </p>
+
+        <p>
+          Но дома котов не было. Они ушли к ручью и остались там с Ёжиком, но Лиса Ярка этого не знала.
         </p>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <BunnyAndFoxFacesWrapper isActive={isFacesActive}>
-          <p>
-            - А велосипед и пирог разве не клад? – спросил Зайчонок. – По-моему, настоящий клад!
-          </p>
+        <p>
+          Чтобы она не расстроилась, что её пирог некому есть, Сова Клара слетела со своего дерева и вскоре села на
+          крышу избушки Барсика и Лёвы.
+        </p>
 
-          <p>
-            - Да и пирог не пропал. А чуть-чуть не считается! – хитро добавила Лиса.
-          </p>
-        </BunnyAndFoxFacesWrapper>
+        <p>
+          — Коты у ручья с Ёжиком, катаются на новом велосипеде, — объяснила она пригорюнившейся Ярке. — Иди к ним, а я
+          остальных приведу.
+        </p>
+
+        <p>
+          А Зайчонок Прыг-Прыг с Коровой Ягодкой все еще бродили по лесу. Они пока не нашли никакого клада, а идти уже
+          устали. И тут мудрая Клара, пролетая над ними, посоветовала идти к ручью.
+        </p>
       </Segment>
 
       <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
         <p>
-          - Тогда пойдемте пить чай, - сказал Барсик.
+          То-то было радости, когда все встретились у ручья! Барсик и Лева с Ёжиком уже проголодались, Прыг-Прыг с
+          Ягодкой тоже, а у Ярки как раз был готов для всех ее чудесный пирог!
         </p>
 
         <p>
-          И все дружно пошли пить чай с пирогом, смеясь и рассказывая о том, как весело провели сегодняшний день.
+          Последней прилетела мудрая Сова.
         </p>
       </Segment>
     </PageWrapper>

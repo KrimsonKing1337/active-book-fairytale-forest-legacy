@@ -10,6 +10,8 @@ import { Action } from 'activeBook-core/components/ColoredTextTrigger';
 
 import type { Timer } from 'activeBook-core/@types';
 
+import { useBackground } from 'activeBook-core/hooks/effects/background';
+
 import { Fox, FirBranchesWrapper, Tea } from './components';
 import { useFoxVibration } from './hooks';
 
@@ -23,18 +25,36 @@ export const Page21 = () => {
   const { vibrate } = useFoxVibration();
 
   const audioInst1 = useAudio({
-    id: 'page-17_fireplace',
-    page: 17,
+    id: 'page-21_fireplace',
+    page: 21,
     src: './assets/book_data/audios/sounds/fireplace.mp3',
     loop: true,
   });
 
   const audioInst2 = useAudio({
-    id: 'page-17_running',
-    page: 17,
+    id: 'page-21_running',
+    page: 21,
     src: './assets/book_data/audios/sounds/running.mp3',
     delay: 500,
     relativeVolume: 5,
+  });
+
+  useBackground({
+    id: 'page-21_bg',
+    style: {
+      zIndex: -1,
+    },
+    images: [{
+      src: './assets/book_data/images/backgrounds/fox_hut.png',
+    }],
+    shadow: {
+      show: true,
+      style: {
+        zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
+      },
+    },
   });
 
   const segment1EnterHandler = () => {

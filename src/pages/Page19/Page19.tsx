@@ -13,28 +13,46 @@ export const Page19 = () => {
   const [isAppleSlicesActive, setIsAppleSlicesActive] = useState(false);
 
   useBackground({
-    id: 'page-15_apple-slices',
+    id: 'page-19_apple-slices',
     Component: isAppleSlicesActive ? <AppleSlices /> : null,
   });
 
   const audioInst1 = useAudio({
-    id: 'page-15_humming-woman-with-echo',
-    page: 15,
+    id: 'page-19_humming-woman-with-echo',
+    page: 19,
     src: './assets/book_data/audios/sounds/humming-woman-with-echo.mp3',
   });
 
   const audioInst2 = useAudio({
-    id: 'page-15_fireplace',
-    page: 15,
+    id: 'page-19_fireplace',
+    page: 19,
     src: './assets/book_data/audios/sounds/fireplace.mp3',
     loop: true,
   });
 
   const audioInst3 = useAudio({
-    id: 'page-15-cutting-vegetables',
-    page: 15,
+    id: 'page-19-cutting-vegetables',
+    page: 19,
     src: './assets/book_data/audios/sounds/cutting-vegetables.mp3',
     loop: true,
+  });
+
+  useBackground({
+    id: 'page-19_bg',
+    style: {
+      zIndex: -1,
+    },
+    images: [{
+      src: './assets/book_data/images/backgrounds/fox_hut.png',
+    }],
+    shadow: {
+      show: true,
+      style: {
+        zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
+      },
+    },
   });
 
   const segment1EnterHandler = () => {

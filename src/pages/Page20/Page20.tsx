@@ -4,13 +4,33 @@ import { useAudio } from 'activeBook-core/hooks/effects/audio';
 
 import { Action } from 'activeBook-core/components/ColoredTextTrigger';
 
+import { useBackground } from 'activeBook-core/hooks/effects/background';
+
 import { Trigger } from './components';
 
 export const Page20 = () => {
   const audioInst1 = useAudio({
     id: 'page-16_kids-laughing-2',
-    page: 16,
+    page: 20,
     src: './assets/book_data/audios/sounds/kid-laughing.mp3',
+  });
+
+  useBackground({
+    id: 'page-20_bg',
+    style: {
+      zIndex: -1,
+    },
+    images: [{
+      src: './assets/book_data/images/backgrounds/fox_hut.png',
+    }],
+    shadow: {
+      show: true,
+      style: {
+        zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
+      },
+    },
   });
 
   const clickHandler = () => {
