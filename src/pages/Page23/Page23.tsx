@@ -58,6 +58,7 @@ export const Page23 = () => {
   const segment1EnterHandler = () => {
     audioInst1?.play();
 
+    // Почему-то при заходе на страницу инициализация не срабатывает, только уничтожение, поэтому такой костылёк
     if (bgImageSrc !== imgSrcs[0]) {
       destroy();
     }
