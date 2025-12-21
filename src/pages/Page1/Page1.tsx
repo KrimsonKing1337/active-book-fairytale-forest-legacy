@@ -6,12 +6,12 @@ import { FlowersAnimation } from './components';
 
 export const Page1 = () => {
   useBackground({
-    id: 'page-1-flowers-animation',
+    id: 'page-1_flowers-animation',
     Component: <FlowersAnimation />,
   });
 
   useBackground({
-    id: 'page-1-bg',
+    id: 'page-1_bg',
     style: {
       zIndex: -1,
     },
@@ -21,8 +21,9 @@ export const Page1 = () => {
     shadow: {
       show: true,
       style: {
-        backdropFilter: 'blur(3px)',
         zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
       },
     },
   });

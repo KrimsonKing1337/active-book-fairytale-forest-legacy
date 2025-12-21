@@ -26,8 +26,9 @@ export const Page0 = () => {
     shadow: {
       show: true,
       style: {
-        backdropFilter: 'blur(3px)',
         zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
       },
     },
   });

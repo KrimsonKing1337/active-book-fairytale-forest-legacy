@@ -5,6 +5,8 @@ import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 import { Segment } from 'activeBook-core/components';
 
+import { useBackground } from 'activeBook-core/hooks/effects/background';
+
 import { Cat } from './components';
 
 export const Page3 = () => {
@@ -20,6 +22,24 @@ export const Page3 = () => {
     id: 'page-3_cat-meow',
     page: 3,
     src: './assets/book_data/audios/sounds/cat-meow.mp3',
+  });
+
+  useBackground({
+    id: 'page-3_bg',
+    style: {
+      zIndex: -1,
+    },
+    images: [{
+      src: './assets/book_data/images/backgrounds/hut.png',
+    }],
+    shadow: {
+      show: true,
+      style: {
+        zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
+      },
+    },
   });
 
   const segment1EnterHandler = () => {

@@ -1,1 +1,1 @@
-export * from './Emojis';
+export * from './Swing';
