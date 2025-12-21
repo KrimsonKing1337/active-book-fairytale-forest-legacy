@@ -1,2 +1,1 @@
-export * from './TriggerCarrots';
-export * from './TriggerClouds';
+export * from './Jumping';

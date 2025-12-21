@@ -3,26 +3,46 @@ import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 import { Segment } from 'activeBook-core/components';
 
+import { useBackground } from 'activeBook-core/hooks/effects/background';
+
 import { screwBoltVibration, screwBoltVibrationStop } from './effects';
 
 export const Page7 = () => {
   const audioInst1 = useAudio({
-    id: 'page-6_water-stream',
-    page: 6,
+    id: 'page-7_water-stream',
+    page: 7,
     src: './assets/book_data/audios/sounds/water-stream.mp3',
     loop: true,
   });
 
   const audioInst2 = useAudio({
-    id: 'page-6_paper',
-    page: 6,
+    id: 'page-7_paper',
+    page: 7,
     src: './assets/book_data/audios/sounds/paper.mp3',
   });
 
   const audioInst3 = useAudio({
-    id: 'page-6_screw-bolt',
-    page: 5,
+    id: 'page-7_screw-bolt',
+    page: 7,
     src: './assets/book_data/audios/sounds/screw-bolt.mp3',
+  });
+
+  useBackground({
+    id: 'page-7_bg',
+    style: {
+      zIndex: -1,
+    },
+    images: [{
+      src: './assets/book_data/images/backgrounds/stream.png',
+    }],
+    shadow: {
+      show: true,
+      style: {
+        zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
+      },
+    },
   });
 
   const segment1EnterHandler = () => {

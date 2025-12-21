@@ -2,7 +2,7 @@ import type { Config } from 'activeBook-core/@types';
 
 export const config: Config = {
   id: 'fairytale-forest',
-  pages: 21,
+  pages: 22,
   defaultTheme: 'green',
   customThemes: {
     green: {

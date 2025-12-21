@@ -1,34 +1,32 @@
-import { useState } from 'react';
-
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
+import { useVibration } from 'activeBook-core/hooks/effects/vibration';
+
 import { Segment } from 'activeBook-core/components';
 
-import { Jumping } from './components';
+import { Trigger } from './components';
 
 export const Page13 = () => {
-  const [isJumpingActive, setIsJumpingActive] = useState(false);
-
   const audioInst1 = useAudio({
-    id: 'page-12-kids-laughing-2',
-    page: 12,
-    src: './assets/book_data/audios/sounds/kids-laughing-2.mp3',
+    id: 'page-11-kids-laughing-2',
+    page: 11,
+    src: './assets/book_data/audios/sounds/kid-laughing.mp3',
   });
 
   const audioInst2 = useAudio({
-    id: 'page-12-running-on-grass-with-wind',
-    page: 12,
-    src: './assets/book_data/audios/sounds/running-on-grass-with-wind.mp3',
-    loop: true,
+    id: 'page-11-creaking-wood',
+    page: 11,
+    src: './assets/book_data/audios/sounds/creaking-wood.mp3',
   });
 
   const audioInst3 = useAudio({
-    id: 'page-12-rustling-grass-birds-singing',
-    page: 12,
-    src: './assets/book_data/audios/sounds/rustling-grass-birds-singing.mp3',
-    loop: true,
+    id: 'page-11-rustling-grass',
+    page: 11,
+    src: './assets/book_data/audios/sounds/rustling-grass.mp3',
   });
+
+  const { vibrationOff } = useVibration();
 
   const segment1EnterHandler = () => {
     audioInst1?.play();
@@ -38,14 +36,13 @@ export const Page13 = () => {
     audioInst1?.stop();
   };
 
-  const segment2EnterHandler = () => {
+  const segment2EnterHandler = async () => {
     audioInst2?.play();
-    setIsJumpingActive(true);
   };
 
   const segment2ExitHandler = () => {
     audioInst2?.stop();
-    setIsJumpingActive(false);
+    vibrationOff();
   };
 
   const segment3EnterHandler = () => {
@@ -60,23 +57,32 @@ export const Page13 = () => {
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
         <p>
-          — Хорошо, Ёжик, пусть тогда твой велосипед будет новым стандартом колючести! – наконец сказал Лёва, и все
-          засмеялись.
+          Лёва, рассмотрев изобретение, снова рассмеялся:
+          <br />
+          <br />
+          — Это же велосипед!
         </p>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
         <p>
-          Клара оставила друзей наслаждаться летним днем и испытывать новое изобретение Ёжика и посмотрела в другую
-          сторону. По залитой солнцем тропинке
-          <Jumping isActive={isJumpingActive} />
-          Ему сегодня было особенно весело, потому что он придумал, что станет великим первооткрывателем.
+          Барсик подхватил:
+          <br />
+          <br />
+          — Эх, Ёжик, ты, я смотрю,
+          <Trigger />
+          и сделал из них новые дрова!
+          Велосипед! Да это изобретение старо как мир!
         </p>
       </Segment>
 
       <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
         <p>
-          Листья под его лапками тихо шуршали, а где-то высоко в ветвях пели птицы.
+          Но Ёжик не обиделся и с добрым смехом ответил:
+          <br />
+          <br />
+          — Ну и что с того! Зато мой велосипед самый колючий и неповторимый!
+          Может, это и есть главное открытие.
         </p>
       </Segment>
     </PageWrapper>
