@@ -7,15 +7,33 @@ import { BackgroundComponent } from './components';
 
 export const Page9 = () => {
   useAudio({
-    id: 'page-7_children-playing',
-    page: 7,
+    id: 'page-9_children-playing',
+    page: 9,
     src: './assets/book_data/audios/sounds/children-playing.mp3',
     playOnLoad: true,
   });
 
   useBackground({
-    id: 'page-7_background-component',
+    id: 'page-9_background-component',
     Component: <BackgroundComponent />,
+  });
+
+  useBackground({
+    id: 'page-9_bg',
+    style: {
+      zIndex: -1,
+    },
+    images: [{
+      src: './assets/book_data/images/backgrounds/trail.png',
+    }],
+    shadow: {
+      show: true,
+      style: {
+        zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
+      },
+    },
   });
 
   return (

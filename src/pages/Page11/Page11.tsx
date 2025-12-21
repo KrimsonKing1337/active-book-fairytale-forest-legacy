@@ -8,15 +8,33 @@ import { Emojis } from './components';
 
 export const Page11 = () => {
   useBackground({
-    id: 'page-9_emojis',
+    id: 'page-11_emojis',
     Component: <Emojis />,
   });
 
   useAudio({
-    id: 'page-9_kids-laughing-short',
-    page: 9,
+    id: 'page-11_kids-laughing-short',
+    page: 11,
     src: './assets/book_data/audios/sounds/kids-laughing-2.mp3',
     playOnLoad: true,
+  });
+
+  useBackground({
+    id: 'page-11_bg',
+    style: {
+      zIndex: -1,
+    },
+    images: [{
+      src: './assets/book_data/images/backgrounds/trail.png',
+    }],
+    shadow: {
+      show: true,
+      style: {
+        zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
+      },
+    },
   });
 
   return (

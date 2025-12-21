@@ -1,32 +1,32 @@
+import { useState } from 'react';
+
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-import { useVibration } from 'activeBook-core/hooks/effects/vibration';
-
 import { Segment } from 'activeBook-core/components';
 
-import { Trigger } from './components';
+import { Questions } from './components';
 
 export const Page13 = () => {
+  const [isQuestionActive, setIsQuestionActive] = useState(false);
+
   const audioInst1 = useAudio({
-    id: 'page-11-kids-laughing-2',
-    page: 11,
-    src: './assets/book_data/audios/sounds/kid-laughing.mp3',
+    id: 'page-10_wow',
+    page: 10,
+    src: './assets/book_data/audios/sounds/wow.mp3',
   });
 
   const audioInst2 = useAudio({
-    id: 'page-11-creaking-wood',
-    page: 11,
-    src: './assets/book_data/audios/sounds/creaking-wood.mp3',
+    id: 'page-10_hmm',
+    page: 10,
+    src: './assets/book_data/audios/sounds/hmm.mp3',
   });
 
   const audioInst3 = useAudio({
-    id: 'page-11-rustling-grass',
-    page: 11,
-    src: './assets/book_data/audios/sounds/rustling-grass.mp3',
+    id: 'page-10-applause-cheer',
+    page: 10,
+    src: './assets/book_data/audios/sounds/applause-cheer.mp3',
   });
-
-  const { vibrationOff } = useVibration();
 
   const segment1EnterHandler = () => {
     audioInst1?.play();
@@ -36,13 +36,16 @@ export const Page13 = () => {
     audioInst1?.stop();
   };
 
-  const segment2EnterHandler = async () => {
+  const segment2EnterHandler = () => {
     audioInst2?.play();
+
+    setIsQuestionActive(true);
   };
 
   const segment2ExitHandler = () => {
     audioInst2?.stop();
-    vibrationOff();
+
+    setIsQuestionActive(false);
   };
 
   const segment3EnterHandler = () => {
@@ -57,32 +60,23 @@ export const Page13 = () => {
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
         <p>
-          Лёва, рассмотрев изобретение, снова рассмеялся:
-          <br />
-          <br />
-          — Это же велосипед!
+          Дойдя до ручья, они увидели Ёжика, гордо стоящего рядом с чем-то необычным. Барсик помахал ему:
         </p>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
         <p>
-          Барсик подхватил:
-          <br />
-          <br />
-          — Эх, Ёжик, ты, я смотрю,
-          <Trigger />
-          и сделал из них новые дрова!
-          Велосипед! Да это изобретение старо как мир!
+          — Привет, Ёжик! Что это за чудо техники у тебя такое?
+          <Questions isActive={isQuestionActive} />
         </p>
       </Segment>
 
       <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
         <p>
-          Но Ёжик не обиделся и с добрым смехом ответил:
+          Ёжик, сияя от гордости, ответил:
           <br />
           <br />
-          — Ну и что с того! Зато мой велосипед самый колючий и неповторимый!
-          Может, это и есть главное открытие.
+          — Привет, Барсик! Это мой супер-уникальный вездеход! Думаю, он произведет революцию в мире транспорта!
         </p>
       </Segment>
     </PageWrapper>

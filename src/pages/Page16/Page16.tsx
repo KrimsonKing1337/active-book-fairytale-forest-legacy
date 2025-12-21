@@ -1,85 +1,41 @@
-import { useState } from 'react';
-
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
+import { Action } from 'activeBook-core/components/ColoredTextTrigger';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-import { Segment } from 'activeBook-core/components';
 
-import { useBackground } from 'activeBook-core/hooks/effects/background';
-
-import { BookAnimation, Books } from './components';
+import { TriggerCarrots, TriggerClouds } from './components';
 
 export const Page16 = () => {
-  const [isBooksActive, setIsBooksActive] = useState(false);
-
-  useBackground({
-    id: 'page-14_books',
-    Component: isBooksActive ? <Books /> : null,
-  });
-
   const audioInst1 = useAudio({
-    id: 'page-14_applause',
-    page: 14,
-    src: './assets/book_data/audios/sounds/applause.mp3',
+    id: 'page-13-intrigue',
+    page: 13,
+    src: './assets/book_data/audios/sounds/intrigue.mp3',
   });
 
-  const audioInst2 = useAudio({
-    id: 'page-13_cow-moo',
-    page: 14,
-    src: './assets/book_data/audios/sounds/cow-moo.mp3',
-  });
-
-  const segment1EnterHandler = () => {
+  const action1ClickHandler = () => {
     audioInst1?.play();
-  };
-
-  const segment1ExitHandler = () => {
-    audioInst1?.stop();
-  };
-
-  const segment2EnterHandler = () => {
-    audioInst2?.play();
-  };
-
-  const segment2ExitHandler = () => {
-    audioInst2?.stop();
-  };
-
-  const segment3EnterHandler = () => {
-    setIsBooksActive(true);
-  };
-
-  const segment3ExitHandler = () => {
-    setIsBooksActive(false);
   };
 
   return (
     <PageWrapper>
-      <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
-          — Я, наверное, назову её… эм… «Прыг-Прыг и всё-всё-всё!» — объявил он.
-        </p>
-      </Segment>
+      <p>
+        — Сначала я найду самую огромную
+        <TriggerCarrots />
+        в лесу! — сказал он громко, как будто кто-то должен был услышать и порадоваться вместе с ним.
+      </p>
 
-      <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <p>
-          Он был так увлечён своими мыслями, что даже не заметил, что его догнала его подруга, корова Ягодка.
-          Та усмехнулась, услышав, как Зайчонок мечтает вслух.
-        </p>
-      </Segment>
+      <p>
+        — Хотя нет, морковь в лесу не растёт. Тогда я… э-э, тогда я найду
+        <Action onClick={action1ClickHandler}>
+          клад!
+        </Action>
+        Ну а потом напишу про это книгу!
+      </p>
 
-      <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
-        <p>
-          — Ты уверен, что тебе хватит места в книге для всего-всего-всего? — мягко спросила Ягодка.
-        </p>
-
-        <p>
-          — Конечно, хватит! А если не хватит, я просто напишу вторую книгу.
-          И третью. И четвёртую! — решительно сказал Зайчонок.
-
-          <BookAnimation isActive={isBooksActive} />
-        </p>
-      </Segment>
+      <p>
+        Он остановился и задумчиво посмотрел на
+        <TriggerClouds />
+      </p>
     </PageWrapper>
   );
 };
