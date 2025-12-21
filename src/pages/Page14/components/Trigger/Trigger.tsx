@@ -24,8 +24,8 @@ export const Trigger = () => {
   const { vibrationOn } = useVibration();
 
   const audioInst = useAudio({
-    id: 'page-10-trigger-wood-broke',
-    page: 10,
+    id: 'page-14_trigger-wood-broke',
+    page: 14,
     src: './assets/book_data/audios/sounds/wood-broke.mp3',
   });
 
