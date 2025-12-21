@@ -16,4 +16,18 @@ export const rangeEffects: RangeEffects = [
       relativeVolume: 30,
     },
   },
+  {
+    id: 'page-1-2_birds-brook-leafs',
+    type: 'audio',
+    range: [{
+      from: 1,
+      to: 2,
+    }],
+    options: {
+      src: './assets/book_data/audios/sounds/birds-brook-leafs.mp3',
+      type: 'bg',
+      playOnLoad: true,
+      loop: true,
+    },
+  },
 ];

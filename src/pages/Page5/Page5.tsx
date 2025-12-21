@@ -1,76 +1,30 @@
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-import { Segment } from 'activeBook-core/components';
 
-import { screwBoltVibration, screwBoltVibrationStop } from './effects';
+import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { Leaf } from './components';
 
 export const Page5 = () => {
-  const audioInst1 = useAudio({
-    id: 'page-5-water-stream',
+  useAudio({
+    id: 'page-5_kids-laughing',
     page: 5,
-    src: './assets/book_data/audios/sounds/water-stream.mp3',
-    loop: true,
+    src: './assets/book_data/audios/sounds/kids-laughing.mp3',
+    playOnLoad: true,
   });
 
-  const audioInst2 = useAudio({
-    id: 'page-5-paper',
-    page: 5,
-    src: './assets/book_data/audios/sounds/paper.mp3',
+  useBackground({
+    id: 'page-5_leaf',
+    Component: <Leaf />,
   });
-
-  const audioInst3 = useAudio({
-    id: 'page-5-screw-bolt',
-    page: 5,
-    src: './assets/book_data/audios/sounds/screw-bolt.mp3',
-  });
-
-  const segment1EnterHandler = () => {
-    audioInst1?.play();
-  };
-
-  const segment1ExitHandler = () => {
-    audioInst1?.stop();
-  };
-
-  const segment2EnterHandler = () => {
-    audioInst2?.play();
-  };
-
-  const segment2ExitHandler = () => {
-    audioInst2?.stop();
-  };
-
-  const segment3EnterHandler = () => {
-    audioInst3?.play();
-    screwBoltVibration();
-  };
-
-  const segment3ExitHandler = () => {
-    audioInst3?.stop();
-    screwBoltVibrationStop();
-  };
 
   return (
     <PageWrapper>
-      <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
-          Ещё Клара видела, как Ёжик в полном восторге бегал туда-сюда вдоль тихо журчащего ручья.
-        </p>
-      </Segment>
-
-      <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <p>
-          Он проверял каждую деталь своего нового изобретения. Повсюду валялись чертежи, какие-то деревяшки и даже пара
-          свёрнутых носков (где он их нашёл — загадка).
-        </p>
-      </Segment>
-
-      <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
-        <p>
-          — Ну вот, деталь сюда, болтик сюда... Ух, кажется, готово!
-        </p>
-      </Segment>
+      <p>
+        Эти слова, наполненные комичным отчаянием, рассмешили Барсика. Лёва тоже не выдержал и рассмеялся, и вскоре
+        братья хохотали уже вдвоём. Новый день начался для них с беззаботного счастья, и это было так уютно и хорошо!
+      </p>
     </PageWrapper>
   );
 };

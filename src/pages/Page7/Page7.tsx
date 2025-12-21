@@ -1,61 +1,29 @@
-import { useState } from 'react';
-
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
+import { useBackground } from 'activeBook-core/hooks/effects/background';
 
-import { Segment } from 'activeBook-core/components';
-
-import { Swing } from './components';
+import { BackgroundComponent } from './components';
 
 export const Page7 = () => {
-  const [isSwingActive, setIsSwingActive] = useState(false);
-
-  const audioInst1 = useAudio({
-    id: 'page-7-child-humming',
+  useAudio({
+    id: 'page-7_children-playing',
     page: 7,
-    src: './assets/book_data/audios/sounds/child-humming.mp3',
+    src: './assets/book_data/audios/sounds/children-playing.mp3',
+    playOnLoad: true,
   });
 
-  const audioInst2 = useAudio({
-    id: 'page-7-child-humming2',
-    page: 7,
-    src: './assets/book_data/audios/sounds/child-humming2.mp3',
+  useBackground({
+    id: 'page-7_background-component',
+    Component: <BackgroundComponent />,
   });
-
-  const segment1EnterHandler = () => {
-    audioInst1?.play();
-    setIsSwingActive(true);
-  };
-
-  const segment1ExitHandler = () => {
-    audioInst1?.stop();
-    setIsSwingActive(false);
-  };
-
-  const segment2EnterHandler = () => {
-    audioInst2?.play();
-  };
-
-  const segment2ExitHandler = () => {
-    audioInst2?.stop();
-  };
 
   return (
     <PageWrapper>
-      <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
-          Барсик,
-          <Swing isActive={isSwingActive} />
-          запел свою версию известной всему Сказочному лесу песни о природе, добавляя к каждому слову весёлые звуки.
-        </p>
-      </Segment>
-
-      <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <p>
-          Лёва пытался подхватить мелодию по-своему, путая брата и делая песню ещё забавнее.
-        </p>
-      </Segment>
+      <p>
+        Лёва и Барсик, смеясь и оживленно болтая, бежали по лесной тропинке к ручью. Солнышко пробивалось сквозь кроны
+        деревьев, играя бликами в их глазах.
+      </p>
     </PageWrapper>
   );
 };
