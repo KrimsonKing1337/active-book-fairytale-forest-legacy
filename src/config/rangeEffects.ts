@@ -6,7 +6,7 @@ export const rangeEffects: RangeEffects = [
     type: 'audio',
     range: [{
       from: 1,
-      to: 19,
+      to: 26,
     }],
     options: {
       src: './assets/book_data/audios/music/just-relax.mp3',
