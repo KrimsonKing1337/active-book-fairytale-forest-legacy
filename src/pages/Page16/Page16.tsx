@@ -3,13 +3,33 @@ import { Action } from 'activeBook-core/components/ColoredTextTrigger';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 
+import { useBackground } from 'activeBook-core/hooks/effects/background';
+
 import { TriggerCarrots, TriggerClouds } from './components';
 
 export const Page16 = () => {
   const audioInst1 = useAudio({
-    id: 'page-13-intrigue',
-    page: 13,
+    id: 'page-16-intrigue',
+    page: 16,
     src: './assets/book_data/audios/sounds/intrigue.mp3',
+  });
+
+  useBackground({
+    id: 'page-16_bg',
+    style: {
+      zIndex: -1,
+    },
+    images: [{
+      src: './assets/book_data/images/backgrounds/treasure.png',
+    }],
+    shadow: {
+      show: true,
+      style: {
+        zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
+      },
+    },
   });
 
   const action1ClickHandler = () => {

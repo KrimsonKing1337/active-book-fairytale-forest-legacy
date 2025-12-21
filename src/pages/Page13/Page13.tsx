@@ -5,27 +5,47 @@ import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 import { Segment } from 'activeBook-core/components';
 
+import { useBackground } from 'activeBook-core/hooks/effects/background';
+
 import { Questions } from './components';
 
 export const Page13 = () => {
   const [isQuestionActive, setIsQuestionActive] = useState(false);
 
   const audioInst1 = useAudio({
-    id: 'page-10_wow',
-    page: 10,
+    id: 'page-13_wow',
+    page: 13,
     src: './assets/book_data/audios/sounds/wow.mp3',
   });
 
   const audioInst2 = useAudio({
-    id: 'page-10_hmm',
-    page: 10,
+    id: 'page-13_hmm',
+    page: 13,
     src: './assets/book_data/audios/sounds/hmm.mp3',
   });
 
   const audioInst3 = useAudio({
-    id: 'page-10-applause-cheer',
-    page: 10,
+    id: 'page-13-applause-cheer',
+    page: 13,
     src: './assets/book_data/audios/sounds/applause-cheer.mp3',
+  });
+
+  useBackground({
+    id: 'page-13_bg',
+    style: {
+      zIndex: -1,
+    },
+    images: [{
+      src: './assets/book_data/images/backgrounds/stream.png',
+    }],
+    shadow: {
+      show: true,
+      style: {
+        zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
+      },
+    },
   });
 
   const segment1EnterHandler = () => {

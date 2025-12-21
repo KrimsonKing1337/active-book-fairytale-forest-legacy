@@ -13,20 +13,38 @@ export const Page17 = () => {
   const [isBooksActive, setIsBooksActive] = useState(false);
 
   useBackground({
-    id: 'page-14_books',
+    id: 'page-17_books',
     Component: isBooksActive ? <Books /> : null,
   });
 
   const audioInst1 = useAudio({
-    id: 'page-14_applause',
-    page: 14,
+    id: 'page-17_applause',
+    page: 17,
     src: './assets/book_data/audios/sounds/applause.mp3',
   });
 
   const audioInst2 = useAudio({
-    id: 'page-13_cow-moo',
-    page: 14,
+    id: 'page-17_cow-moo',
+    page: 17,
     src: './assets/book_data/audios/sounds/cow-moo.mp3',
+  });
+
+  useBackground({
+    id: 'page-17_bg',
+    style: {
+      zIndex: -1,
+    },
+    images: [{
+      src: './assets/book_data/images/backgrounds/treasure.png',
+    }],
+    shadow: {
+      show: true,
+      style: {
+        zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
+      },
+    },
   });
 
   const segment1EnterHandler = () => {

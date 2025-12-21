@@ -5,29 +5,49 @@ import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 import { Segment } from 'activeBook-core/components';
 
+import { useBackground } from 'activeBook-core/hooks/effects/background';
+
 import { Jumping } from './components';
 
 export const Page15 = () => {
   const [isJumpingActive, setIsJumpingActive] = useState(false);
 
   const audioInst1 = useAudio({
-    id: 'page-12-kids-laughing-2',
-    page: 12,
+    id: 'page-15-kids-laughing-2',
+    page: 15,
     src: './assets/book_data/audios/sounds/kids-laughing-2.mp3',
   });
 
   const audioInst2 = useAudio({
-    id: 'page-12-running-on-grass-with-wind',
-    page: 12,
+    id: 'page-15-running-on-grass-with-wind',
+    page: 15,
     src: './assets/book_data/audios/sounds/running-on-grass-with-wind.mp3',
     loop: true,
   });
 
   const audioInst3 = useAudio({
-    id: 'page-12-rustling-grass-birds-singing',
-    page: 12,
+    id: 'page-15-rustling-grass-birds-singing',
+    page: 15,
     src: './assets/book_data/audios/sounds/rustling-grass-birds-singing.mp3',
     loop: true,
+  });
+
+  useBackground({
+    id: 'page-15_bg',
+    style: {
+      zIndex: -1,
+    },
+    images: [{
+      src: './assets/book_data/images/backgrounds/stream.png',
+    }],
+    shadow: {
+      show: true,
+      style: {
+        zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
+      },
+    },
   });
 
   const segment1EnterHandler = () => {

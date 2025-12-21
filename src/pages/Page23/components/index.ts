@@ -1,3 +1,2 @@
-export * from './Rainbow';
-export * from './Balloons';
-export * from './BackgroundComponent';
+export * from './Feather';
+export * from './BunnyAndFoxFacesWrapper';

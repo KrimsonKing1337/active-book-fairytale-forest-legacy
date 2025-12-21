@@ -5,25 +5,45 @@ import { useVibration } from 'activeBook-core/hooks/effects/vibration';
 
 import { Segment } from 'activeBook-core/components';
 
+import { useBackground } from 'activeBook-core/hooks/effects/background';
+
 import { Trigger } from './components';
 
 export const Page14 = () => {
   const audioInst1 = useAudio({
-    id: 'page-11-kids-laughing-2',
-    page: 11,
+    id: 'page-14-kids-laughing-2',
+    page: 14,
     src: './assets/book_data/audios/sounds/kid-laughing.mp3',
   });
 
   const audioInst2 = useAudio({
-    id: 'page-11-creaking-wood',
-    page: 11,
+    id: 'page-14-creaking-wood',
+    page: 14,
     src: './assets/book_data/audios/sounds/creaking-wood.mp3',
   });
 
   const audioInst3 = useAudio({
-    id: 'page-11-rustling-grass',
-    page: 11,
+    id: 'page-14-rustling-grass',
+    page: 14,
     src: './assets/book_data/audios/sounds/rustling-grass.mp3',
+  });
+
+  useBackground({
+    id: 'page-14_bg',
+    style: {
+      zIndex: -1,
+    },
+    images: [{
+      src: './assets/book_data/images/backgrounds/stream.png',
+    }],
+    shadow: {
+      show: true,
+      style: {
+        zIndex: 2,
+        backgroundColor: 'rgba(255, 255, 255, 0.3)',
+        backdropFilter: 'blur(3px)',
+      },
+    },
   });
 
   const { vibrationOff } = useVibration();
