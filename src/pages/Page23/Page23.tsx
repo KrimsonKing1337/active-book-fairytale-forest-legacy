@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
@@ -5,7 +7,11 @@ import { useAudio } from 'activeBook-core/hooks/effects/audio';
 import { Segment } from 'activeBook-core/components';
 import { useBackground } from 'activeBook-core/hooks/effects/background';
 
+import { imgSrcs } from './utils';
+
 export const Page23 = () => {
+  const [bgImageSrc, setBgImageSrc] = useState(imgSrcs[0]);
+
   const audioInst1 = useAudio({
     id: 'page-23_footsteps-dirt',
     page: 23,
@@ -25,14 +31,20 @@ export const Page23 = () => {
     src: './assets/book_data/audios/sounds/yay-children.mp3',
   });
 
-  useBackground({
+  /* Здесь меняем только первое изображение.
+   * Второе и третье нужно только для подгрузки в кэш перед показом страницы.
+   * Иначе при смене bgImageSrc новое изображение будет подгрудаться, и задний фон будет мерцать
+  */
+  const destroy = useBackground({
     id: 'page-23_bg',
     style: {
       zIndex: -1,
     },
-    images: [{
-      src: './assets/book_data/images/backgrounds/hut.png',
-    }],
+    images: [
+      { src: bgImageSrc },
+      { src: imgSrcs[1], style: { opacity: 0 } },
+      { src: imgSrcs[2], style: { opacity: 0 } },
+    ],
     shadow: {
       show: true,
       style: {
@@ -45,6 +57,12 @@ export const Page23 = () => {
 
   const segment1EnterHandler = () => {
     audioInst1?.play();
+
+    if (bgImageSrc !== imgSrcs[0]) {
+      destroy();
+    }
+
+    setBgImageSrc(imgSrcs[0]);
   };
 
   const segment1ExitHandler = () => {
@@ -53,6 +71,8 @@ export const Page23 = () => {
 
   const segment2EnterHandler = () => {
     audioInst2?.play();
+    destroy();
+    setBgImageSrc(imgSrcs[1]);
   };
 
   const segment2ExitHandler = () => {
@@ -61,6 +81,8 @@ export const Page23 = () => {
 
   const segment3EnterHandler = () => {
     audioInst3?.play();
+    destroy();
+    setBgImageSrc(imgSrcs[2]);
   };
 
   const segment3ExitHandler = () => {
