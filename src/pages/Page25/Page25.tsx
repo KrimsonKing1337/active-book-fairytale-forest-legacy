@@ -12,6 +12,9 @@ export const Page25 = () => {
 
   useBackground({
     id: 'page-25-bg',
+    style: {
+      zIndex: -1,
+    },
     images: [{ src: './assets/book_data/images/backgrounds/fox_and_rabbit.png' }],
     shadow: {
       show: true,
