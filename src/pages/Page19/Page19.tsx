@@ -12,7 +12,7 @@ import { AppleSlices } from './components';
 export const Page19 = () => {
   const [isAppleSlicesActive, setIsAppleSlicesActive] = useState(false);
 
-  useBackground({
+  const destroy = useBackground({
     id: 'page-19_apple-slices',
     Component: isAppleSlicesActive ? <AppleSlices /> : null,
   });
@@ -74,12 +74,14 @@ export const Page19 = () => {
   const segment3EnterHandler = () => {
     audioInst3?.play();
 
+    destroy();
     setIsAppleSlicesActive(true);
   };
 
   const segment3ExitHandler = () => {
     audioInst3?.stop();
 
+    destroy();
     setIsAppleSlicesActive(false);
   };
 

@@ -15,7 +15,7 @@ export const TriggerClouds = () => {
 
   const Component = isActive ? <Clouds /> : null;
 
-  useBackground({
+  const destroy = useBackground({
     id: 'page-12-trigger-clouds',
     Component,
   });
@@ -29,6 +29,7 @@ export const TriggerClouds = () => {
   }, []);
 
   const clickHandler = () => {
+    destroy();
     setIsActive(true);
 
     if (timer) {
@@ -36,7 +37,9 @@ export const TriggerClouds = () => {
     }
 
     timer = setTimeout(() => {
+      destroy();
       setIsActive(false);
+
       timer = null;
     }, 25000);
   };

@@ -12,7 +12,7 @@ import { BookAnimation, Books } from './components';
 export const Page17 = () => {
   const [isBooksActive, setIsBooksActive] = useState(false);
 
-  useBackground({
+  const destroy = useBackground({
     id: 'page-17_books',
     Component: isBooksActive ? <Books /> : null,
   });
@@ -64,10 +64,12 @@ export const Page17 = () => {
   };
 
   const segment3EnterHandler = () => {
+    destroy();
     setIsBooksActive(true);
   };
 
   const segment3ExitHandler = () => {
+    destroy();
     setIsBooksActive(false);
   };
 

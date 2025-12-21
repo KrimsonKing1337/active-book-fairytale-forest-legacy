@@ -15,7 +15,7 @@ export const TriggerCarrots = () => {
 
   const Component = isActive ? <Carrots /> : null;
 
-  useBackground({
+  const destroy = useBackground({
     id: 'carrots',
     Component,
   });
@@ -29,6 +29,7 @@ export const TriggerCarrots = () => {
   }, []);
 
   const clickHandler = () => {
+    destroy();
     setIsActive(true);
 
     if (timer) {
@@ -36,6 +37,7 @@ export const TriggerCarrots = () => {
     }
 
     timer = setTimeout(() => {
+      destroy();
       setIsActive(false);
       timer = null;
     }, 15000);
