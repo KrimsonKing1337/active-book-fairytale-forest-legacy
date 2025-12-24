@@ -1,11 +1,9 @@
 import { useState } from 'react';
 
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
-
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-
-import { Segment } from 'activeBook-core/components';
 import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { PageWrapper, Segment, P } from 'activeBook-core/components';
 
 import { imgSrcs } from './utils';
 
@@ -93,41 +91,41 @@ export const Page23 = () => {
   return (
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
+        <P>
           И она направилась к дому Барсика и Лёвы.
-        </p>
+        </P>
 
-        <p>
+        <P>
           Но дома котов не было. Они ушли к ручью и остались там с Ёжиком, но Лиса Ярка этого не знала.
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <p>
+        <P>
           Чтобы она не расстроилась, что её пирог некому есть, Сова Клара слетела со своего дерева и вскоре села на
           крышу избушки Барсика и Лёвы.
-        </p>
+        </P>
 
-        <p>
+        <P>
           — Коты у ручья с Ёжиком, катаются на новом велосипеде, — объяснила она пригорюнившейся Ярке. — Иди к ним, а я
           остальных приведу.
-        </p>
+        </P>
 
-        <p>
+        <P>
           А Зайчонок Прыг-Прыг с Коровой Ягодкой все еще бродили по лесу. Они пока не нашли никакого клада, а идти уже
           устали. И тут мудрая Клара, пролетая над ними, посоветовала идти к ручью.
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
-        <p>
+        <P>
           То-то было радости, когда все встретились у ручья! Барсик и Лева с Ёжиком уже проголодались, Прыг-Прыг с
           Ягодкой тоже, а у Ярки как раз был готов для всех ее чудесный пирог!
-        </p>
+        </P>
 
-        <p>
+        <P>
           Последней прилетела мудрая Сова.
-        </p>
+        </P>
       </Segment>
     </PageWrapper>
   );

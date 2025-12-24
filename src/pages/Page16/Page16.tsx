@@ -1,8 +1,6 @@
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
-import { Action } from 'activeBook-core/components/ColoredTextTrigger';
+import { PageWrapper, Action, P } from 'activeBook-core/components';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-
 import { useBackground } from 'activeBook-core/hooks/effects/background';
 
 import { TriggerCarrots, TriggerClouds } from './components';
@@ -38,24 +36,24 @@ export const Page16 = () => {
 
   return (
     <PageWrapper>
-      <p>
+      <P>
         — Сначала я найду самую огромную
         <TriggerCarrots />
         в лесу! — сказал он громко, как будто кто-то должен был услышать и порадоваться вместе с ним.
-      </p>
+      </P>
 
-      <p>
+      <P>
         — Хотя нет, морковь в лесу не растёт. Тогда я… э-э, тогда я найду
         <Action onClick={action1ClickHandler}>
           клад!
         </Action>
         Ну а потом напишу про это книгу!
-      </p>
+      </P>
 
-      <p>
+      <P>
         Он остановился и задумчиво посмотрел на
         <TriggerClouds />
-      </p>
+      </P>
     </PageWrapper>
   );
 };

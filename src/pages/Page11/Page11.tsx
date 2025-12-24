@@ -1,8 +1,7 @@
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
-
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-
 import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { PageWrapper, P } from 'activeBook-core/components';
 
 import { Emojis } from './components';
 
@@ -39,10 +38,10 @@ export const Page11 = () => {
 
   return (
     <PageWrapper>
-      <p>
+      <P>
         В конце концов Барсик запутался в словах и спел вместо последней фразы что-то совсем нелепое,
         отчего братья так и покатились со смеху.
-      </p>
+      </P>
     </PageWrapper>
   );
 };

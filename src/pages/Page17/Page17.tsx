@@ -1,11 +1,9 @@
 import { useState } from 'react';
 
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
-
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-import { Segment } from 'activeBook-core/components';
-
 import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { PageWrapper, Segment, P } from 'activeBook-core/components';
 
 import { BookAnimation, Books } from './components';
 
@@ -76,29 +74,29 @@ export const Page17 = () => {
   return (
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
+        <P>
           — Я, наверное, назову её… эм… «Прыг-Прыг и всё-всё-всё!» — объявил он.
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <p>
+        <P>
           Он был так увлечён своими мыслями, что даже не заметил, что его догнала его подруга, корова Ягодка.
           Та усмехнулась, услышав, как Зайчонок мечтает вслух.
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
-        <p>
+        <P>
           — Ты уверен, что тебе хватит места в книге для всего-всего-всего? — мягко спросила Ягодка.
-        </p>
+        </P>
 
-        <p>
+        <P>
           — Конечно, хватит! А если не хватит, я просто напишу вторую книгу.
           И третью. И четвёртую! — решительно сказал Зайчонок.
 
           <BookAnimation isActive={isBooksActive} />
-        </p>
+        </P>
       </Segment>
     </PageWrapper>
   );

@@ -1,11 +1,10 @@
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
+import { useBackground } from 'activeBook-core/hooks/effects/background';
 import { useVibration } from 'activeBook-core/hooks/effects/vibration';
 
-import { Segment } from 'activeBook-core/components';
-
-import { useBackground } from 'activeBook-core/hooks/effects/background';
+import { Segment, P } from 'activeBook-core/components';
 
 import { Trigger } from './components';
 
@@ -76,16 +75,16 @@ export const Page14 = () => {
   return (
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
+        <P>
           Лёва, рассмотрев изобретение, снова рассмеялся:
           <br />
           <br />
           — Это же велосипед!
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <p>
+        <P>
           Барсик подхватил:
           <br />
           <br />
@@ -93,17 +92,17 @@ export const Page14 = () => {
           <Trigger />
           и сделал из них новые дрова!
           Велосипед! Да это изобретение старо как мир!
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
-        <p>
+        <P>
           Но Ёжик не обиделся и с добрым смехом ответил:
           <br />
           <br />
           — Ну и что с того! Зато мой велосипед самый колючий и неповторимый!
           Может, это и есть главное открытие.
-        </p>
+        </P>
       </Segment>
     </PageWrapper>
   );

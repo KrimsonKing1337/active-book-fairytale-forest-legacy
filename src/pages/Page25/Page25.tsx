@@ -1,4 +1,4 @@
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
+import { PageWrapper, P } from 'activeBook-core/components';
 
 import { useBackground } from 'activeBook-core/hooks/effects/background';
 
@@ -28,9 +28,9 @@ export const Page25 = () => {
 
   return (
     <PageWrapper>
-      <p>
+      <P>
         Вот и сказочке конец. Кто внимал ей - молодец!
-      </p>
+      </P>
     </PageWrapper>
   );
 };

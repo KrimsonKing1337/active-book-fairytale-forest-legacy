@@ -1,19 +1,14 @@
 import { useState } from 'react';
 
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
-
-import { useAudio } from 'activeBook-core/hooks/effects/audio';
-
-import { Segment } from 'activeBook-core/components';
-
-import { Action } from 'activeBook-core/components/ColoredTextTrigger';
-
 import type { Timer } from 'activeBook-core/@types';
 
+import { useAudio } from 'activeBook-core/hooks/effects/audio';
 import { useBackground } from 'activeBook-core/hooks/effects/background';
 
-import { Fox, FirBranchesWrapper, Tea } from './components';
+import { PageWrapper, Segment, Action, P } from 'activeBook-core/components';
+
 import { useFoxVibration } from './hooks';
+import { Fox, FirBranchesWrapper, Tea } from './components';
 
 let timer: Timer = null;
 
@@ -99,7 +94,7 @@ export const Page21 = () => {
   return (
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
+        <P>
           Сова Клара знала, что вдвоем им будет весело, так что продолжила наблюдать за тем, как готовит Лиса Ярка. Вот
           только она как раз
           <Action onClick={actionClickHandler}>
@@ -107,31 +102,31 @@ export const Page21 = () => {
           </Action>
           поставив пирог на огонь.
           <Fox isActive={isFoxActive} />
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
         <FirBranchesWrapper isActive={isFirBranchesActive}>
-          <p>
+          <P>
             Клара бывала у Ярки в гостях не раз и знала, как хорошо у той дома. Лиса обустроила свою нору с заботой и
             вкусом. Вход украшали маленькие еловые веточки, а внутри было тепло и уютно благодаря мягким коврам из мха
             и листвы, разложенным по полу.
-          </p>
+          </P>
 
-          <p>
+          <P>
             Когда пирог был готов, Лиса вышла из норы с причесанной шерстью и в красивом шарфе, и сняла пирог с печи.
-          </p>
+          </P>
         </FirBranchesWrapper>
       </Segment>
 
       <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
-        <p>
+        <P>
           — Что ж, наш Прыг-Прыг опять что-то великое придумал, — проворковала Ярка, лениво потирая лапку. — Пусть его.
           А я пойду к нашим котам на чай напрошусь.
           <Tea isActive={isTeaActive} />
           Самый хитрый зверь — это тот, кто вовремя напомнит о чае. А если они меня не пригласят, не получат
           свой любимый пирог, ха-ха!
-        </p>
+        </P>
       </Segment>
     </PageWrapper>
   );

@@ -1,12 +1,9 @@
 import { useState } from 'react';
 
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
-
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-
-import { Segment } from 'activeBook-core/components';
-
 import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { PageWrapper, Segment, P } from 'activeBook-core/components';
 
 import { Swing } from './components';
 
@@ -64,17 +61,17 @@ export const Page10 = () => {
   return (
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
+        <P>
           Барсик,
           <Swing isActive={isSwingActive} />
           запел свою версию известной всему Сказочному лесу песни о природе, добавляя к каждому слову весёлые звуки.
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <p>
+        <P>
           Лёва пытался подхватить мелодию по-своему, путая брата и делая песню ещё забавнее.
-        </p>
+        </P>
       </Segment>
     </PageWrapper>
   );

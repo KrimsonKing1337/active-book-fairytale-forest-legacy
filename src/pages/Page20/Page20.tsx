@@ -1,10 +1,7 @@
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
-
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-
-import { Action } from 'activeBook-core/components/ColoredTextTrigger';
-
 import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { PageWrapper, Action, P } from 'activeBook-core/components';
 
 import { Trigger } from './components';
 
@@ -39,31 +36,31 @@ export const Page20 = () => {
 
   return (
     <PageWrapper>
-      <p>
+      <P>
         — Ты, Прыг-Прыг, всегда думаешь, что можешь придумать что-то лучше всех! — отозвалась она. — Уверена, твоя книга
         будет... ну, интересной, но я могла бы написать не хуже!
-      </p>
+      </P>
 
-      <p>
+      <P>
         Прыг-Прыг
         <Action onClick={clickHandler}>
           рассмеялся,
         </Action>
         а Ягодка только покачала головой:
-      </p>
+      </P>
 
-      <p>
+      <P>
         — Лиса Ярка всегда найдёт, что сказать!
-      </p>
+      </P>
 
-      <p>
+      <P>
         — Это точно! — ответил зайчонок, с довольным видом глядя на Ягодку. — Ну что, пошли дальше, искать клад?
-      </p>
+      </P>
 
-      <p>
+      <P>
         И они пошли дальше, искать
         <Trigger />
-      </p>
+      </P>
     </PageWrapper>
   );
 };

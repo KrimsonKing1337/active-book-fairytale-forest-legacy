@@ -1,9 +1,9 @@
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-import { Segment } from 'activeBook-core/components';
-import { Action } from 'activeBook-core/components/ColoredTextTrigger';
 import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { Segment, Action, P } from 'activeBook-core/components';
 
 export const Page4 = () => {
   const audioInst1 = useAudio({
@@ -65,7 +65,7 @@ export const Page4 = () => {
   return (
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
+        <P>
           В этот момент где-то неподалёку вспорхнула птица.
           <br />
           Лёва лениво повернулся на другой бок и протянул:
@@ -73,11 +73,11 @@ export const Page4 = () => {
           <br />
           — Подумаешь… Это точно не что-нибудь вроде «О-о, смотрите, я изобрёл часы, которые тикают громче всех»?
           Помнишь, что было в прошлый раз?
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <p>
+        <P>
           Барсик неосторожно махнул хвостом и смахнул с тумбочки брата книгу.
           Подняв ее, он сказал:
           <br />
@@ -88,7 +88,7 @@ export const Page4 = () => {
           — До сих пор это
           <Action onClick={actionClickHandler}>«ку-ку»</Action>
           мне во снах снится...
-        </p>
+        </P>
       </Segment>
     </PageWrapper>
   );

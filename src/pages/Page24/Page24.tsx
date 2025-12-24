@@ -1,12 +1,9 @@
 import { useState } from 'react';
 
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
-
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-
-import { Segment } from 'activeBook-core/components';
-
 import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { PageWrapper, Segment, P } from 'activeBook-core/components';
 
 import { BunnyAndFoxFacesWrapper, Feather } from './components';
 
@@ -75,34 +72,34 @@ export const Page24 = () => {
   return (
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
+        <P>
           — Каждый день – новый урок, — сказала она, хлопая крыльями. — Сегодня, кажется мне, урок будет такой:
           «Планируйте и договаривайтесь заранее!» Вот Ёжик предупредил Барсика с Лёвой о своей затее, и они чудесно
           провели день. А Зайчонок и Корова пошли за кладом наобум, и Ярка свой пирог приготовила, не пригласив гостей –
           а в итоге и клада не нашли, и пирог ещё чуть-чуть и пропал бы.
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
         <BunnyAndFoxFacesWrapper isActive={isFacesActive}>
-          <p>
+          <P>
             - А велосипед и пирог разве не клад? – спросил Зайчонок. – По-моему, настоящий клад!
-          </p>
+          </P>
 
-          <p>
+          <P>
             - Да и пирог не пропал. А чуть-чуть не считается! – хитро добавила Лиса.
-          </p>
+          </P>
         </BunnyAndFoxFacesWrapper>
       </Segment>
 
       <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
-        <p>
+        <P>
           - Тогда пойдемте пить чай, - сказал Барсик.
-        </p>
+        </P>
 
-        <p>
+        <P>
           И все дружно пошли пить чай с пирогом, смеясь и рассказывая о том, как весело провели сегодняшний день.
-        </p>
+        </P>
       </Segment>
     </PageWrapper>
   );

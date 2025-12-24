@@ -1,11 +1,9 @@
 import { useState } from 'react';
 
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
-
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-import { Segment } from 'activeBook-core/components';
-
 import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { PageWrapper, Segment, P } from 'activeBook-core/components';
 
 import { Questions } from './components';
 
@@ -79,25 +77,25 @@ export const Page13 = () => {
   return (
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
+        <P>
           Дойдя до ручья, они увидели Ёжика, гордо стоящего рядом с чем-то необычным. Барсик помахал ему:
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <p>
+        <P>
           — Привет, Ёжик! Что это за чудо техники у тебя такое?
           <Questions isActive={isQuestionActive} />
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
-        <p>
+        <P>
           Ёжик, сияя от гордости, ответил:
           <br />
           <br />
           — Привет, Барсик! Это мой супер-уникальный вездеход! Думаю, он произведет революцию в мире транспорта!
-        </p>
+        </P>
       </Segment>
     </PageWrapper>
   );

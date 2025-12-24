@@ -2,6 +2,8 @@ import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useBackground } from 'activeBook-core/hooks/effects/background';
 
+import { H1, H2, P } from 'activeBook-core/components';
+
 import { FlowersAnimation } from './components';
 
 export const Page1 = () => {
@@ -30,18 +32,18 @@ export const Page1 = () => {
 
   return (
     <PageWrapper>
-      <h1>
+      <H1>
         Сказка первая.
-      </h1>
+      </H1>
 
-      <h2>
+      <H2>
         Сказочный лес и его обитатели.
-      </h2>
+      </H2>
 
-      <p>
+      <P>
         В Сказочном лесу начиналось утро: птицы весело распевали свои песни, солнечные лучи пробивались сквозь высокие
         кроны деревьев, мягко касаясь земли, а в ветвях шумел ветерок.
-      </p>
+      </P>
     </PageWrapper>
   );
 };

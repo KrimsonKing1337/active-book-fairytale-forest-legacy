@@ -1,3 +1,3 @@
-import { Page25 } from './Page25';
-export { Page25 };
-export default Page25; // default нужен для React.lazy()
+import { Page26 } from './Page26';
+export { Page26 };
+export default Page26; // default нужен для React.lazy()

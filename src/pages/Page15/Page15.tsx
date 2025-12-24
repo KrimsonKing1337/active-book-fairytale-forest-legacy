@@ -1,11 +1,9 @@
 import { useState } from 'react';
 
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
-
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-import { Segment } from 'activeBook-core/components';
-
 import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { PageWrapper, Segment, P } from 'activeBook-core/components';
 
 import { Jumping } from './components';
 
@@ -79,25 +77,25 @@ export const Page15 = () => {
   return (
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
+        <P>
           — Хорошо, Ёжик, пусть тогда твой велосипед будет новым стандартом колючести! – наконец сказал Лёва, и все
           засмеялись.
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <p>
+        <P>
           Клара оставила друзей наслаждаться летним днем и испытывать новое изобретение Ёжика и посмотрела в другую
           сторону. По залитой солнцем тропинке
           <Jumping isActive={isJumpingActive} />
           Ему сегодня было особенно весело, потому что он придумал, что станет великим первооткрывателем.
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
-        <p>
+        <P>
           Листья под его лапками тихо шуршали, а где-то высоко в ветвях пели птицы.
-        </p>
+        </P>
       </Segment>
     </PageWrapper>
   );

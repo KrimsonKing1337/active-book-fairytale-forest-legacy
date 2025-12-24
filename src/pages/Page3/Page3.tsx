@@ -1,11 +1,9 @@
 import { useState } from 'react';
 
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
-
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-import { Segment } from 'activeBook-core/components';
-
 import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { Segment, PageWrapper, P } from 'activeBook-core/components';
 
 import { Cat } from './components';
 
@@ -69,30 +67,30 @@ export const Page3 = () => {
   return (
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
+        <P>
           Высоко-высоко на самом большом дереве мудрая Сова Клара
           наблюдала за лесом из густой тени ветвей. Некоторые думают, что совы плохо видят днем, но это неправда – их
           круглые глаза одинаково хорошо видят в темноте и на свету. Клару уважали все звери леса.
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <p>
+        <P>
           Клара видела, как в небольшой уютной избушке – Барсик и Лёва – начинали свой день. Барсик уже бодро
           прохаживался по комнате, вытирая усы после утреннего умывания, а вот его младший брат Лёва только-только
           просыпался.
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
-        <p>
+        <P>
           Барсик наклонился над сонным Лёвой и весело произнес:
           <br />
           <br />
           — Доброе утро, соня! Пора вставать,
           <Cat isActive={isHedgehogActive} />
           приготовил что-то интересное и будет ждать нас утром у ручья!
-        </p>
+        </P>
       </Segment>
     </PageWrapper>
   );

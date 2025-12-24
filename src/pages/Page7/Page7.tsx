@@ -1,9 +1,9 @@
 import { PageWrapper } from 'activeBook-core/components/PageWrapper';
 
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-import { Segment } from 'activeBook-core/components';
-
 import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { Segment, P } from 'activeBook-core/components';
 
 import { screwBoltVibration, screwBoltVibrationStop } from './effects';
 
@@ -74,22 +74,22 @@ export const Page7 = () => {
   return (
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
+        <P>
           Ещё Клара видела, как Ёжик в полном восторге бегал туда-сюда вдоль тихо журчащего ручья.
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <p>
+        <P>
           Он проверял каждую деталь своего нового изобретения. Повсюду валялись чертежи, какие-то деревяшки и даже пара
           свёрнутых носков (где он их нашёл — загадка).
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
-        <p>
+        <P>
           — Ну вот, деталь сюда, болтик сюда... Ух, кажется, готово!
-        </p>
+        </P>
       </Segment>
     </PageWrapper>
   );

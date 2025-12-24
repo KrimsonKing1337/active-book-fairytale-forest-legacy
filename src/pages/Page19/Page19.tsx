@@ -1,11 +1,9 @@
 import { useState } from 'react';
 
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
-import { Segment } from 'activeBook-core/components';
-
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-
 import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { PageWrapper, Segment, P } from 'activeBook-core/components';
 
 import { AppleSlices } from './components';
 
@@ -88,36 +86,36 @@ export const Page19 = () => {
   return (
     <PageWrapper>
       <Segment isActive onEnter={segment1EnterHandler} onExit={segment1ExitHandler}>
-        <p>
+        <P>
           Тут в воздухе раздался голос Лисы Ярки. Она пела песню, и эхо разносилось по лесу. Её нора была совсем рядом,
           и друзья решили ненадолго завернуть к ней.
-        </p>
+        </P>
 
-        <p>
+        <P>
           — Лиса Ярка! — весело закричал Прыг-Прыг, когда они вышли к ее норе. — Ты что скажешь про мою будущую книгу?
-        </p>
+        </P>
 
-        <p>
+        <P>
           Перед норой под навесом стоял деревянный стол, изготовленный из старой, но крепкой древесины – на нём всегда
           блестели чистые медные миски и деревянные ложки, готовые вступить в дело. Сегодня стол покрывала скатерть в
           клеточку, а на ней стояла прозрачная стеклянная банка с засахаренными ягодами, которые Ярка собрала ещё
           прошлым летом.
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment2EnterHandler} onExit={segment2ExitHandler}>
-        <p>
+        <P>
           Рядом со столом в маленькой печи трещали дрова, Лиса Ярка готовила свой знаменитый яблочный пирог. Её хвост
           мягко покачивался, и каждый её жест был элегантен и плавен, словно танец.
-        </p>
+        </P>
       </Segment>
 
       <Segment onEnter={segment3EnterHandler} onExit={segment3ExitHandler}>
-        <p>
+        <P>
           Она ловко нарезала сочные яблоки, аккуратно складывая их в большую глиняную миску.
           Запах корицы и ванили плыл по воздуху. Сова Клара с самого высокого дерева восхищенно смотрела, как Лиса Ярка
           с любовью и мастерством создает своё кулинарное чудо.
-        </p>
+        </P>
       </Segment>
     </PageWrapper>
   );

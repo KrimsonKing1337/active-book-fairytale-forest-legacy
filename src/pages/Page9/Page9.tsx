@@ -1,7 +1,7 @@
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
-
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
 import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { PageWrapper, P } from 'activeBook-core/components';
 
 import { BackgroundComponent } from './components';
 
@@ -38,10 +38,10 @@ export const Page9 = () => {
 
   return (
     <PageWrapper>
-      <p>
+      <P>
         Лёва и Барсик, смеясь и оживленно болтая, бежали по лесной тропинке к ручью. Солнышко пробивалось сквозь кроны
         деревьев, играя бликами в их глазах.
-      </p>
+      </P>
     </PageWrapper>
   );
 };

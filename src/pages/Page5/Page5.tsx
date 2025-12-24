@@ -1,8 +1,7 @@
-import { PageWrapper } from 'activeBook-core/components/PageWrapper';
-
 import { useAudio } from 'activeBook-core/hooks/effects/audio';
-
 import { useBackground } from 'activeBook-core/hooks/effects/background';
+
+import { PageWrapper, P } from 'activeBook-core/components';
 
 import { Leaf } from './components';
 
@@ -39,10 +38,10 @@ export const Page5 = () => {
 
   return (
     <PageWrapper>
-      <p>
+      <P>
         Эти слова, наполненные комичным отчаянием, рассмешили Барсика. Лёва тоже не выдержал и рассмеялся, и вскоре
         братья хохотали уже вдвоём. Новый день начался для них с беззаботного счастья, и это было так уютно и хорошо!
-      </p>
+      </P>
     </PageWrapper>
   );
 };
