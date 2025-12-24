@@ -4,7 +4,7 @@ import * as styles from './Leaf.scss';
 
 export const Leaf = () => {
   return (
-    <div className={styles.leaf}>
+    <div className={styles.Leaf}>
       <Img src="./assets/book_data/images/leaf.svg" />
     </div>
   );

@@ -48,7 +48,7 @@ export const Questions = ({ isActive }: QuestionsProps) => {
         const uuid = nanoid();
 
         return (
-          <Icon key={uuid} style={{ fill: fillItemCur }} className={styles.icon} />
+          <Icon key={uuid} style={{ fill: fillItemCur }} className={styles.Icon} />
         );
       })}
     </span>

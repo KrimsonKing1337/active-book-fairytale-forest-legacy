@@ -18,25 +18,25 @@ export const FirBranchesWrapper = ({ children, isActive }: FirstBranchesProps) =
 
   const img1ClassNames = classNames({
     [styles.img]: true,
-    [styles.img1]: true,
+    [styles.Img1]: true,
     [styles.isActive]: isActive,
   });
 
   const img2ClassNames = classNames({
     [styles.img]: true,
-    [styles.img2]: true,
+    [styles.Img2]: true,
     [styles.isActive]: isActive,
   });
 
   const img3ClassNames = classNames({
     [styles.img]: true,
-    [styles.img3]: true,
+    [styles.Img3]: true,
     [styles.isActive]: isActive,
   });
 
   const img4ClassNames = classNames({
     [styles.img]: true,
-    [styles.img4]: true,
+    [styles.Img4]: true,
     [styles.isActive]: isActive,
   });
 

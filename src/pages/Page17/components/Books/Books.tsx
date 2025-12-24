@@ -15,8 +15,8 @@ export const Books = () => {
         const uuid = nanoid();
 
         return (
-          <div key={uuid} className={styles.bookWrapper}>
-            <Img src={imageCur} className={styles.book} />
+          <div key={uuid} className={styles.BookWrapper}>
+            <Img src={imageCur} className={styles.Book} />
           </div>
         );
       })}

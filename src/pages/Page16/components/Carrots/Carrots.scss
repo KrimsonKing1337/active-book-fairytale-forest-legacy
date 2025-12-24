@@ -1,4 +1,4 @@
-.wrapper {
+.Wrapper {
   position: relative;
   overflow: hidden;
   height: 100%;
@@ -32,7 +32,7 @@
   }
 }
 
-.carrot {
+.Carrot {
   position: absolute;
   z-index: 1;
   top: -120px;
@@ -42,61 +42,61 @@
   animation: fall linear infinite;
 }
 
-.carrot:nth-child(1) {
+.Carrot:nth-child(1) {
   left: 5%;
   animation-duration: 4s;
   animation-delay: 0s;
 }
 
-.carrot:nth-child(2) {
+.Carrot:nth-child(2) {
   left: calc(15% - 60px);
   animation-duration: 5s;
   animation-delay: 1s;
 }
 
-.carrot:nth-child(3) {
+.Carrot:nth-child(3) {
   left: calc(25% - 60px);
   animation-duration: 6s;
   animation-delay: 2s;
 }
 
-.carrot:nth-child(4) {
+.Carrot:nth-child(4) {
   left: calc(35% - 60px);
   animation-duration: 4.5s;
   animation-delay: 0.5s;
 }
 
-.carrot:nth-child(5) {
+.Carrot:nth-child(5) {
   left: calc(45% - 60px);
   animation-duration: 5.5s;
   animation-delay: 1.5s;
 }
 
-.carrot:nth-child(6) {
+.Carrot:nth-child(6) {
   left: calc(55% - 60px);
   animation-duration: 3.5s;
   animation-delay: 0.2s;
 }
 
-.carrot:nth-child(7) {
+.Carrot:nth-child(7) {
   left: calc(65% - 60px);
   animation-duration: 6.5s;
   animation-delay: 2.5s;
 }
 
-.carrot:nth-child(8) {
+.Carrot:nth-child(8) {
   left: calc(75% - 60px);
   animation-duration: 4s;
   animation-delay: 0.8s;
 }
 
-.carrot:nth-child(9) {
+.Carrot:nth-child(9) {
   left: calc(85% - 60px);
   animation-duration: 5s;
   animation-delay: 1.2s;
 }
 
-.carrot:nth-child(10) {
+.Carrot:nth-child(10) {
   left: calc(95% - 60px);
   animation-duration: 6s;
   animation-delay: 3s;

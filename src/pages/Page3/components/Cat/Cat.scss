@@ -1,4 +1,4 @@
-.wrapper {
+.Wrapper {
   position: relative;
   display: block;
   margin: 0;
@@ -11,7 +11,7 @@
   }
 }
 
-.img {
+.Img {
   position: absolute;
   z-index: 1;
   top: 0;
@@ -30,7 +30,7 @@
   }
 }
 
-.curve {
+.Curve {
   span {
     transition: all 1s 0s ease-in;
   }

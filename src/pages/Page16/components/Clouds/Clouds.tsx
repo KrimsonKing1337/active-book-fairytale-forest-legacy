@@ -14,7 +14,7 @@ export const Clouds = () => {
         const src = getRandomImage();
 
         return (
-          <Img key={uuid} src={src} className={styles.cloud} />
+          <Img key={uuid} src={src} className={styles.Cloud} />
         );
       })}
     </div>

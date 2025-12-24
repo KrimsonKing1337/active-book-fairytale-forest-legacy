@@ -1,4 +1,4 @@
-.wrapper {
+.Wrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -40,7 +40,7 @@
 }
 
 
-.imgWrapper {
+.ImgWrapper {
   position: absolute;
   top: -60px;
   left: -200px;
@@ -50,7 +50,7 @@
   animation: fall 5s linear 1 forwards, spin 2.5s linear 2 forwards;
 }
 
-.img {
+.Img {
   height: 100%;
   width: 100%;
   animation: sway 2.5s 2 ease-in-out forwards;

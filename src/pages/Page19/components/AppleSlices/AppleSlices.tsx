@@ -15,7 +15,7 @@ export const AppleSlices = () => {
         const uuid = nanoid();
 
         return (
-          <Img key={uuid} src={imageCur} className={styles.slice} />
+          <Img key={uuid} src={imageCur} className={styles.Slice} />
         );
       })}
     </div>

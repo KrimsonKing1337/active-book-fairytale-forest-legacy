@@ -10,7 +10,7 @@
   }
 }
 
-.emojisWrapper {
+.EmojisWrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -19,7 +19,7 @@
   height: 100%;
 }
 
-.emoji {
+.Emoji {
   position: absolute;
   z-index: 1;
   width: 50px;
@@ -30,55 +30,55 @@
   animation-iteration-count: infinite;
 }
 
-.emoji:nth-child(1) {
+.Emoji:nth-child(1) {
   top: 20%;
   left: 20%;
   animation-delay: 0s;
 }
 
-.emoji:nth-child(2) {
+.Emoji:nth-child(2) {
   top: 30%;
   left: 70%;
   animation-delay: 0.25s;
 }
 
-.emoji:nth-child(3) {
+.Emoji:nth-child(3) {
   top: 50%;
   left: 40%;
   animation-delay: 0.3s;
 }
 
-.emoji:nth-child(4) {
+.Emoji:nth-child(4) {
   top: 80%;
   left: 10%;
   animation-delay: 0.1s;
 }
 
-.emoji:nth-child(5) {
+.Emoji:nth-child(5) {
   top: 60%;
   left: 80%;
   animation-delay: 0.5s;
 }
 
-.emoji:nth-child(6) {
+.Emoji:nth-child(6) {
   top: 70%;
   left: 15%;
   animation-delay: 1s;
 }
 
-.emoji:nth-child(7) {
+.Emoji:nth-child(7) {
   top: 40%;
   left: 30%;
   animation-delay: 0.1s;
 }
 
-.emoji:nth-child(8) {
+.Emoji:nth-child(8) {
   top: 70%;
   left: 60%;
   animation-delay: 0.5s;
 }
 
-.emoji:nth-child(9) {
+.Emoji:nth-child(9) {
   top: 80%;
   left: 50%;
   animation-delay: 1s;

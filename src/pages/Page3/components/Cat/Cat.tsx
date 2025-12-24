@@ -36,24 +36,24 @@ export const Cat = ({ isActive }: HedgehogProps) => {
   }, [isActive]);
 
   const wrapperClassNames = classNames({
-    [styles.wrapper]: true,
+    [styles.Wrapper]: true,
     [styles.isActive]: isActive,
   });
 
   const imgClassNames = classNames({
-    [styles.img]: true,
+    [styles.Img]: true,
     [styles.isActive]: isActive,
   });
 
   return (
     <span className={wrapperClassNames}>
-      <span ref={elementRef1} className={styles.curve}>
+      <span ref={elementRef1} className={styles.Curve}>
         Ёжик Фыр-Фыр ждёт нас.&nbsp;
       </span>
 
       <Img src="./assets/book_data/images/cat.svg" className={imgClassNames} />
 
-      <span ref={elementRef2} className={styles.curve}>
+      <span ref={elementRef2} className={styles.Curve}>
         Он вчера сказал, что
       </span>
     </span>

@@ -50,19 +50,19 @@ export const Trigger = () => {
   };
 
   const actionClassNames = classNames({
-    [styles.action]: true,
+    [styles.Action]: true,
     [styles.isBroken]: isBroken,
     [styles.isTrembling]: isTrembling,
   });
 
   const text1ClassNames = classNames({
-    [styles.text1]: true,
+    [styles.Text1]: true,
     [styles.isBroken]: isBroken,
     [styles.isTrembling]: isTrembling,
   });
 
   const text2ClassNames = classNames({
-    [styles.text2]: true,
+    [styles.Text2]: true,
     [styles.isBroken]: isBroken,
     [styles.isTrembling]: isTrembling,
   });

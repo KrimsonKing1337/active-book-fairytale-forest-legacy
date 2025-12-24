@@ -8,7 +8,7 @@ export type SwingProps = {
 
 export const Swing = ({ isActive }: SwingProps) => {
   const swingClassNames = classNames({
-    [styles.swing]: true,
+    [styles.Swing]: true,
     [styles.isActive]: isActive,
   });
 

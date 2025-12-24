@@ -2,6 +2,6 @@ import * as styles from './SunBeam.scss';
 
 export const SunBeam = () => {
   return (
-    <div className={styles.sunBeam} />
+    <div className={styles.SunBeam} />
   );
 };

@@ -1,4 +1,4 @@
-.wrapper {
+.Wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,14 +22,14 @@
   }
 }
 
-.teaIcon {
+.TeaIcon {
   width: 60px;
   height: 60px;
   animation: swing 3s linear infinite;
   transform-origin: center;
 }
 
-.teapotIcon {
+.TeapotIcon {
   width: 60px;
   height: 65px;
   fill: pink;
@@ -37,7 +37,7 @@
   transform-origin: center;
 }
 
-.teaIconWrapper {
+.TeaIconWrapper {
   position: relative;
 }
 
@@ -58,7 +58,7 @@
   }
 }
 
-.smoke {
+.Smoke {
   position: absolute;
   z-index: -1;
   top: 0;

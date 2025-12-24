@@ -1,4 +1,4 @@
-.wrapper {
+.Wrapper {
   position: absolute;
   z-index: -1;
   top: 0;
@@ -27,7 +27,7 @@
   }
 }
 
-.balloon {
+.Balloon {
   position: absolute;
   z-index: 1;
   bottom: -120px;
@@ -36,27 +36,27 @@
   transform-origin: center;
 }
 
-.balloon:nth-child(1) {
+.Balloon:nth-child(1) {
   left: 0;
   animation: up 10s 0s linear 1 forwards, swing 1s linear infinite;
 }
 
-.balloon:nth-child(2) {
+.Balloon:nth-child(2) {
   left: 20%;
   animation: up 10s 0.5s linear 1 forwards, swing 1s linear infinite;
 }
 
-.balloon:nth-child(3) {
+.Balloon:nth-child(3) {
   left: 40%;
   animation: up 10s 1s linear 1 forwards, swing 1s linear infinite;
 }
 
-.balloon:nth-child(4) {
+.Balloon:nth-child(4) {
   left: 60%;
   animation: up 10s 1.5s linear 1 forwards, swing 1s linear infinite;
 }
 
-.balloon:nth-child(5) {
+.Balloon:nth-child(5) {
   left: calc(100% - 80px);
   animation: up 10s 2s linear 1 forwards, swing 1s linear infinite;
 }

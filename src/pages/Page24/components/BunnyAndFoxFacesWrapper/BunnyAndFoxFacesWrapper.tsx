@@ -16,12 +16,12 @@ export const BunnyAndFoxFacesWrapper = ({ children, isActive }: BunnyAndFoxFaces
   });
 
   const bunnyClassNames = classNames({
-    [styles.bunny]: true,
+    [styles.Bunny]: true,
     [styles.isActive]: isActive,
   });
 
   const foxClassNames = classNames({
-    [styles.fox]: true,
+    [styles.Fox]: true,
     [styles.isActive]: isActive,
   });
 

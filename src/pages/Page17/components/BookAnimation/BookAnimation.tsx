@@ -10,7 +10,7 @@ export type BookAnimationProps = {
 
 export const BookAnimation = ({ isActive }: BookAnimationProps) => {
   const extraWrapperClassnames = classNames({
-    [styles.extraWrapper]: true,
+    [styles.ExtraWrapper]: true,
     [styles.isActive]: isActive,
   });
 

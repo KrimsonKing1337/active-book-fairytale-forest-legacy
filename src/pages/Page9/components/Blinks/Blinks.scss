@@ -10,7 +10,7 @@
   }
 }
 
-.blinkWrapper {
+.BlinkWrapper {
   position: absolute;
   top: 0;
   left: 0;
@@ -19,7 +19,7 @@
   height: 100%;
 }
 
-.blink {
+.Blink {
   position: absolute;
   z-index: 1;
   width: 20px;
@@ -31,31 +31,31 @@
   animation: blink 1s infinite ease-in-out;
 }
 
-.blink:nth-child(1) {
+.Blink:nth-child(1) {
   top: 20%;
   left: 20%;
   animation-delay: 0s;
 }
 
-.blink:nth-child(2) {
+.Blink:nth-child(2) {
   top: 30%;
   left: 70%;
   animation-delay: 0.25s;
 }
 
-.blink:nth-child(3) {
+.Blink:nth-child(3) {
   top: 50%;
   left: 40%;
   animation-delay: 0.3s;
 }
 
-.blink:nth-child(4) {
+.Blink:nth-child(4) {
   top: 80%;
   left: 10%;
   animation-delay: 0.1s;
 }
 
-.blink:nth-child(5) {
+.Blink:nth-child(5) {
   top: 60%;
   left: 90%;
   animation-delay: 0.5s;

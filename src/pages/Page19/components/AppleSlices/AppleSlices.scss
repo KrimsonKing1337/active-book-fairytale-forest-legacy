@@ -1,11 +1,11 @@
-.wrapper {
+.Wrapper {
   position: relative;
   overflow: hidden;
   height: 100%;
   width: 100%;
 }
 
-.slice {
+.Slice {
   position: absolute;
   z-index: 1;
   top: -120px;
@@ -56,52 +56,52 @@
   }
 }
 
-.slice:nth-child(1) {
+.Slice:nth-child(1) {
   left: 5%;
   animation: fall 4s 0s linear infinite, fromLeftToRight linear 4s 0s infinite;
 }
 
-.slice:nth-child(2) {
+.Slice:nth-child(2) {
   left: calc(15% - 60px);
   animation: fall 5s 1s linear infinite, fromLeftToRight linear 5s 1s infinite;
 }
 
-.slice:nth-child(3) {
+.Slice:nth-child(3) {
   left: calc(25% - 60px);
   animation: fall 6s 2s linear infinite, fromLeftToRight linear 6s 2s infinite;
 }
 
-.slice:nth-child(4) {
+.Slice:nth-child(4) {
   left: calc(35% - 60px);
   animation: fall 4.5s 0.5s linear infinite, fromLeftToRight linear 4.5s 0.5s infinite;
 }
 
-.slice:nth-child(5) {
+.Slice:nth-child(5) {
   left: calc(45% - 60px);
   animation: fall 5.5s 1.5s linear infinite, fromLeftToRight linear 5.5s 1.5s infinite;
 }
 
-.slice:nth-child(6) {
+.Slice:nth-child(6) {
   left: calc(55% - 60px);
   animation: fall 3.5s 0.2s linear infinite, fromLeftToRight linear 3.5s 0.2s infinite reverse;
 }
 
-.slice:nth-child(7) {
+.Slice:nth-child(7) {
   left: calc(65% - 60px);
   animation: fall 6.5s 2.5s linear infinite, fromLeftToRight linear 6.5s 2.5s infinite reverse;
 }
 
-.slice:nth-child(8) {
+.Slice:nth-child(8) {
   left: calc(75% - 60px);
   animation: fall 4s 0.8s linear infinite, fromLeftToRight linear 4s 0.8s infinite reverse;
 }
 
-.slice:nth-child(9) {
+.Slice:nth-child(9) {
   left: calc(85% - 60px);
   animation: fall 5s 1.2s linear infinite, fromLeftToRight linear 5s 1.2s infinite reverse;
 }
 
-.slice:nth-child(10) {
+.Slice:nth-child(10) {
   left: calc(95% - 60px);
   animation: fall 6s 3s linear infinite, fromLeftToRight linear 6s 3s infinite reverse;
 }

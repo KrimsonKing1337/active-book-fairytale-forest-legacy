@@ -18,12 +18,12 @@ export const Emojis = () => {
   ];
 
   return (
-    <div className={styles.emojisWrapper}>
+    <div className={styles.EmojisWrapper}>
       {imagesSrc.map((imageSrcCur) => {
         const uuid = nanoid();
 
         return (
-          <Img key={uuid} src={imageSrcCur} className={styles.emoji} />
+          <Img key={uuid} src={imageSrcCur} className={styles.Emoji} />
         );
       })}
     </div>

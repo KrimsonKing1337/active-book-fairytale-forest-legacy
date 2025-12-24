@@ -5,7 +5,7 @@ import * as styles from './FlowersAnimation.scss';
 export const FlowersAnimation = () => {
   return (
     <DotLottieReactWrapper amount={6}>
-      <div className={styles.flower1}>
+      <div className={styles.Flower1}>
         <DotLottieReact
           src="./assets/book_data/animations/flower-1.lottie"
           height={250}
@@ -15,7 +15,7 @@ export const FlowersAnimation = () => {
         />
       </div>
 
-      <div className={styles.flower2}>
+      <div className={styles.Flower2}>
         <DotLottieReact
           src="./assets/book_data/animations/flower-2.lottie"
           height={250}
@@ -25,7 +25,7 @@ export const FlowersAnimation = () => {
         />
       </div>
 
-      <div className={styles.flower3}>
+      <div className={styles.Flower3}>
         <DotLottieReact
           src="./assets/book_data/animations/flower-3.lottie"
           height={250}
@@ -35,7 +35,7 @@ export const FlowersAnimation = () => {
         />
       </div>
 
-      <div className={styles.flower4}>
+      <div className={styles.Flower4}>
         <DotLottieReact
           src="./assets/book_data/animations/flower-4.lottie"
           height={250}
@@ -45,7 +45,7 @@ export const FlowersAnimation = () => {
         />
       </div>
 
-      <div className={styles.flower5}>
+      <div className={styles.Flower5}>
         <DotLottieReact
           src="./assets/book_data/animations/flower-5.lottie"
           height={250}
@@ -55,7 +55,7 @@ export const FlowersAnimation = () => {
         />
       </div>
 
-      <div className={styles.flower6}>
+      <div className={styles.Flower6}>
         <DotLottieReact
           src="./assets/book_data/animations/flower-6.lottie"
           height={250}

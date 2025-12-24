@@ -36,26 +36,26 @@ export const Tea = ({ isActive }: TeaProps) => {
 
   return (
     <div className={wrapperClassNames}>
-      <div className={styles.teaIconWrapper}>
-        <SmokeIcon className={styles.smoke} />
-        <TeaCupIcon className={styles.teaIcon} style={{ fill: fills[0] }} />
+      <div className={styles.TeaIconWrapper}>
+        <SmokeIcon className={styles.Smoke} />
+        <TeaCupIcon className={styles.TeaIcon} style={{ fill: fills[0] }} />
       </div>
 
-      <div className={styles.teaIconWrapper}>
-        <SmokeIcon className={styles.smoke} />
-        <TeaCupIcon className={styles.teaIcon} style={{ fill: fills[1] }} />
+      <div className={styles.TeaIconWrapper}>
+        <SmokeIcon className={styles.Smoke} />
+        <TeaCupIcon className={styles.TeaIcon} style={{ fill: fills[1] }} />
       </div>
 
-      <TeapotIcon className={styles.teapotIcon} style={{ fill: fills[2] }} />
+      <TeapotIcon className={styles.TeapotIcon} style={{ fill: fills[2] }} />
 
-      <div className={styles.teaIconWrapper}>
-        <SmokeIcon className={styles.smoke} />
-        <TeaCupIcon className={styles.teaIcon} style={{ fill: fills[3] }} />
+      <div className={styles.TeaIconWrapper}>
+        <SmokeIcon className={styles.Smoke} />
+        <TeaCupIcon className={styles.TeaIcon} style={{ fill: fills[3] }} />
       </div>
 
-      <div className={styles.teaIconWrapper}>
-        <SmokeIcon className={styles.smoke} />
-        <TeaCupIcon className={styles.teaIcon} style={{ fill: fills[4] }} />
+      <div className={styles.TeaIconWrapper}>
+        <SmokeIcon className={styles.Smoke} />
+        <TeaCupIcon className={styles.TeaIcon} style={{ fill: fills[4] }} />
       </div>
     </div>
   );

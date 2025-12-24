@@ -1,4 +1,4 @@
-.wrapper {
+.Wrapper {
   position: relative;
   overflow: hidden;
   height: 100%;
@@ -161,104 +161,104 @@
   }
 }
 
-.bookWrapper {
+.BookWrapper {
   position: absolute;
   z-index: 1;
   width: 60px;
   height: 60px;
 }
 
-.book {
+.Book {
   width: 100%;
   height: 100%;
 }
 
-.bookWrapper:nth-child(1) {
+.BookWrapper:nth-child(1) {
   top: -360px;
   left: -120px;
   animation: fromLeftToCenter 4s 0s linear 1 forwards, fall1 4s 0s linear 1 forwards;
 
-  .book {
+  .Book {
     animation: bouncing 4s 4s linear 1 forwards;
   }
 }
 
-.bookWrapper:nth-child(2) {
+.BookWrapper:nth-child(2) {
   top: calc(10% - 360px);
   left: -120px;
   animation: fromLeftToCenter 4s 1s linear 1 forwards, fall2 4s 1s linear 1 forwards;
 
-  .book {
+  .Book {
     animation: bouncing 4s 5s linear 1 forwards;
   }
 }
 
-.bookWrapper:nth-child(3) {
+.BookWrapper:nth-child(3) {
   top: calc(20% - 360px);
   left: -120px;
   animation: fromLeftToCenter 4s 1.5s linear 1 forwards, fall3 4s 1.5s linear 1 forwards;
 
-  .book {
+  .Book {
     animation: bouncing 4s 5.5s linear 1 forwards;
   }
 }
 
-.bookWrapper:nth-child(4) {
+.BookWrapper:nth-child(4) {
   top: calc(30% - 360px);
   left: -120px;
   animation: fromLeftToCenter 4s 2s linear 1 forwards, fall4 4s 2s linear 1 forwards;
 
-  .book {
+  .Book {
     animation: bouncing 4s 6s linear 1 forwards;
   }
 }
 
-.bookWrapper:nth-child(5) {
+.BookWrapper:nth-child(5) {
   top: calc(40% - 360px);
   left: -120px;
   animation: fromLeftToCenter 4s 0.5s linear 1 forwards, fall5 4s 0.5s linear 1 forwards;
 
-  .book {
+  .Book {
     animation: bouncing 4s 4.5s linear 1 forwards;
   }
 }
 
-.bookWrapper:nth-child(6) {
+.BookWrapper:nth-child(6) {
   top: calc(5% - 360px);
   right: -120px;
   animation: fromRightToCenter 4s 1.25s linear 1 forwards, fall6 4s 1.25s linear 1 forwards;
 
-  .book {
+  .Book {
     animation: bouncing 4s 5.25s linear 1 forwards;
   }
 }
 
-.bookWrapper:nth-child(7) {
+.BookWrapper:nth-child(7) {
   top: calc(15% - 360px);
   right: -120px;
   animation: fromRightToCenter 4s 2.25s linear 1 forwards, fall7 4s 2.25s linear 1 forwards;
 
-  .book {
+  .Book {
     animation: bouncing 4s 6.25s linear 1 forwards;
   }
 }
 
-.bookWrapper:nth-child(8) {
+.BookWrapper:nth-child(8) {
   top: calc(25% - 360px);
   right: -120px;
   animation: fromRightToCenter 4s 1.75s linear 1 forwards, fall8 4s 1.75s linear 1 forwards;
 
-  .book {
+  .Book {
     animation: bouncing 4s 5.75s linear 1 forwards;
   }
 }
 
-.bookWrapper:nth-child(9) {
+.BookWrapper:nth-child(9) {
   top: calc(35% - 360px);
   right: -120px;
   animation: fromRightToCenter 4s 2.5s linear 1 forwards, fall9 4s 2.5s linear 1 forwards;
 
-  .book {
+  .Book {
     animation: bouncing 4s 6.5s linear 1 forwards;
   }
 }

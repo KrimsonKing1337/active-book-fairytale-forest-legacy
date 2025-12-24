@@ -11,7 +11,7 @@ export const Carrots = () => {
         const uuid = nanoid();
 
         return (
-          <Img key={uuid} src="./assets/book_data/images/carrot.svg" className={styles.carrot} />
+          <Img key={uuid} src="./assets/book_data/images/carrot.svg" className={styles.Carrot} />
         );
       })}
     </div>
