@@ -15,7 +15,7 @@ export const Page25 = () => {
     style: {
       zIndex: -1,
     },
-    images: [{ src: './assets/book_data/images/backgrounds/fox_and_rabbit.png' }],
+    images: [{ src: './assets/book_data/images/backgrounds/fox_and_rabbit.jpg' }],
     shadow: {
       show: true,
       style: {

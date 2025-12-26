@@ -14,4 +14,7 @@ export const config: Config = {
       'text-shadow-for-hover': '#1111117f',
     },
   },
+  bodyStyle: {
+    background: 'url("./assets/book_data/images/backgrounds/forest_wide.jpg") no-repeat center',
+  },
 };

@@ -15,7 +15,7 @@ export const Page22 = () => {
   useBackground({
     id: 'page-22_bg',
     images: [{
-      src: './assets/book_data/images/backgrounds/fox_hut.png',
+      src: './assets/book_data/images/backgrounds/fox_hut.jpg',
     }],
   });
 

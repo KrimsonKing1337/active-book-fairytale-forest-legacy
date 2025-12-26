@@ -24,7 +24,7 @@ export const Page9 = () => {
       zIndex: -1,
     },
     images: [{
-      src: './assets/book_data/images/backgrounds/trail.png',
+      src: './assets/book_data/images/backgrounds/trail.jpg',
     }],
     shadow: {
       show: true,

@@ -34,7 +34,7 @@ export const Page13 = () => {
       zIndex: -1,
     },
     images: [{
-      src: './assets/book_data/images/backgrounds/stream.png',
+      src: './assets/book_data/images/backgrounds/stream.jpg',
     }],
     shadow: {
       show: true,

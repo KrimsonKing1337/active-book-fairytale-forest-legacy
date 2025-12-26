@@ -1,5 +1,5 @@
 export const imgSrcs = [
-  './assets/book_data/images/backgrounds/hut.png',
-  './assets/book_data/images/backgrounds/forest.png',
-  './assets/book_data/images/backgrounds/stream.png',
+  './assets/book_data/images/backgrounds/hut.jpg',
+  './assets/book_data/images/backgrounds/forest.jpg',
+  './assets/book_data/images/backgrounds/stream.jpg',
 ];

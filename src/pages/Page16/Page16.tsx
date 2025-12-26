@@ -18,7 +18,7 @@ export const Page16 = () => {
       zIndex: -1,
     },
     images: [{
-      src: './assets/book_data/images/backgrounds/treasure.png',
+      src: './assets/book_data/images/backgrounds/treasure.jpg',
     }],
     shadow: {
       show: true,

@@ -14,7 +14,7 @@ export const Page8 = () => {
   useBackground({
     id: 'page-8_bg',
     images: [{
-      src: './assets/book_data/images/backgrounds/stream.png',
+      src: './assets/book_data/images/backgrounds/stream.jpg',
     }],
   });
 

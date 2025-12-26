@@ -18,7 +18,7 @@ export const Page1 = () => {
       zIndex: -1,
     },
     images: [{
-      src: './assets/book_data/images/backgrounds/forest.png',
+      src: './assets/book_data/images/backgrounds/forest.jpg',
     }],
     shadow: {
       show: true,

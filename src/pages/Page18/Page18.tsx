@@ -5,7 +5,7 @@ export const Page18 = () => {
   useBackground({
     id: 'page-18_bg',
     images: [{
-      src: './assets/book_data/images/backgrounds/treasure.png',
+      src: './assets/book_data/images/backgrounds/treasure.jpg',
     }],
   });
 

@@ -24,7 +24,7 @@ export const Page5 = () => {
       zIndex: -1,
     },
     images: [{
-      src: './assets/book_data/images/backgrounds/hut.png',
+      src: './assets/book_data/images/backgrounds/hut.jpg',
     }],
     shadow: {
       show: true,

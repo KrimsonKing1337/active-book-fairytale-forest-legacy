@@ -22,7 +22,7 @@ export const Page0 = () => {
 
   useBackground({
     id: 'page-0-bg',
-    images: [{ src: './assets/book_data/images/backgrounds/fox_and_rabbit.png' }],
+    images: [{ src: './assets/book_data/images/backgrounds/fox_and_rabbit.jpg' }],
     shadow: {
       show: true,
       style: {
