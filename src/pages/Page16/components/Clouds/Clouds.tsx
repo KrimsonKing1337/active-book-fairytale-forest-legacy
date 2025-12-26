@@ -8,7 +8,7 @@ import { getRandomImage } from './utils';
 
 export const Clouds = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.Wrapper}>
       {[...Array(10)].map(() => {
         const uuid = nanoid();
         const src = getRandomImage();

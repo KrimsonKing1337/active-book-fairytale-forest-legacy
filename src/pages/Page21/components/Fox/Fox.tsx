@@ -10,14 +10,14 @@ export type FoxProps = {
 
 export const Fox = ({ isActive }: FoxProps) => {
   const wrapperClassNames = classNames({
-    [styles.wrapper]: true,
+    [styles.Wrapper]: true,
     [styles.isActive]: isActive,
   });
 
   return (
     <span className={wrapperClassNames}>
       {isActive && (
-        <Icon className={styles.icon} />
+        <Icon className={styles.Icon} />
       )}
     </span>
   );

@@ -6,7 +6,7 @@ import * as styles from './Carrots.scss';
 
 export const Carrots = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.Wrapper}>
       {[...Array(10)].map(() => {
         const uuid = nanoid();
 

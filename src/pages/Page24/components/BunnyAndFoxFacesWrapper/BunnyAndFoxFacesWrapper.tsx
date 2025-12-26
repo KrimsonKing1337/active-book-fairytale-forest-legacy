@@ -11,7 +11,7 @@ export type BunnyAndFoxFacesWrapperProps = PropsWithChildren & {
 
 export const BunnyAndFoxFacesWrapper = ({ children, isActive }: BunnyAndFoxFacesWrapperProps) => {
   const wrapperClassNames = classNames({
-    [styles.wrapper]: true,
+    [styles.Wrapper]: true,
     [styles.isActive]: isActive,
   });
 

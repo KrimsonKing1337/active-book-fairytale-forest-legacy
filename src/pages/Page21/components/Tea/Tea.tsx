@@ -30,7 +30,7 @@ export const Tea = ({ isActive }: TeaProps) => {
   }, [isActive]);
 
   const wrapperClassNames = classNames({
-    [styles.wrapper]: true,
+    [styles.Wrapper]: true,
     [styles.isActive]: isActive,
   });
 

@@ -42,7 +42,7 @@ export const Sun = () => {
   }, []);
 
   return (
-    <div ref={ref} className={styles.wrapper}>
+    <div ref={ref} className={styles.Wrapper}>
       <svg
         width="305"
         height="321"

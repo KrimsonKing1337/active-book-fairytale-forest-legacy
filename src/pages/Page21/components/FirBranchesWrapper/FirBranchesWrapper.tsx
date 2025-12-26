@@ -12,30 +12,30 @@ export type FirstBranchesProps = PropsWithChildren & {
 
 export const FirBranchesWrapper = ({ children, isActive }: FirstBranchesProps) => {
   const wrapperClassNames = classNames({
-    [styles.wrapper]: true,
+    [styles.Wrapper]: true,
     [styles.isActive]: isActive,
   });
 
   const img1ClassNames = classNames({
-    [styles.img]: true,
+    [styles.Img]: true,
     [styles.Img1]: true,
     [styles.isActive]: isActive,
   });
 
   const img2ClassNames = classNames({
-    [styles.img]: true,
+    [styles.Img]: true,
     [styles.Img2]: true,
     [styles.isActive]: isActive,
   });
 
   const img3ClassNames = classNames({
-    [styles.img]: true,
+    [styles.Img]: true,
     [styles.Img3]: true,
     [styles.isActive]: isActive,
   });
 
   const img4ClassNames = classNames({
-    [styles.img]: true,
+    [styles.Img]: true,
     [styles.Img4]: true,
     [styles.isActive]: isActive,
   });

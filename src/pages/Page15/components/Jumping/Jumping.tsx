@@ -8,7 +8,7 @@ export type JumpingProps = {
 
 export const Jumping = ({ isActive }: JumpingProps) => {
   const classNamesWrapper = classNames({
-    [styles.wrapper]: true,
+    [styles.Wrapper]: true,
     [styles.isActive]: isActive,
   });
 

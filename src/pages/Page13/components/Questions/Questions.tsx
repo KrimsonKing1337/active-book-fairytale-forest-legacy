@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 
 import classNames from 'classnames';
+import { nanoid } from 'nanoid';
 
 import { getRandomNumber } from 'activeBook-core/utils/getRandomNumber';
 
 import Icon from 'assets/book_data/images/question.svg';
-
-import { nanoid } from 'nanoid';
 
 import * as styles from './Question.scss';
 
@@ -38,7 +37,7 @@ export const Questions = ({ isActive }: QuestionsProps) => {
   }, [isActive]);
 
   const wrapperClassNames = classNames({
-    [styles.wrapper]: true,
+    [styles.Wrapper]: true,
     [styles.isActive]: isActive,
   });
 

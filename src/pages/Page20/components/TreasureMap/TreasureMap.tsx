@@ -30,7 +30,7 @@ export const TreasureMap = ({ isActive }: TreasureMapProps) => {
   };
 
   const wrapperClassnames = classNames({
-    [styles.wrapper]: true,
+    [styles.Wrapper]: true,
     [styles.isActive]: isActive,
   });
 

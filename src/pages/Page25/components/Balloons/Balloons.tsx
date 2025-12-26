@@ -32,12 +32,12 @@ export const Balloons = () => {
   }, []);
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.Wrapper}>
       {fills.map((fillCur) => {
         const uuid = nanoid();
 
         return (
-          <BalloonIcon key={uuid} className={styles.balloon} style={{ fill: fillCur }} />
+          <BalloonIcon key={uuid} className={styles.Balloon} style={{ fill: fillCur }} />
         );
       })}
     </div>

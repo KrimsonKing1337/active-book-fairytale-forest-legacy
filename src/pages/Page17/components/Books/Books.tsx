@@ -10,7 +10,7 @@ export const Books = () => {
   const images = getShuffledImages();
 
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.Wrapper}>
       {images.map((imageCur) => {
         const uuid = nanoid();
 

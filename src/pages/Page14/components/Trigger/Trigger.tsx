@@ -68,7 +68,7 @@ export const Trigger = () => {
   });
 
   return (
-    <span className={styles.wrapper} onClick={clickHandler}>
+    <span className={styles.Wrapper} onClick={clickHandler}>
       <Action className={text1ClassNames}>
         {text}
       </Action>

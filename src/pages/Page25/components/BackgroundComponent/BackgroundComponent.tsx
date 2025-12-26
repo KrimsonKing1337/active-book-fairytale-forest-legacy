@@ -4,7 +4,7 @@ import * as styles from './BackgroundComponents.scss';
 
 export const BackgroundComponent = () => {
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.Wrapper}>
       <Rainbow />
       <Balloons />
     </div>

@@ -16,7 +16,7 @@ export const BookAnimation = ({ isActive }: BookAnimationProps) => {
 
   return (
     <span className={extraWrapperClassnames}>
-      <DotLottieReactWrapper className={styles.wrapper}>
+      <DotLottieReactWrapper className={styles.Wrapper}>
         <DotLottieReact
           src="./assets/book_data/animations/book.lottie"
           width={448}
