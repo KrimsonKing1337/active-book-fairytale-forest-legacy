@@ -29,6 +29,10 @@ export const TriggerClouds = () => {
   }, []);
 
   const clickHandler = () => {
+    if (isActive) {
+      return;
+    }
+
     destroy();
     setIsActive(true);
 

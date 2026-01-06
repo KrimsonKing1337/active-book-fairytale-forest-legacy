@@ -29,6 +29,10 @@ export const TriggerCarrots = () => {
   }, []);
 
   const clickHandler = () => {
+    if (isActive) {
+      return;
+    }
+
     destroy();
     setIsActive(true);
 
