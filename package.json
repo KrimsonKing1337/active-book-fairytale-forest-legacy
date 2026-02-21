@@ -95,5 +95,5 @@
     "react-router-dom": "^7.10.1",
     "react-toastify": "^11.0.5"
   },
-  "license": "MIT"
+  "license": "GPL-3"
 }
