@@ -13,7 +13,6 @@ export const Page0 = () => {
     id: 'page-0-start-reading',
     page: 0,
     src: './assets/book_data/audios/sounds/start-reading.mp3',
-    isInitAudio: true,
     fadeOutWhenUnload: false,
     onPlay() {
       vibrationOn(200);
@@ -42,7 +41,7 @@ export const Page0 = () => {
     <Page0Default
       header="Сказочный лес и его обитатели"
       subHeader="Небольшой сборник сказок для детей и их родителей (пока готова только первая сказка)"
-      audioInstForInit={audioInst}
+      audioSrcForInit="./assets/book_data/audios/sounds/start-reading.mp3"
       goCallback={goCallback}
     />
   );
