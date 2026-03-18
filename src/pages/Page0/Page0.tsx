@@ -42,6 +42,7 @@ export const Page0 = () => {
     <Page0Default
       header="Сказочный лес и его обитатели"
       subHeader="Небольшой сборник сказок для детей и их родителей (пока готова только первая сказка)"
+      audioInstForInit={audioInst}
       goCallback={goCallback}
     />
   );
