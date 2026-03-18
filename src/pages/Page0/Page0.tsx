@@ -13,6 +13,7 @@ export const Page0 = () => {
     id: 'page-0-start-reading',
     page: 0,
     src: './assets/book_data/audios/sounds/start-reading.mp3',
+    isInitAudio: true,
     fadeOutWhenUnload: false,
     onPlay() {
       vibrationOn(200);
